@@ -111,6 +111,14 @@ abun_nb_mod %>% plotResiduals() # residual plot
 abun_nb_mod %>% testDispersion()
 ```
 
+# Save / load model
+
+```{r}
+save(abun_nb_mod, file = "Model_Outputs/abun_nb_mod.RData")
+
+load("Model_Outputs/abun_nb_mod.RData")
+```
+
 ## Predictions / emmeans
 
 ```{r}
@@ -171,7 +179,7 @@ Depth has a negative effect on abundance of herbivores. The rate of decrease is 
 
 ## Pairwise comparisons
 
-Let us say we want to know differences in abundance between the shallowest and maximum depth and at 50 and 75m depth. We can do so with pairwise contrasts. 
+Let us say we want to know differences in abundance between the shallowest and maximum depth and at 50 depth. We can do so with pairwise contrasts. 
 
 ### Extract min and max values
 
@@ -179,7 +187,6 @@ Let us say we want to know differences in abundance between the shallowest and m
 depth_comp <- abun2 %>% 
   summarise(min_depth = min(Depth_m),
             mid_depth = 50,
-            low_depth = 75,
             max_depth = max(Depth_m)) %>% 
   unlist(use.names = FALSE) %>% # remove column names of min and max depth
   as_tibble() %>% # have them as one column
@@ -189,13 +196,14 @@ depth_comp <- abun2 %>%
 ### Pairwise between shallowest and deepest depth
 
 ```{r}
-# comparisons betweem min, 50m, 75m, and max depth
+# comparisons betweem min, 50m and max depth
 pairwise_depth <- 
 abun_nb_mod |> 
   emmeans(~ Depth_m, 
           at = depth_comp, 
           epred = TRUE) |> 
   pairs(type = "link") %>% 
+  confint(level = 0.95) %>% 
   as.tibble()
 # from the shallowest to the deepest depth band, the ratio increases (greater differences in abundance)
 
@@ -206,6 +214,7 @@ abun_nb_mod |>
           epred = TRUE) |> 
   pairs(rev = TRUE, 
         type = "response") %>% 
+  confint(level = 0.95) %>% 
   as.tibble()
 ```
 
@@ -217,7 +226,7 @@ pairwise_depth %>%
   mutate(contrast = fct_rev(fct_inorder(contrast))) %>% # makes 2.3m the top most of the fig
 ggplot(aes(y = contrast, x = estimate)) +
   geom_point() +
-  geom_pointrange(aes(x = estimate, xmax = estimate + SE, xmin = estimate - SE)) +
+  geom_pointrange(aes(x = estimate, xmax = asymp.UCL, xmin = asymp.LCL)) +
   geom_vline(xintercept = 0, lty = 11, color = "red") +
   scale_x_continuous("Contrast ratio (log-scale)") +
   scale_y_discrete("") +

@@ -19,189 +19,189 @@ library(patchwork) # for combining plots
 
 # Scenario
 
-
+Tim and colleagues (2019) investigated differences in the attached of Porites coral nubbins when exposed to two herbivore grazers and two butterflyfish facultative corralivores in aquaria. Coral nubbins were attached to tiles with 10 nubbins for each tile. These tiles were then exposed to the grazers or corallivores in the aquaria for 8h. The initial and final number of coral nubbins attached after 8h were then compared. 
 
 # Read data
 
 ```{r}
-larvae <- read_csv("Data/plank_larvae.csv", trim_ws = TRUE)
+nub <- read_csv("Data/herb_nubbins.csv", trim_ws = TRUE)
 ```
 
 ## Glimpse data and find columns of interest
 
 ```{r}
-larvae  %>% glimpse()
+nub  %>% glimpse()
 ```
 
-We are interested in Species, Larvae, Initial, Individual, Survivorship, Time
+We are interested in Fish_species, Nubbins_start, Nubbins_end, Fish_ind
 
 ## Isolate variables of interest and data preparation
 
 ```{r}
-larvae2 <- 
+nub2 <- 
   # old dataframe
-  larvae %>% 
+  nub %>% 
   # select relevant columns
-  select(Species, 
-         Larvae,
-         Individual,
-         Survivorship,
-         Initial,
-         Time) %>% 
-  # only have data where feeding trials were conducted in daylight hours
-  filter(Time == "Day") %>%
-  # change Species, Larvae as factors
-  mutate(Species = as.factor(Species),
-         Larvae = as.factor(Larvae),
-         Individual = as.factor(Individual)) %>% 
-  mutate(Species = recode(Species,
-                          'cur' = 'A. cura',
-                          'ret' = 'D. reti',
-                          'sex' = 'A. sex',
-                          'tri' = 'D. tri',
-                          'viri'= 'C. viri')) %>% 
-  mutate(Larvae = recode(Larvae,
-                         'millepora' = 'A. mill',
-                         'heliopora' = 'H. coer')) %>% 
-  mutate(survival_prop = Survivorship/Initial)
+  select(Fish_species, 
+         Nubbins_start,
+         Nubbins_end,
+         Fish_ind) %>% 
+  # change Fish_species, Fish_ind as factors
+  mutate(Fish_species = as.factor(Fish_species),
+         Fish_ind = as.factor(Fish_ind)) %>% 
+  # abbreviate fish names
+  mutate(Fish_species = recode(Fish_species,
+                               "Chaetodon kleinii" = "C. kle",
+      "Chaetodon lunulatus" = "C. lun",
+      "Chlorurus sordidus" = "C. sor",
+      "Siganus fuscescens" = "S. fus")) %>% 
+  # calculate survivar probability. binomial needs to have responses between 0 and 1
+  mutate(nubatt_prop = Nubbins_end/Nubbins_start)
+  
 ```
 
 # Exploratory data analysis
 
 ```{r}
 # scatterplot
-larvae2 %>% 
-  ggplot(aes(y = Survivorship, x = Larvae)) +
+nub2 %>% 
+  ggplot(aes(y = nubatt_prop, x = Fish_species)) +
   geom_boxplot() +
-  facet_grid(~ Species) +
   theme_classic()
 ```
 
-Heliopora consistently has higher survivorship compared to A. millepora. We should be able to run an additive model since an interaction term doesn't seem to be present.  
+Nubbin detachment greater for grazers than butterflyfishes
 
 # Fit the model (binomial distribution)
 
 ```{r}
-larvae_binom_mod <- 
-  glmmTMB(survival_prop ~ Larvae + 
-            Species +
-            (1 | Individual),
-        weights = Initial,
+herb_binom_mod <- 
+  glmmTMB(nubatt_prop ~ Fish_species +
+            (1 | Fish_ind),
+        weights = Nubbins_start,
         family = binomial(), 
-        data = larvae2,
+        data = nub2,
         REML = TRUE)
 ```
 
 ## Model validation
 
 ```{r}
-larvae_binom_mod  %>% testUniformity()
-larvae_binom_mod  %>% plotResiduals() # some minor issues with residuals
-larvae_binom_mod %>% testDispersion() # show signs of overdispersion
+herb_binom_mod  %>% testUniformity()
+herb_binom_mod  %>% plotResiduals() # some minor issues with residuals
+herb_binom_mod %>% testDispersion() # show signs of overdispersion
 ```
 
-Fit could be better. Let's try betabinomial. 
+Fit garbage. Let's try betabinomial
 
 # Fit model 2 (beta binomial)
 
 ```{r}
-larvae_bbinom_mod <- 
-  glmmTMB(survival_prop ~ Larvae + 
-            Species +
-            (1 | Individual),
-        weights = Initial,
+herb_bbinom_mod <- 
+  glmmTMB(nubatt_prop ~ Fish_species +
+            (1 | Fish_ind),
+        weights = Nubbins_start,
         family = betabinomial(), 
-        data = larvae2,
+        data = nub2,
         REML = TRUE)
 ```
 
 ## Model validation
 
 ```{r}
-larvae_bbinom_mod %>% testUniformity() # qqplot
-larvae_bbinom_mod %>% plotResiduals() # residual plot
-larvae_bbinom_mod %>% testDispersion()
+herb_bbinom_mod %>% testUniformity() # qqplot
+herb_bbinom_mod %>% plotResiduals() # residual plot
+herb_bbinom_mod %>% testDispersion()
 ```
 
-Dispersion still seems to be an issue, but we are somewhat out of options and it doesn't seem to be too bad. 
+Slight dispersion but doesn't seem too bad
+
+# Save / load model
+
+```{r}
+save(herb_bbinom_mod, file = "Model_Outputs/herb_bbinom_mod.RData")
+
+load("Model_Outputs/herb_bbinom_mod.RData")
+```
 
 ## Predictions / emmeans
 
 ```{r}
 # grid preparation
-larvae_newdata <-
-  larvae_bbinom_mod %>% 
-  emmeans(~ Larvae + Species,
+nub_newdata <-
+  herb_bbinom_mod %>% 
+  emmeans(~ Fish_species,
           type = "response") %>% 
   as.tibble()
 
-larvae_newdata %>% head()
+nub_newdata %>% head()
 ```
 
 ## Plot
 
 ```{r}
-p_larvae <-
-larvae_newdata %>% 
+p_nub <-
+nub_newdata %>% 
   ggplot(aes(y = prob, 
-             x = Species, 
-             fill = Larvae, 
-             color = Larvae,
-             shape = Larvae)) +
+             x = Fish_species, 
+             fill = Fish_species, 
+             color = Fish_species,
+             shape = Fish_species)) +
   geom_pointrange(aes(ymin = asymp.LCL, ymax = asymp.UCL),
                   position = position_dodge(0.5)) +
   scale_x_discrete(name = "Fish species") +
-  scale_y_continuous(name = "Proportional larvae survivorship",
-                     limits = c(0,1),
-                     breaks = seq(0,1, by = 0.2)) +
+  scale_y_continuous(name = "Proportional nubbin attachment",
+                     limits = c(0.8,1),
+                     breaks = seq(0.8,1, by = 0.1)) +
   theme_classic() +
-  ggtitle("a)")
+  ggtitle("a)") +
+  theme(legend.position = 'none')
 ```
 
 ## Model interpretation
 
 ```{r}
-larvae_bbinom_mod %>% broom.mixed::tidy(
+ herb_bbinom_mod %>% broom.mixed::tidy(
   effects = "fixed",
   conf.int = TRUE,
-  exponentiate = TRUE # in log odds ratio
-)
+  exponentiate = TRUE) %>%  # in log odds ratio
+  mutate(p.value = round(p.value, 2))
 ```
 
-Survivorship of Acropora overall is 91% lower when compared to Heliopora.
-Survivorship of larvae varies with fish species when held at Heliopora only
+Nubbin detachment differs only between C. kleinii (ref group) and C. sordidus wherein attachment of nubbins in aquaria with C. sordidus is 56% lower. 
 
 ## Pairwise comparisons
 
-Let us say we want to know differences in survivorship of Heliopora or Acropora among fish species. 
+Let us say we want to know differences in attachment between species (i.e. not only against the reference group of C. kleinii)
 
 ### Pairwise between fish species on similar larvae
 
 ```{r}
-# comparisons betweem min, 50m, 75m, and max depth
-pairwise_larvae <- 
-larvae_bbinom_mod |> 
-  emmeans(~Species | Larvae,
+pairwise_nub <- 
+ herb_bbinom_mod |> 
+  emmeans(~Fish_species,
           epred = TRUE) |> 
   pairs(type = "link") %>% 
+  confint(level = 0.95) %>% 
   as.tibble()
 
-pairwise_larvae %>% head()
+pairwise_nub %>% head()
 ```
 
 ### Plot
 
 ```{r}
-p_pairwise_larvae <-
-pairwise_larvae  %>% 
+p_pairwise_nub <-
+pairwise_nub  %>% 
   mutate(contrast = fct_rev(fct_inorder(contrast))) %>% 
   ggplot(aes(y = contrast, x = estimate)) +
   geom_point() +
-  geom_pointrange(aes(x = estimate, xmax = estimate + SE, xmin = estimate - SE)) +
+  geom_pointrange(aes(x = estimate, xmax = asymp.UCL + SE, xmin = asymp.LCL)) +
   geom_vline(xintercept = 0, lty = 11, color = "red") +
   scale_x_continuous("Contrast ratio (log-scale)",
-                     limits = c(-2,2)) +
-  scale_y_discrete("") +
+                     limits = c(-5, 5)) +
+  scale_y_discrete("",
+                   position = "right") +
   ggtitle("b) Comparisons among fish species") +
   theme_classic() 
 ```
@@ -209,17 +209,17 @@ pairwise_larvae  %>%
 # Combine plot
 
 ```{r}
-p_final_larvae <- 
-p_larvae / p_pairwise_larvae 
+p_final_nub <- 
+p_nub + p_pairwise_nub 
 ```
 
 # Save plot
 
 ```{r}
-ggsave("Figures/Fig_betabinom_Larvae.jpeg",
-       plot = p_final_larvae,
+ggsave("Figures/Fig_betabinom_Nub.jpeg",
+       plot = p_final_nub,
        dpi = 300,
-       height = 6,
+       height = 4,
        width = 6,
        units = "in")
 ```
