@@ -1,0 +1,648 @@
+"","Reef_2","Site","Transect","Depth_m","Habitat","Aspect_descriptive","Benthic_Complexity","cropper","browser","detritivore","excavator","scraper"
+"1","Bougainville","BOUG-01","T1",65,"outer_slope","steep_slope",5,1,0,0,0,0
+"2","Bougainville","BOUG-01","T10",54.7,"outer_slope","steep_slope",5,0,0,0,0,1
+"3","Bougainville","BOUG-01","T11",47.4,"outer_slope","wall",5,0,0,0,0,0
+"4","Bougainville","BOUG-01","T12",45.5,"outer_slope","steep_slope",5,1,0,0,0,1
+"5","Bougainville","BOUG-01","T13",45,"outer_slope","wall",4,0,0,0,0,0
+"6","Bougainville","BOUG-01","T14",43.7,"outer_slope","steep_slope",5,0,0,0,0,0
+"7","Bougainville","BOUG-01","T15",38.6,"outer_slope","wall",4,0,0,0,0,0
+"8","Bougainville","BOUG-01","T16",36.4,"outer_slope","wall",5,2,0,0,0,1
+"9","Bougainville","BOUG-01","T17",35.1,"outer_slope","wall",5,5,0,1,0,0
+"10","Bougainville","BOUG-01","T18",28.5,"outer_slope","wall",4,2,0,0,0,0
+"11","Bougainville","BOUG-01","T19",22.3,"outer_slope","wall",3,1,0,0,0,0
+"12","Bougainville","BOUG-01","T2",66.7,"outer_slope","wall",5,1,0,0,0,1
+"13","Bougainville","BOUG-01","T3",66.3,"outer_slope","wall",5,0,0,0,0,0
+"14","Bougainville","BOUG-01","T4",67.8,"outer_slope","wall",5,0,0,0,0,4
+"15","Bougainville","BOUG-01","T5",67.3,"outer_slope","steep_slope",5,0,0,0,0,0
+"16","Bougainville","BOUG-01","T6",58.1,"outer_slope","steep_slope",4,2,0,0,0,4
+"17","Bougainville","BOUG-01","T7",57.8,"outer_slope","steep_slope",5,2,0,0,0,0
+"18","Bougainville","BOUG-01","T8",57.2,"outer_slope","steep_slope",5,3,0,0,0,0
+"19","Bougainville","BOUG-01","T9",57.4,"outer_slope","steep_slope",5,0,0,0,0,0
+"20","Bougainville","BOUG-02","T1",67.1,"outer_slope","steep_slope",3,2,0,0,1,0
+"21","Bougainville","BOUG-02","T10",52.1,"outer_slope","steep_slope",3,2,1,1,0,0
+"22","Bougainville","BOUG-02","T11",47.6,"outer_slope","steep_slope",3,2,0,0,0,0
+"23","Bougainville","BOUG-02","T12",47,"outer_slope","steep_slope",3,0,0,0,0,0
+"24","Bougainville","BOUG-02","T13",45.8,"outer_slope","steep_slope",3,1,0,2,0,0
+"25","Bougainville","BOUG-02","T14",45,"outer_slope","moderate_slope",3,4,0,0,0,0
+"26","Bougainville","BOUG-02","T15",44.9,"outer_slope","wall",3,1,0,0,0,0
+"27","Bougainville","BOUG-02","T16",37.2,"outer_slope","wall",3,0,0,0,0,0
+"28","Bougainville","BOUG-02","T17",35.1,"outer_slope","wall",3,0,0,0,0,0
+"29","Bougainville","BOUG-02","T18",33.1,"outer_slope","wall",3,0,0,0,0,1
+"30","Bougainville","BOUG-02","T19",32.5,"outer_slope","steep_slope",3,2,0,2,0,11
+"31","Bougainville","BOUG-02","T2",67.1,"outer_slope","steep_slope",3,1,0,0,1,0
+"32","Bougainville","BOUG-02","T20",31.1,"outer_slope","moderate_slope",3,7,0,1,2,9
+"33","Bougainville","BOUG-02","T21",28.4,"outer_slope","wall",3,2,0,1,1,0
+"34","Bougainville","BOUG-02","T22",27.3,"outer_slope","wall",3,1,0,1,0,4
+"35","Bougainville","BOUG-02","T23",24.8,"outer_slope","steep_slope",3,1,0,1,1,0
+"36","Bougainville","BOUG-02","T24",24.2,"outer_slope","wall",3,2,0,0,0,0
+"37","Bougainville","BOUG-02","T25",22.3,"outer_slope","steep_slope",3,4,1,0,1,4
+"38","Bougainville","BOUG-02","T26",15.4,"outer_slope","moderate_slope",3,2,0,0,1,0
+"39","Bougainville","BOUG-02","T27",13.4,"outer_slope","steep_slope",3,2,1,3,0,3
+"40","Bougainville","BOUG-02","T28",9.8,"outer_slope","steep_slope",2,2,0,0,0,1
+"41","Bougainville","BOUG-02","T3",64.5,"outer_slope","steep_slope",3,0,0,0,1,3
+"42","Bougainville","BOUG-02","T4",63.8,"outer_slope","steep_slope",3,0,0,0,0,0
+"43","Bougainville","BOUG-02","T5",63,"outer_slope","wall",3,0,0,2,0,0
+"44","Bougainville","BOUG-02","T6",58.4,"outer_slope","moderate_slope",4,1,0,0,0,0
+"45","Bougainville","BOUG-02","T7",57.7,"outer_slope","moderate_slope",4,1,0,0,0,0
+"46","Bougainville","BOUG-02","T8",55.3,"outer_slope","moderate_slope",4,4,1,5,2,2
+"47","Bougainville","BOUG-02","T9",53.6,"outer_slope","moderate_slope",4,2,0,0,1,0
+"48","South Flinders","FLIN-01","T1",35.6,"outer_slope","steep_slope",4,6,1,2,0,0
+"49","South Flinders","FLIN-01","T2",37.1,"outer_slope","wall",4,0,0,1,3,2
+"50","South Flinders","FLIN-01","T3",42.1,"outer_slope","wall",3,1,0,0,0,0
+"51","South Flinders","FLIN-01","T4",35.2,"outer_slope","wall",3,2,0,1,0,0
+"52","South Flinders","FLIN-01","T5",45.4,"outer_slope","wall",3,0,0,0,0,0
+"53","South Flinders","FLIN-01","T6",34.3,"outer_slope","steep_slope",3,1,0,0,0,0
+"54","South Flinders","FLIN-01","T7",45.2,"outer_slope","wall",4,0,0,0,1,0
+"55","North Flinders","FLIN-02","T1",42.1,"lagoon","flat",0,0,0,0,0,0
+"56","North Flinders","FLIN-02","T2",40.2,"lagoon","flat",1,0,0,0,0,0
+"57","North Flinders","FLIN-02","T3",40,"lagoon","flat",0,0,0,0,0,0
+"58","North Flinders","FLIN-02","T4",40,"lagoon","flat",0,0,0,4,0,0
+"59","North Flinders","FLIN-02","T5",41.5,"lagoon","flat",0,1,0,0,0,0
+"60","North Flinders","FLIN-02","T6",43.3,"lagoon","flat",0,10,0,0,0,0
+"61","North Flinders","FLIN-02","T7",44,"lagoon","flat",1,3,0,0,1,0
+"62","Frederick","FRED-01","T1",34.8,"inner_reef","gentle_slope",1,7,0,1,0,0
+"63","Frederick","FRED-01","T2",40,"inner_reef","flat",1,0,0,0,0,0
+"64","West Herald","HERA-01","T1",34.3,"passage","flat",3,0,0,0,0,0
+"65","West Herald","HERA-01","T2",35.3,"passage","flat",2,0,0,8,0,0
+"66","West Herald","HERA-01","T3",37.6,"passage","flat",1,0,0,0,0,0
+"67","West Herald","HERA-01","T4",43.5,"passage","gentle_slope",2,8,0,1,0,0
+"68","West Herald","HERA-01","T5",43.8,"passage","gentle_slope",2,9,0,1,0,1
+"69","West Herald","HERA-01","T6",41.7,"passage","gentle_slope",2,18,2,4,0,0
+"70","West Herald","HERA-01","T7",40.5,"passage","gentle_slope",2,10,1,8,0,8
+"71","West Herald","HERA-01","T8",40.4,"passage","gentle_slope",2,20,0,3,4,1
+"72","West Herald","HERA-01","T9",37.1,"passage","gentle_slope",3,14,3,8,0,3
+"73","Hermit Crab Islet","HERM-01","T1",46.2,"lagoon","flat",1,10,0,2,0,6
+"74","Hermit Crab Islet","HERM-01","T2",46.6,"lagoon","flat",1,9,0,0,0,1
+"75","Hermit Crab Islet","HERM-01","T4",47.1,"lagoon","flat",0,1,0,0,0,0
+"76","Hermit Crab Islet","HERM-01","T5",46.4,"lagoon","flat",1,5,0,0,0,0
+"77","Hermit Crab Islet","HERM-01","T7",47.7,"lagoon","flat",1,3,0,1,0,0
+"78","Hermit Crab Islet","HERM-01","T8",47.9,"lagoon","flat",1,2,0,0,0,6
+"79","Hermit Crab Islet","HERM-01","T9",48.9,"lagoon","flat",0,0,0,0,0,0
+"80","West Holmes","HOLM-01","T1",55,"outer_slope","steep_slope",3,3,0,0,0,0
+"81","West Holmes","HOLM-01","T10",34.7,"outer_slope","gentle_slope",1,3,0,1,0,0
+"82","West Holmes","HOLM-01","T2",51,"outer_slope","steep_slope",3,9,0,1,1,0
+"83","West Holmes","HOLM-01","T3",52.4,"outer_slope","steep_slope",3,2,0,0,0,0
+"84","West Holmes","HOLM-01","T4",55,"outer_slope","steep_slope",4,2,0,0,0,0
+"85","West Holmes","HOLM-01","T5",46.4,"outer_slope","moderate_slope",3,13,0,0,0,0
+"86","West Holmes","HOLM-01","T6",42.5,"outer_slope","moderate_slope",4,5,0,2,0,0
+"87","West Holmes","HOLM-01","T7",43,"outer_slope","moderate_slope",3,2,0,0,0,0
+"88","West Holmes","HOLM-01","T8",36.8,"outer_slope","moderate_slope",2,4,0,1,2,1
+"89","West Holmes","HOLM-01","T9",36,"outer_slope","moderate_slope",2,9,0,7,0,0
+"90","East Holmes","HOLM-02","T1",62.7,"outer_slope","steep_slope",3,2,0,0,0,0
+"91","East Holmes","HOLM-02","T10",37,"outer_slope","gentle_slope",2,10,0,2,0,1
+"92","East Holmes","HOLM-02","T11",35,"outer_slope","gentle_slope",2,11,1,5,0,1
+"93","East Holmes","HOLM-02","T12",31.2,"outer_slope","gentle_slope",2,3,0,1,0,2
+"94","East Holmes","HOLM-02","T13",28,"outer_slope","gentle_slope",2,8,0,10,0,3
+"95","East Holmes","HOLM-02","T2",63.7,"outer_slope","steep_slope",3,6,0,0,0,0
+"96","East Holmes","HOLM-02","T3",64.2,"outer_slope","steep_slope",4,0,0,0,0,0
+"97","East Holmes","HOLM-02","T4",63.2,"outer_slope","steep_slope",4,4,2,0,0,0
+"98","East Holmes","HOLM-02","T5",63.1,"outer_slope","steep_slope",3,0,0,0,0,0
+"99","East Holmes","HOLM-02","T6",56.6,"outer_slope","steep_slope",3,3,0,0,0,0
+"100","East Holmes","HOLM-02","T7",54.5,"outer_slope","steep_slope",4,3,0,0,0,0
+"101","East Holmes","HOLM-02","T8",46.6,"outer_slope","wall",4,0,0,0,0,0
+"102","East Holmes","HOLM-02","T9",45,"outer_slope","wall",4,2,0,0,0,0
+"103","Kenn","KENN-01","T1",40.8,"outer_slope","steep_slope",4,5,1,4,0,2
+"104","Kenn","KENN-01","T2",31.1,"outer_slope","steep_slope",4,4,0,3,1,2
+"105","Kenn","KENN-01","T3",31.4,"outer_slope","gentle_slope",3,29,3,5,1,4
+"106","Kenn","KENN-01","T4",32.3,"outer_slope","gentle_slope",3,8,0,0,0,0
+"107","Lorna Cay","LORN-01","T1",45.1,"outer_slope","flat",2,6,0,9,0,2
+"108","Lorna Cay","LORN-01","T10",50.1,"outer_slope","steep_slope",1,0,0,0,0,0
+"109","Lorna Cay","LORN-01","T11",50.1,"outer_slope","steep_slope",3,0,0,0,0,0
+"110","Lorna Cay","LORN-01","T12",55.6,"outer_slope","steep_slope",4,1,0,0,0,1
+"111","Lorna Cay","LORN-01","T13",55.2,"outer_slope","steep_slope",3,0,0,2,0,1
+"112","Lorna Cay","LORN-01","T2",31.2,"outer_slope","flat",1,0,0,0,0,0
+"113","Lorna Cay","LORN-01","T3",30.8,"outer_slope","flat",2,0,0,0,0,0
+"114","Lorna Cay","LORN-01","T4",33,"outer_slope","flat",2,0,0,0,0,0
+"115","Lorna Cay","LORN-01","T5",31.7,"outer_slope","flat",2,1,0,0,0,0
+"116","Lorna Cay","LORN-01","T6",32.5,"outer_slope","flat",2,4,0,2,0,1
+"117","Lorna Cay","LORN-01","T7",36.5,"outer_slope","flat",3,3,0,0,0,0
+"118","Lorna Cay","LORN-01","T8",40,"outer_slope","gentle_slope",3,10,2,4,0,0
+"119","Lorna Cay","LORN-01","T9",44.8,"outer_slope","gentle_slope",2,9,0,2,0,0
+"120","Marion","MARI-01","T1",33.9,"lagoon","flat",2,1,0,7,0,1
+"121","Marion","MARI-01","T3",34.7,"lagoon","flat",0,0,0,0,0,0
+"122","Marion","MARI-01","T5",34.9,"lagoon","flat",1,0,0,0,0,0
+"123","Marion","MARI-01","T6",35,"lagoon","flat",1,1,0,4,0,1
+"124","Marion","MARI-01","T7",34.9,"lagoon","flat",1,0,0,0,0,0
+"125","Marion","MARI-01","T8",35.1,"lagoon","flat",0,0,0,0,0,0
+"126","Osprey","OSPR-01","T1",87.6,"outer_slope","wall",3,0,0,0,0,0
+"127","Osprey","OSPR-01","T10",56.2,"outer_slope","wall",3,0,0,0,0,0
+"128","Osprey","OSPR-01","T11",47.3,"outer_slope","wall",3,0,0,0,0,0
+"129","Osprey","OSPR-01","T12",44.7,"outer_slope","wall",4,1,0,0,0,0
+"130","Osprey","OSPR-01","T13",43.2,"outer_slope","wall",4,0,0,0,0,0
+"131","Osprey","OSPR-01","T14",55,"outer_slope","steep_slope",3,3,0,0,1,0
+"132","Osprey","OSPR-01","T15",52.4,"outer_slope","steep_slope",4,1,0,0,1,1
+"133","Osprey","OSPR-01","T16",38.2,"outer_slope","wall",3,1,0,0,0,1
+"134","Osprey","OSPR-01","T17",35.3,"outer_slope","steep_slope",3,2,1,1,0,1
+"135","Osprey","OSPR-01","T18",33.3,"outer_slope","wall",3,3,0,1,0,0
+"136","Osprey","OSPR-01","T19",28.2,"outer_slope","wall",3,1,1,0,2,1
+"137","Osprey","OSPR-01","T2",85.1,"outer_slope","steep_slope",3,0,0,0,0,0
+"138","Osprey","OSPR-01","T20",25.1,"outer_slope","steep_slope",3,0,0,0,0,0
+"139","Osprey","OSPR-01","T21",21.8,"outer_slope","steep_slope",3,8,1,2,1,1
+"140","Osprey","OSPR-01","T22",18.8,"outer_slope","wall",3,2,0,0,0,1
+"141","Osprey","OSPR-01","T23",16.4,"outer_slope","wall",3,4,0,0,1,1
+"142","Osprey","OSPR-01","T24",14.1,"outer_slope","wall",3,3,0,11,0,0
+"143","Osprey","OSPR-01","T25",9.1,"outer_slope","wall",3,11,0,12,2,1
+"144","Osprey","OSPR-01","T26",7.1,"outer_slope","wall",3,0,0,16,1,2
+"145","Osprey","OSPR-01","T27",7,"outer_slope","steep_slope",3,0,1,9,1,0
+"146","Osprey","OSPR-01","T3",77.2,"outer_slope","steep_slope",3,2,0,0,0,0
+"147","Osprey","OSPR-01","T4",74.4,"outer_slope","steep_slope",4,0,0,0,0,0
+"148","Osprey","OSPR-01","T5",82.3,"outer_slope","wall",4,0,0,0,0,0
+"149","Osprey","OSPR-01","T6",72.2,"outer_slope","steep_slope",4,0,0,0,0,0
+"150","Osprey","OSPR-01","T7",67.8,"outer_slope","steep_slope",4,1,0,0,0,0
+"151","Osprey","OSPR-01","T8",65.8,"outer_slope","steep_slope",4,2,0,0,0,0
+"152","Osprey","OSPR-01","T9",63.2,"outer_slope","moderate_slope",3,2,0,0,0,0
+"153","Osprey","OSPR-01","T1",94,"outer_slope","wall",3,0,0,0,0,0
+"154","Osprey","OSPR-01","T10",90.4,"outer_slope","steep_slope",3,0,0,0,0,0
+"155","Osprey","OSPR-01","T11",93.9,"outer_slope","wall",3,0,0,0,0,0
+"156","Osprey","OSPR-01","T13",77,"outer_slope","steep_slope",3,0,0,0,0,0
+"157","Osprey","OSPR-01","T14",70.9,"outer_slope","steep_slope",3,0,0,0,0,0
+"158","Osprey","OSPR-01","T15",70.2,"outer_slope","steep_slope",3,0,0,0,0,0
+"159","Osprey","OSPR-01","T16",66.2,"outer_slope","steep_slope",3,1,0,0,0,0
+"160","Osprey","OSPR-01","T17",64.6,"outer_slope","steep_slope",3,0,0,0,0,0
+"161","Osprey","OSPR-01","T18",57.2,"outer_slope","steep_slope",2,0,0,0,0,0
+"162","Osprey","OSPR-01","T19",53.2,"outer_slope","steep_slope",3,0,1,0,0,0
+"163","Osprey","OSPR-01","T2",98.8,"outer_slope","wall",4,0,0,0,0,0
+"164","Osprey","OSPR-01","T20",64.6,"outer_slope","steep_slope",3,0,0,0,0,0
+"165","Osprey","OSPR-01","T21",52.8,"outer_slope","steep_slope",4,1,0,0,1,0
+"166","Osprey","OSPR-01","T22",47.8,"outer_slope","moderate_slope",2,4,0,5,0,0
+"167","Osprey","OSPR-01","T23",44.7,"outer_slope","moderate_slope",1,0,0,0,0,0
+"168","Osprey","OSPR-01","T24",41.2,"outer_slope","wall",4,1,0,0,0,0
+"169","Osprey","OSPR-01","T25",32.8,"outer_slope","moderate_slope",3,1,0,2,0,0
+"170","Osprey","OSPR-01","T26",35.7,"outer_slope","gentle_slope",3,2,0,1,0,0
+"171","Osprey","OSPR-01","T27",36.6,"outer_slope","moderate_slope",3,3,0,2,0,1
+"172","Osprey","OSPR-01","T28",28.8,"outer_slope","moderate_slope",3,0,0,3,0,3
+"173","Osprey","OSPR-01","T29",25.5,"outer_slope","moderate_slope",3,1,0,0,7,1
+"174","Osprey","OSPR-01","T3",92.4,"outer_slope","wall",3,0,0,0,0,0
+"175","Osprey","OSPR-01","T30",23.7,"outer_slope","moderate_slope",3,0,0,7,0,3
+"176","Osprey","OSPR-01","T31",18.9,"outer_slope","steep_slope",3,0,0,1,0,0
+"177","Osprey","OSPR-01","T32",15.4,"outer_slope","steep_slope",3,2,0,3,0,3
+"178","Osprey","OSPR-01","T33",12.7,"outer_slope","moderate_slope",3,1,0,2,0,0
+"179","Osprey","OSPR-01","T34",5.1,"outer_slope","moderate_slope",1,3,1,16,10,0
+"180","Osprey","OSPR-01","T35",7.1,"outer_slope","moderate_slope",1,2,0,8,6,0
+"181","Osprey","OSPR-01","T36",9.1,"outer_slope","moderate_slope",1,2,0,3,0,0
+"182","Osprey","OSPR-01","T4",86.4,"outer_slope","steep_slope",3,0,0,0,0,0
+"183","Osprey","OSPR-01","T5",84.5,"outer_slope","steep_slope",2,0,0,0,0,0
+"184","Osprey","OSPR-01","T6",82.5,"outer_slope","steep_slope",2,0,0,0,0,0
+"185","Osprey","OSPR-01","T7",96.3,"outer_slope","wall",2,0,0,0,0,1
+"186","Osprey","OSPR-01","T8",91.3,"outer_slope","wall",2,0,0,0,0,0
+"187","Osprey","OSPR-01","T9",91.1,"outer_slope","wall",3,0,0,0,0,0
+"188","Osprey","OSPR-02","T1",47.7,"outer_slope","steep_slope",3,0,1,0,1,3
+"189","Osprey","OSPR-02","T10",12.7,"outer_slope","moderate_slope",2,4,0,9,7,15
+"190","Osprey","OSPR-02","T11",15.8,"outer_slope","steep_slope",2,2,0,1,1,1
+"191","Osprey","OSPR-02","T12",18.2,"outer_slope","wall",2,2,0,0,1,1
+"192","Osprey","OSPR-02","T13",9.4,"outer_slope","moderate_slope",2,3,0,10,7,0
+"193","Osprey","OSPR-02","T14",7.3,"outer_slope","moderate_slope",2,9,1,31,1,7
+"194","Osprey","OSPR-02","T15",6.1,"outer_slope","gentle_slope",1,19,0,70,1,25
+"195","Osprey","OSPR-02","T16",47.8,"outer_slope","moderate_slope",4,1,0,4,0,0
+"196","Osprey","OSPR-02","T17",44.4,"outer_slope","steep_slope",3,0,0,0,0,0
+"197","Osprey","OSPR-02","T18",36.9,"outer_slope","steep_slope",3,0,0,0,0,0
+"198","Osprey","OSPR-02","T19",33.2,"outer_slope","steep_slope",3,3,0,1,0,2
+"199","Osprey","OSPR-02","T2",44.8,"outer_slope","wall",4,0,0,0,0,0
+"200","Osprey","OSPR-02","T20",27.7,"outer_slope","steep_slope",3,0,1,2,0,2
+"201","Osprey","OSPR-02","T21",21.4,"outer_slope","moderate_slope",2,2,0,3,0,0
+"202","Osprey","OSPR-02","T22",17.1,"outer_slope","wall",3,1,0,1,1,0
+"203","Osprey","OSPR-02","T23",14.1,"outer_slope","steep_slope",2,1,5,8,4,7
+"204","Osprey","OSPR-02","T24",6.2,"outer_slope","moderate_slope",1,4,27,63,8,13
+"205","Osprey","OSPR-02","T25",8.2,"outer_slope","moderate_slope",2,7,6,39,1,2
+"206","Osprey","OSPR-02","T3",42.3,"outer_slope","moderate_slope",3,1,0,1,8,4
+"207","Osprey","OSPR-02","T4",32.2,"outer_slope","steep_slope",2,1,0,2,0,0
+"208","Osprey","OSPR-02","T5",35,"outer_slope","steep_slope",3,2,0,0,0,0
+"209","Osprey","OSPR-02","T6",38.1,"outer_slope","steep_slope",3,1,0,0,0,4
+"210","Osprey","OSPR-02","T7",28,"outer_slope","steep_slope",2,0,0,4,0,0
+"211","Osprey","OSPR-02","T8",24.9,"outer_slope","steep_slope",3,0,1,2,0,1
+"212","Osprey","OSPR-02","T9",23.1,"outer_slope","wall",3,3,0,2,0,4
+"213","Osprey","OSPR-02","T1",97.2,"outer_slope","wall",5,0,0,0,0,0
+"214","Osprey","OSPR-02","T10",68,"outer_slope","steep_slope",4,0,0,0,1,0
+"215","Osprey","OSPR-02","T11",64.2,"outer_slope","steep_slope",4,1,0,0,0,0
+"216","Osprey","OSPR-02","T12",61.4,"outer_slope","steep_slope",4,0,0,2,0,0
+"217","Osprey","OSPR-02","T13",52.3,"outer_slope","steep_slope",5,0,0,0,0,0
+"218","Osprey","OSPR-02","T14",54.6,"outer_slope","wall",3,0,0,0,0,0
+"219","Osprey","OSPR-02","T15",59.8,"outer_slope","wall",4,0,0,0,0,0
+"220","Osprey","OSPR-02","T2",87.6,"outer_slope","wall",5,0,0,0,0,0
+"221","Osprey","OSPR-02","T3",94.1,"outer_slope","wall",4,0,0,0,0,0
+"222","Osprey","OSPR-02","T5",84,"outer_slope","wall",3,0,0,0,0,0
+"223","Osprey","OSPR-02","T6",80.6,"outer_slope","steep_slope",4,3,0,0,0,0
+"224","Osprey","OSPR-02","T7",71.6,"outer_slope","steep_slope",5,0,0,2,0,0
+"225","Osprey","OSPR-02","T8",74.4,"outer_slope","steep_slope",4,0,0,0,0,0
+"226","Osprey","OSPR-02","T9",77.2,"outer_slope","steep_slope",4,0,0,0,0,0
+"227","Osprey","OSPR-03","T1",55.6,"outer_slope","wall",3,0,0,1,0,0
+"228","Osprey","OSPR-03","T10",18.1,"outer_slope","steep_slope",3,3,0,0,1,0
+"229","Osprey","OSPR-03","T11",8.3,"outer_slope","moderate_slope",1,5,1,45,4,3
+"230","Osprey","OSPR-03","T12",6.4,"outer_slope","moderate_slope",1,17,0,101,20,16
+"231","Osprey","OSPR-03","T13",96.5,"outer_slope","wall",3,0,0,0,0,1
+"232","Osprey","OSPR-03","T14",91,"outer_slope","wall",3,0,0,0,0,0
+"233","Osprey","OSPR-03","T15",81.1,"outer_slope","steep_slope",3,0,0,0,0,0
+"234","Osprey","OSPR-03","T16",81.1,"outer_slope","steep_slope",3,2,0,0,0,0
+"235","Osprey","OSPR-03","T17",87.4,"outer_slope","steep_slope",3,0,0,0,0,0
+"236","Osprey","OSPR-03","T18",75.6,"outer_slope","steep_slope",3,0,0,0,0,0
+"237","Osprey","OSPR-03","T19",78.1,"outer_slope","steep_slope",3,1,0,0,0,0
+"238","Osprey","OSPR-03","T2",55.7,"outer_slope","steep_slope",3,1,0,0,0,0
+"239","Osprey","OSPR-03","T20",70.5,"outer_slope","steep_slope",3,0,0,0,0,0
+"240","Osprey","OSPR-03","T21",60.6,"outer_slope","wall",3,1,0,0,0,0
+"241","Osprey","OSPR-03","T22",64.9,"outer_slope","wall",3,0,0,0,1,1
+"242","Osprey","OSPR-03","T23",68.7,"outer_slope","steep_slope",3,0,0,0,0,0
+"243","Osprey","OSPR-03","T24",88.2,"outer_slope","wall",3,0,0,0,0,0
+"244","Osprey","OSPR-03","T25",78.9,"outer_slope","steep_slope",3,0,0,0,0,0
+"245","Osprey","OSPR-03","T26",53.6,"outer_slope","wall",3,0,0,0,0,0
+"246","Osprey","OSPR-03","T27",51,"outer_slope","wall",4,0,0,0,0,0
+"247","Osprey","OSPR-03","T3",45.8,"outer_slope","wall",3,1,0,0,0,0
+"248","Osprey","OSPR-03","T4",47.4,"outer_slope","wall",3,0,0,0,0,0
+"249","Osprey","OSPR-03","T5",37.5,"outer_slope","steep_slope",4,0,1,0,0,0
+"250","Osprey","OSPR-03","T6",34.3,"outer_slope","steep_slope",4,0,0,2,0,1
+"251","Osprey","OSPR-03","T7",28.2,"outer_slope","wall",4,4,0,3,0,0
+"252","Osprey","OSPR-03","T8",24.4,"outer_slope","steep_slope",4,2,0,1,0,0
+"253","Osprey","OSPR-03","T9",14.5,"outer_slope","wall",2,3,0,1,1,0
+"254","Saumarez","SAUM-01","T1",29.6,"inner_reef","flat",1,0,0,0,0,0
+"255","Saumarez","SAUM-01","T2",29.6,"inner_reef","flat",1,2,0,0,0,0
+"256","Saumarez","SAUM-01","T3",29.8,"inner_reef","flat",1,0,0,0,0,0
+"257","Saumarez","SAUM-01","T4",29.6,"inner_reef","flat",0,6,0,0,0,0
+"258","Saumarez","SAUM-01","T5",29.5,"inner_reef","flat",1,13,2,0,0,0
+"259","Saumarez","SAUM-01","T6",29.9,"inner_reef","flat",1,6,0,0,0,0
+"260","Willis","WILL-01","T1",35.2,"outer_slope","gentle_slope",3,3,0,6,0,1
+"261","Willis","WILL-01","T10",50.4,"outer_slope","steep_slope",3,0,0,3,1,2
+"262","Willis","WILL-01","T11",50.1,"outer_slope","steep_slope",3,4,0,2,0,0
+"263","Willis","WILL-01","T12",40,"outer_slope","steep_slope",3,1,0,0,0,0
+"264","Willis","WILL-01","T13",43,"outer_slope","steep_slope",3,2,0,1,0,0
+"265","Willis","WILL-01","T14",42,"outer_slope","steep_slope",3,1,0,0,0,0
+"266","Willis","WILL-01","T15",42,"outer_slope","steep_slope",3,10,0,2,0,3
+"267","Willis","WILL-01","T2",42.3,"outer_slope","gentle_slope",4,6,0,0,0,0
+"268","Willis","WILL-01","T3",44.4,"outer_slope","gentle_slope",4,1,0,0,0,0
+"269","Willis","WILL-01","T4",51.5,"outer_slope","steep_slope",3,3,0,2,0,0
+"270","Willis","WILL-01","T5",52.3,"outer_slope","steep_slope",3,1,0,0,0,0
+"271","Willis","WILL-01","T6",52.3,"outer_slope","steep_slope",3,2,0,0,0,1
+"272","Willis","WILL-01","T7",60.1,"outer_slope","steep_slope",1,0,0,0,0,0
+"273","Willis","WILL-01","T8",44.8,"outer_slope","steep_slope",2,1,0,0,0,0
+"274","Willis","WILL-01","T9",44.1,"outer_slope","steep_slope",2,3,0,0,0,2
+"275","Wreck","WREC-01","T1",31.5,"outer_slope","gentle_slope",3,7,0,3,0,3
+"276","Wreck","WREC-01","T2",36.5,"outer_slope","gentle_slope",3,4,0,10,0,5
+"277","Wreck","WREC-01","T3",36.3,"outer_slope","gentle_slope",3,15,0,14,0,2
+"278","Betty Cay","BETT-01","T4",57.6,"outer_slope","steep_slope",2,0,0,0,0,0
+"279","Betty Cay","BETT-01","T5",50.9,"outer_slope","steep_slope",2,0,0,0,0,0
+"280","Betty Cay","BETT-01","T6",40.4,"outer_slope","steep_slope",3,2,0,2,0,0
+"281","Betty Cay","BETT-01","T7",32.3,"outer_slope","flat",5,3,0,0,0,0
+"282","Betty Cay","BETT-01","T8",21.1,"outer_slope","flat",4,4,0,1,0,0
+"283","Betty Cay","BETT-01","T9",12.6,"outer_slope","gentle_slope",3,3,0,0,0,1
+"284","Betty Cay","BETT-01","T10",8.2,"outer_slope","flat",3,2,0,7,0,0
+"285","Betty Cay","BETT-01","T11",8.3,"outer_slope","flat",3,11,8,16,6,1
+"286","East Diamond","EDIA-01","T1",48,"lagoon","flat",2,6,0,0,0,0
+"287","East Diamond","EDIA-01","T2",50,"lagoon","flat",2,4,0,0,0,0
+"288","East Diamond","EDIA-01","T3",48,"lagoon","gentle_slope",2,13,0,0,0,2
+"289","East Diamond","EDIA-01","T4",45,"lagoon","gentle_slope",2,9,0,0,0,0
+"290","East Diamond","EDIA-01","T5",45,"lagoon","gentle_slope",2,13,0,0,0,0
+"291","East Diamond","EDIA-01","T6",39,"lagoon","gentle_slope",2,12,0,0,0,0
+"292","East Diamond","EDIA-01","T7",38,"lagoon","gentle_slope",2,19,0,0,0,0
+"293","East Diamond","EDIA-01","T8",32,"lagoon","gentle_slope",2,3,1,0,0,0
+"294","East Diamond","EDIA-01","T9",32,"lagoon","gentle_slope",2,13,1,0,1,3
+"295","East Diamond","EDIA-01","T10",25,"lagoon","gentle_slope",2,6,0,0,0,1
+"296","East Diamond","EDIA-01","T11",26,"lagoon","moderate_slope",2,9,0,0,0,2
+"297","East Diamond","EDIA-01","T12",21,"lagoon","moderate_slope",2,11,3,0,0,0
+"298","East Diamond","EDIA-01","T13",15,"lagoon","moderate_slope",2,1,0,0,0,0
+"299","East Diamond","EDIA-01","T14",19,"lagoon","wall",2,3,0,0,0,0
+"300","East Diamond","EDIA-01","T15",15,"lagoon","wall",2,2,0,0,0,0
+"301","East Diamond","EDIA-01","T16",10,"lagoon","wall",2,4,0,0,2,0
+"302","East Diamond","EDIA-02","T1",30.9,"inner_reef","flat",1,4,0,0,0,0
+"303","East Diamond","EDIA-02","T2",25,"inner_reef","steep_slope",2,7,0,0,1,2
+"304","East Diamond","EDIA-02","T3",32.8,"inner_reef","gentle_slope",1,0,0,0,0,0
+"305","East Diamond","EDIA-02","T4",24.2,"inner_reef","gentle_slope",2,7,0,0,1,0
+"306","East Diamond","EDIA-02","T5",20,"inner_reef","gentle_slope",2,8,0,0,0,2
+"307","East Diamond","EDIA-02","T6",19.1,"inner_reef","gentle_slope",2,4,0,0,0,1
+"308","East Diamond","EDIA-02","T7",15.4,"inner_reef","moderate_slope",3,11,0,0,0,1
+"309","East Diamond","EDIA-02","T8",15.2,"inner_reef","moderate_slope",2,6,0,0,2,6
+"310","East Diamond","EDIA-02","T9",9,"inner_reef","steep_slope",2,12,0,0,2,2
+"311","East Diamond","EDIA-02","T10",8.7,"inner_reef","steep_slope",2,5,0,2,0,1
+"312","Edna Cay","EDNA-01","T1",96,"outer_slope","moderate_slope",3,0,0,0,0,0
+"313","Edna Cay","EDNA-01","T2",86,"outer_slope","moderate_slope",5,0,0,0,0,0
+"314","Edna Cay","EDNA-01","T3",79,"outer_slope","moderate_slope",5,4,2,0,0,3
+"315","Edna Cay","EDNA-01","T4",69,"outer_slope","moderate_slope",2,0,0,0,0,0
+"316","Edna Cay","EDNA-01","T5",63,"outer_slope","gentle_slope",2,0,0,0,0,0
+"317","Edna Cay","EDNA-01","T6",51.3,"outer_slope","gentle_slope",1,0,0,0,0,0
+"318","Edna Cay","EDNA-01","T7",48,"outer_slope","moderate_slope",3,3,0,0,0,0
+"319","Edna Cay","EDNA-01","T8",39,"outer_slope","moderate_slope",4,10,0,3,0,6
+"320","Edna Cay","EDNA-01","T9",26.7,"outer_slope","gentle_slope",3,7,0,11,0,0
+"321","Edna Cay","EDNA-01","T10",19.1,"outer_slope","flat",3,3,0,0,0,0
+"322","Edna Cay","EDNA-01","T11",14,"outer_slope","moderate_slope",3,0,0,12,0,0
+"323","Edna Cay","EDNA-01","T12",9.8,"outer_slope","flat",1,24,6,4,0,0
+"324","Frankie Cay","FRAN-01","T1",90,"outer_slope","steep_slope",1,0,0,0,0,0
+"325","Frankie Cay","FRAN-01","T2",79,"outer_slope","steep_slope",1,0,0,0,0,0
+"326","Frankie Cay","FRAN-01","T3",72,"outer_slope","steep_slope",1,0,0,0,0,0
+"327","Frankie Cay","FRAN-01","T4",62,"outer_slope","wall",1,0,0,0,0,0
+"328","Frankie Cay","FRAN-01","T5",52,"outer_slope","wall",1,0,0,0,0,0
+"329","Frankie Cay","FRAN-01","T6",42,"outer_slope","steep_slope",1,0,0,0,0,0
+"330","Frankie Cay","FRAN-01","T7",35,"outer_slope","steep_slope",3,3,0,1,0,2
+"331","Frankie Cay","FRAN-01","T8",25,"outer_slope","moderate_slope",2,6,3,4,0,2
+"332","Frankie Cay","FRAN-01","T9",14,"outer_slope","moderate_slope",1,0,1,10,0,1
+"333","Frankie Cay","FRAN-01","T10",8,"outer_slope","gentle_slope",1,2,0,1,0,0
+"334","Georgina Cay","GEOR-01","T1",96.5,"outer_slope","gentle_slope",1,0,0,0,0,0
+"335","Georgina Cay","GEOR-01","T2",91,"outer_slope","gentle_slope",1,0,0,0,0,0
+"336","Georgina Cay","GEOR-01","T3",86.8,"outer_slope","gentle_slope",1,0,0,0,0,0
+"337","Georgina Cay","GEOR-01","T4",80.9,"outer_slope","moderate_slope",1,0,0,0,0,0
+"338","Georgina Cay","GEOR-01","T5",77.2,"outer_slope","gentle_slope",1,0,0,0,0,0
+"339","Georgina Cay","GEOR-01","T6",71.5,"outer_slope","gentle_slope",1,0,0,0,0,0
+"340","Georgina Cay","GEOR-01","T7",67,"outer_slope","gentle_slope",2,0,0,0,0,0
+"341","Georgina Cay","GEOR-01","T8",62.3,"outer_slope","flat",1,0,0,0,0,0
+"342","Georgina Cay","GEOR-01","T9",57.2,"outer_slope","flat",1,0,0,0,0,0
+"343","Georgina Cay","GEOR-01","T10",51.4,"outer_slope","moderate_slope",3,8,0,0,0,0
+"344","Georgina Cay","GEOR-01","T11",48,"outer_slope","steep_slope",4,0,0,0,0,0
+"345","Georgina Cay","GEOR-01","T12",47.9,"outer_slope","moderate_slope",2,0,0,0,0,0
+"346","Georgina Cay","GEOR-01","T13",41.2,"outer_slope","steep_slope",2,4,0,0,0,0
+"347","Georgina Cay","GEOR-01","T14",36.2,"outer_slope","moderate_slope",2,6,1,0,0,0
+"348","Georgina Cay","GEOR-01","T15",32.6,"outer_slope","gentle_slope",2,5,0,0,0,0
+"349","Hermit Crab Islet","HERM-01","T2",48.1,"lagoon","flat",1,0,0,4,0,1
+"350","Hermit Crab Islet","HERM-01","T3",46.8,"lagoon","flat",1,2,0,0,0,4
+"351","Hermit Crab Islet","HERM-01","T5",38.7,"lagoon","flat",2,0,0,1,0,0
+"352","Hermit Crab Islet","HERM-01","T6",40.2,"lagoon","flat",2,0,1,0,0,1
+"353","Hermit Crab Islet","HERM-01","T7",41.2,"lagoon","flat",2,6,0,0,0,0
+"354","Hermit Crab Islet","HERM-01","T8",42.5,"lagoon","flat",2,3,0,0,0,3
+"355","Hermit Crab Islet","HERM-01","T9",30.1,"lagoon","flat",3,6,1,1,0,1
+"356","Hermit Crab Islet","HERM-01","T10",30.3,"lagoon","flat",3,15,1,7,0,1
+"357","Hermit Crab Islet","HERM-01","T11",31,"lagoon","flat",2,8,2,4,0,2
+"358","Hermit Crab Islet","HERM-01","T12",33.2,"lagoon","flat",1,1,0,0,0,0
+"359","Hermit Crab Islet","HERM-01","T13",21.1,"lagoon","flat",1,4,0,0,0,0
+"360","Hermit Crab Islet","HERM-01","T14",22,"lagoon","flat",1,4,0,0,0,1
+"361","Hermit Crab Islet","HERM-01","T16",23.7,"lagoon","gentle_slope",0,4,0,0,0,0
+"362","Hermit Crab Islet","HERM-01","T17",14.1,"lagoon","moderate_slope",0,1,0,0,2,2
+"363","Hermit Crab Islet","HERM-01","T18",15.2,"lagoon","moderate_slope",0,3,0,1,0,6
+"364","Hermit Crab Islet","HERM-01","T19",13.5,"lagoon","moderate_slope",0,4,1,2,0,6
+"365","Hermit Crab Islet","HERM-01","T20",10.2,"lagoon","moderate_slope",0,2,1,0,5,2
+"366","Juliette Cay","JULI-01","T1",98,"outer_slope","steep_slope",4,1,0,0,0,0
+"367","Juliette Cay","JULI-01","T2",80,"outer_slope","moderate_slope",4,0,0,0,0,0
+"368","Juliette Cay","JULI-01","T3",68,"outer_slope","flat",3,4,0,0,0,0
+"369","Juliette Cay","JULI-01","T4",59,"outer_slope","gentle_slope",2,0,0,0,0,0
+"370","Juliette Cay","JULI-01","T5",70,"outer_slope","gentle_slope",1,0,0,0,0,0
+"371","Juliette Cay","JULI-01","T6",49.3,"outer_slope","gentle_slope",1,0,0,0,0,0
+"372","Juliette Cay","JULI-01","T7",34.9,"outer_slope","gentle_slope",3,14,0,6,1,1
+"373","Juliette Cay","JULI-01","T8",28,"outer_slope","gentle_slope",3,0,0,5,0,0
+"374","Juliette Cay","JULI-02","T1",98,"outer_slope","moderate_slope",3,0,0,0,0,0
+"375","Juliette Cay","JULI-02","T2",94.2,"outer_slope","moderate_slope",3,0,0,0,0,1
+"376","Juliette Cay","JULI-02","T3",86.4,"outer_slope","moderate_slope",3,0,0,0,0,1
+"377","Juliette Cay","JULI-02","T4",77,"outer_slope","moderate_slope",4,2,0,3,0,0
+"378","Juliette Cay","JULI-02","T5",67.1,"outer_slope","moderate_slope",3,4,0,0,1,3
+"379","Juliette Cay","JULI-02","T6",59.1,"outer_slope","gentle_slope",2,0,0,0,0,2
+"380","Juliette Cay","JULI-02","T7",55.6,"outer_slope","gentle_slope",1,0,0,0,0,0
+"381","Juliette Cay","JULI-02","T8",47.6,"outer_slope","gentle_slope",2,11,2,3,0,0
+"382","Juliette Cay","JULI-02","T9",35.4,"outer_slope","moderate_slope",3,4,0,4,0,1
+"383","Lorna Cay","LORN-01","T1",86,"outer_slope","wall",1,0,0,0,0,0
+"384","Lorna Cay","LORN-01","T2",81,"outer_slope","wall",1,0,0,0,0,0
+"385","Lorna Cay","LORN-01","T3",74,"outer_slope","wall",1,0,0,0,0,0
+"386","Lorna Cay","LORN-01","T4",64,"outer_slope","steep_slope",1,0,0,0,0,0
+"387","Lorna Cay","LORN-01","T5",52,"outer_slope","steep_slope",1,0,0,0,0,0
+"388","Lorna Cay","LORN-01","T6",46,"outer_slope","steep_slope",1,1,0,0,0,0
+"389","Lorna Cay","LORN-01","T7",34,"outer_slope","flat",2,10,0,0,0,0
+"390","Lorna Cay","LORN-01","T8",27,"outer_slope","flat",2,7,0,2,0,0
+"391","Lorna Cay","LORN-01","T9",9,"outer_slope","flat",1,3,1,1,1,1
+"392","Lorna Cay","LORN-01","T10",4,"outer_slope","flat",1,4,0,3,0,0
+"393","Lorna Cay","LORN-02","T3",25,"lagoon","flat",0,0,0,0,0,0
+"394","Lorna Cay","LORN-02","T4",15,"lagoon","flat",1,7,33,3,0,2
+"395","Lorna Cay","LORN-02","T5",7,"lagoon","flat",3,4,1,3,1,2
+"396","Margaret Cay","MARG-01","T1",91,"outer_slope","steep_slope",4,0,0,0,0,0
+"397","Margaret Cay","MARG-01","T2",91.9,"outer_slope","steep_slope",4,0,0,0,0,0
+"398","Margaret Cay","MARG-01","T3",72.2,"outer_slope","moderate_slope",2,0,0,0,0,0
+"399","Margaret Cay","MARG-01","T4",62,"outer_slope","gentle_slope",0,0,0,0,0,0
+"400","Margaret Cay","MARG-01","T5",53.3,"outer_slope","steep_slope",1,2,0,0,0,1
+"401","Margaret Cay","MARG-01","T6",43.6,"outer_slope","moderate_slope",0,4,1,4,0,0
+"402","Margaret Cay","MARG-01","T7",34.2,"outer_slope","moderate_slope",0,0,0,5,0,0
+"403","Margaret Cay","MARG-01","T8",25.2,"outer_slope","moderate_slope",1,17,1,0,0,4
+"404","Margaret Cay","MARG-01","T9",17.3,"outer_slope","gentle_slope",4,4,0,0,0,0
+"405","Margaret Cay","MARG-01","T10",9,"outer_slope","gentle_slope",4,7,0,7,5,5
+"406","Margaret Cay","MARG-02","T1",43.8,"lagoon","gentle_slope",0,0,0,0,0,0
+"407","Margaret Cay","MARG-02","T2",42.2,"lagoon","moderate_slope",0,4,0,0,0,0
+"408","Margaret Cay","MARG-02","T3",34.5,"lagoon","moderate_slope",0,16,0,0,0,0
+"409","Margaret Cay","MARG-02","T4",34.9,"lagoon","moderate_slope",0,0,1,0,0,0
+"410","Margaret Cay","MARG-02","T6",24.3,"lagoon","gentle_slope",0,0,0,0,0,0
+"411","Margaret Cay","MARG-02","T8",13.8,"lagoon","moderate_slope",0,38,0,0,0,0
+"412","Margaret Cay","MARG-02","T9",7.7,"lagoon","moderate_slope",1,56,2,6,0,0
+"413","Margaret Cay","MARG-02","T10",6.4,"lagoon","moderate_slope",1,37,2,1,0,1
+"414","Middle Cay","MIDD-01","T1",40,"inner_reef","flat",2,2,0,2,1,0
+"415","Middle Cay","MIDD-01","T2",40,"inner_reef","flat",1,1,0,1,0,0
+"416","Middle Cay","MIDD-01","T3",30,"inner_reef","flat",1,3,0,1,2,0
+"417","Middle Cay","MIDD-01","T4",28,"inner_reef","flat",0,0,0,0,0,0
+"418","Middle Cay","MIDD-01","T5",26,"inner_reef","flat",1,4,0,0,0,0
+"419","Middle Cay","MIDD-01","T6",21,"inner_reef","steep_slope",3,11,1,5,0,3
+"420","Middle Cay","MIDD-01","T7",11,"inner_reef","flat",3,20,0,10,1,2
+"421","Middle Cay","MIDD-01","T8",10,"inner_reef","flat",3,12,0,23,0,10
+"422","Middle Cay","MIDD-01","T9",4,"inner_reef","flat",1,0,3,6,0,0
+"423","Middle Cay","MIDD-01","T10",5,"inner_reef","flat",1,6,0,0,0,0
+"424","Observation Cay","OBSN-01","T2",82,"outer_slope","wall",1,0,0,0,0,0
+"425","Observation Cay","OBSN-01","T3",76,"outer_slope","wall",1,0,0,0,0,0
+"426","Observation Cay","OBSN-01","T4",63,"outer_slope","wall",1,1,0,0,0,0
+"427","Observation Cay","OBSN-01","T5",55,"outer_slope","wall",1,0,0,0,0,0
+"428","Observation Cay","OBSN-01","T6",41,"outer_slope","wall",1,0,0,0,0,0
+"429","Observation Cay","OBSN-01","T7",33,"outer_slope","wall",1,5,0,4,0,0
+"430","Observation Cay","OBSN-01","T8",25,"outer_slope","wall",1,5,0,3,1,0
+"431","Observation Cay","OBSN-01","T9",16,"outer_slope","wall",1,6,1,3,0,0
+"432","Observation Cay","OBSN-01","T10",5,"outer_slope","wall",1,3,2,14,5,1
+"433","Observation Cay","OBSN-01","T11",5,"outer_slope","wall",1,10,9,5,0,2
+"434","South Diamond","SDIA-01","T1",35.3,"lagoon","flat",1,0,51,0,0,0
+"435","South Diamond","SDIA-01","T2",35.6,"lagoon","flat",2,0,1,0,0,0
+"436","South Diamond","SDIA-01","T4",36.2,"lagoon","flat",2,0,0,0,0,0
+"437","South Diamond","SDIA-02","T1",31.5,"outer_slope","flat",2,7,0,1,0,0
+"438","South Diamond","SDIA-02","T2",36,"outer_slope","flat",3,8,0,0,0,1
+"439","South Diamond","SDIA-02","T3",43.7,"outer_slope","flat",3,2,0,0,0,1
+"440","South Diamond","SDIA-02","T4",47.5,"outer_slope","flat",3,4,0,0,0,1
+"441","South Diamond","SDIA-02","T5",41.7,"outer_slope","flat",3,2,0,0,0,1
+"442","South Diamond","SDIA-02","T6",35.1,"outer_slope","flat",2,3,0,0,0,0
+"443","South Diamond","SDIA-02","T7",33.3,"outer_slope","flat",2,4,0,0,0,0
+"444","South Diamond","SDIA-02","T8",28.8,"outer_slope","gentle_slope",3,1,1,0,0,0
+"445","South Diamond","SDIA-02","T9",24.7,"outer_slope","gentle_slope",3,7,0,0,0,0
+"446","South Diamond","SDIA-02","T10",23.7,"outer_slope","gentle_slope",3,5,0,0,0,0
+"447","South Diamond","SDIA-02","T11",21.4,"outer_slope","gentle_slope",3,7,0,0,0,0
+"448","South Diamond","SDIA-02","T12",20,"outer_slope","gentle_slope",3,14,0,0,0,0
+"449","South Diamond","SDIA-02","T1",68.3,"outer_slope","flat",1,0,0,0,0,0
+"450","South Diamond","SDIA-02","T2",62.3,"outer_slope","flat",1,0,0,0,0,0
+"451","South Diamond","SDIA-02","T4",58.3,"outer_slope","flat",1,0,0,0,0,0
+"452","South Diamond","SDIA-02","T5",59.3,"outer_slope","flat",1,0,0,0,0,0
+"453","South Diamond","SDIA-02","T6",57.8,"outer_slope","flat",1,0,0,0,0,0
+"454","South Diamond","SDIA-02","T8",55,"outer_slope","flat",1,0,0,0,0,0
+"455","South Diamond","SDIA-02","T1",95.3,"outer_slope","gentle_slope",3,2,0,0,0,0
+"456","South Diamond","SDIA-02","T2",93.9,"outer_slope","gentle_slope",3,1,0,0,0,0
+"457","South Diamond","SDIA-02","T3",94.1,"outer_slope","gentle_slope",3,3,0,0,0,0
+"458","South Diamond","SDIA-02","T4",97.2,"outer_slope","gentle_slope",3,2,0,0,0,0
+"459","South Diamond","SDIA-02","T5",88.7,"outer_slope","gentle_slope",3,2,0,0,0,0
+"460","South Diamond","SDIA-02","T6",87,"outer_slope","gentle_slope",3,1,0,0,0,0
+"461","South Diamond","SDIA-02","T7",84.4,"outer_slope","gentle_slope",3,1,0,0,0,1
+"462","South Diamond","SDIA-02","T8",81.7,"outer_slope","gentle_slope",3,2,0,0,0,0
+"463","South Diamond","SDIA-02","T9",78.2,"outer_slope","gentle_slope",3,2,0,0,0,0
+"464","South Diamond","SDIA-02","T10",74.1,"outer_slope","gentle_slope",0,0,1,0,0,0
+"465","South Diamond","SDIA-02","T12",68.7,"outer_slope","flat",0,0,0,0,0,0
+"466","South Diamond","SDIA-02","T13",66.8,"outer_slope","flat",0,0,1,0,0,0
+"467","South Diamond","SDIA-02","T14",66.4,"outer_slope","flat",0,0,0,0,0,0
+"468","South Diamond","SDIA-02","T15",79,"outer_slope","gentle_slope",3,4,0,0,0,2
+"469","South Diamond","SDIA-02","T1",15.2,"outer_slope","gentle_slope",2,32,0,1,6,0
+"470","Shark Cay","SHAR-01","T1",92,"outer_slope","wall",2,0,0,0,0,0
+"471","Shark Cay","SHAR-01","T2",85,"outer_slope","wall",2,1,0,0,0,0
+"472","Shark Cay","SHAR-01","T3",77,"outer_slope","moderate_slope",2,0,0,0,0,1
+"473","Shark Cay","SHAR-01","T4",64,"outer_slope","gentle_slope",1,0,0,0,0,0
+"474","Shark Cay","SHAR-01","T5",53,"outer_slope","moderate_slope",1,0,0,0,0,0
+"475","Shark Cay","SHAR-01","T6",44,"outer_slope","wall",1,0,0,0,0,0
+"476","Shark Cay","SHAR-01","T7",36,"outer_slope","steep_slope",2,7,2,3,0,0
+"477","Shark Cay","SHAR-01","T8",28,"outer_slope","gentle_slope",3,2,0,16,0,0
+"478","Shark Cay","SHAR-01","T9",18,"outer_slope","gentle_slope",1,0,7,0,0,0
+"479","Shark Cay","SHAR-01","T10",11,"outer_slope","flat",1,1,3,14,0,0
+"480","Southwest Cay","SWCA-01","T9",71.4,"outer_slope","flat",0,0,0,0,0,0
+"481","Southwest Cay","SWCA-01","T10",68,"outer_slope","flat",0,0,0,0,0,0
+"482","Southwest Cay","SWCA-01","T11",64,"outer_slope","flat",1,0,0,0,0,0
+"483","Southwest Cay","SWCA-01","T1",97.4,"outer_slope","flat",0,0,0,0,0,0
+"484","Southwest Cay","SWCA-01","T2",94,"outer_slope","flat",1,0,0,0,0,0
+"485","Southwest Cay","SWCA-01","T3",91.6,"outer_slope","flat",0,0,0,0,0,0
+"486","Southwest Cay","SWCA-01","T4",86.5,"outer_slope","flat",0,0,0,0,0,0
+"487","Southwest Cay","SWCA-01","T5",83.8,"outer_slope","flat",0,0,0,0,0,0
+"488","Southwest Cay","SWCA-01","T6",81.6,"outer_slope","flat",0,0,0,0,0,0
+"489","Southwest Cay","SWCA-01","T7",77.3,"outer_slope","flat",1,0,0,0,0,0
+"490","Southwest Cay","SWCA-01","T8",74.6,"outer_slope","flat",0,0,0,0,0,0
+"491","Southwest Cay","SWCA-01","T12",61.2,"outer_slope","flat",1,0,0,1,0,0
+"492","Southwest Cay","SWCA-01","T13",58.2,"outer_slope","gentle_slope",0,0,0,0,0,0
+"493","Southwest Cay","SWCA-01","T14",55.1,"outer_slope","gentle_slope",1,0,0,0,0,0
+"494","Southwest Cay","SWCA-01","T15",52.4,"outer_slope","gentle_slope",0,0,0,0,0,0
+"495","Southwest Cay","SWCA-01","T16",48.1,"outer_slope","steep_slope",2,2,0,0,0,0
+"496","Southwest Cay","SWCA-01","T17",44.1,"outer_slope","moderate_slope",2,3,0,0,0,0
+"497","Southwest Cay","SWCA-01","T18",40.5,"outer_slope","moderate_slope",3,8,0,1,0,1
+"498","Southwest Cay","SWCA-01","T19",37.4,"outer_slope","moderate_slope",2,3,0,4,0,3
+"499","Southwest Cay","SWCA-01","T20",35,"outer_slope","gentle_slope",2,8,0,0,0,1
+"500","Southwest Cay","SWCA-01","T21",32.1,"outer_slope","steep_slope",2,4,0,0,0,1
+"501","Southwest Cay","SWCA-01","T22",27.9,"outer_slope","steep_slope",2,10,0,0,0,4
+"502","Southwest Cay","SWCA-01","T23",24.9,"outer_slope","moderate_slope",1,11,0,0,0,6
+"503","Southwest Cay","SWCA-01","T24",22.4,"outer_slope","moderate_slope",1,8,0,0,0,1
+"504","Southwest Cay","SWCA-01","T25",19.4,"outer_slope","gentle_slope",1,28,3,0,0,1
+"505","Southwest Cay","SWCA-01","T26",15.4,"outer_slope","moderate_slope",2,8,0,2,0,0
+"506","Southwest Cay","SWCA-01","T27",11,"outer_slope","steep_slope",2,0,4,4,0,1
+"507","Turtle Islet","TURT-01","T1",90,"outer_slope","wall",1,0,0,0,0,0
+"508","Turtle Islet","TURT-01","T4",70,"outer_slope","wall",1,0,0,0,0,0
+"509","Turtle Islet","TURT-01","T5",61,"outer_slope","wall",2,0,0,0,0,1
+"510","Turtle Islet","TURT-01","T6",50,"outer_slope","wall",1,3,0,0,0,0
+"511","Bougainville","BOUG-01","T1",98.5,"outer_slope","wall",2,0,0,0,0,0
+"512","Bougainville","BOUG-01","T2",91.1,"outer_slope","wall",3,0,0,0,0,0
+"513","Bougainville","BOUG-01","T3",90.9,"outer_slope","wall",3,0,0,0,0,0
+"514","Bougainville","BOUG-01","T4",85.7,"outer_slope","wall",4,2,0,0,0,0
+"515","Bougainville","BOUG-01","T5",81.9,"outer_slope","steep_slope",4,1,0,0,0,0
+"516","Bougainville","BOUG-01","T6",76.4,"outer_slope","steep_slope",4,2,0,0,0,0
+"517","Bougainville","BOUG-01","T7",71.4,"outer_slope","steep_slope",4,0,0,0,0,0
+"518","Bougainville","BOUG-01","T8",66.3,"outer_slope","steep_slope",4,3,0,1,0,0
+"519","Bougainville","BOUG-01","T9",24.1,"outer_slope","wall",3,0,0,0,0,0
+"520","Bougainville","BOUG-01","T10",20.3,"outer_slope","wall",4,1,0,0,0,0
+"521","Bougainville","BOUG-01","T11",17.6,"outer_slope","wall",3,5,0,0,0,0
+"522","Bougainville","BOUG-01","T12",13.8,"outer_slope","steep_slope",3,8,0,0,0,1
+"523","Bougainville","BOUG-01","T13",12.5,"outer_slope","wall",4,2,22,0,0,0
+"524","Bougainville","BOUG-01","T14",9.3,"outer_slope","wall",3,14,7,1,1,4
+"525","Bougainville","BOUG-01","T15",7.5,"outer_slope","wall",2,5,4,7,8,1
+"526","Bougainville","BOUG-01","T16",5.5,"outer_slope","wall",3,4,0,7,1,1
+"527","Bougainville","BOUG-01","T17",3.6,"outer_slope","steep_slope",3,99,1,30,13,2
+"528","South Flinders","FLIN-01","T1",41.5,"outer_slope","steep_slope",4,3,0,0,0,0
+"529","South Flinders","FLIN-01","T2",34.3,"outer_slope","steep_slope",3,1,0,1,0,0
+"530","South Flinders","FLIN-01","T3",30.2,"outer_slope","steep_slope",4,3,0,4,0,0
+"531","South Flinders","FLIN-01","T4",25.3,"outer_slope","steep_slope",4,4,0,1,0,0
+"532","South Flinders","FLIN-01","T5",20.4,"outer_slope","steep_slope",4,0,1,3,0,1
+"533","South Flinders","FLIN-01","T6",15.3,"outer_slope","steep_slope",4,0,0,2,1,1
+"534","South Flinders","FLIN-01","T7",9.9,"outer_slope","moderate_slope",4,2,0,0,5,1
+"535","South Flinders","FLIN-01","T8",5.2,"outer_slope","gentle_slope",2,0,2,5,0,0
+"536","South Flinders","FLIN-01","T1",98.6,"outer_slope","gentle_slope",4,0,0,0,0,0
+"537","South Flinders","FLIN-01","T3",87.2,"outer_slope","gentle_slope",4,0,0,0,0,0
+"538","South Flinders","FLIN-01","T5",77.4,"outer_slope","gentle_slope",4,0,0,0,0,0
+"539","South Flinders","FLIN-01","T6",72.3,"outer_slope","gentle_slope",4,0,0,0,0,0
+"540","South Flinders","FLIN-01","T7",67.1,"outer_slope","gentle_slope",4,0,1,0,0,0
+"541","South Flinders","FLIN-01","T9",51.1,"outer_slope","gentle_slope",4,0,0,0,0,0
+"542","South Flinders","FLIN-01","T10",45.7,"outer_slope","gentle_slope",3,1,0,0,0,0
+"543","North Flinders","FLIN-04","T1",34.1,"lagoon","flat",1,0,3,2,1,0
+"544","North Flinders","FLIN-04","T5",18.8,"lagoon","gentle_slope",0,16,0,0,0,6
+"545","West Holmes","HOLM-03","T1",98.7,"outer_slope","gentle_slope",4,0,0,0,0,0
+"546","West Holmes","HOLM-03","T2",91.4,"outer_slope","gentle_slope",4,0,0,0,0,0
+"547","West Holmes","HOLM-03","T3",87.6,"outer_slope","gentle_slope",4,0,0,0,0,0
+"548","West Holmes","HOLM-03","T4",82.2,"outer_slope","gentle_slope",4,0,0,0,0,0
+"549","West Holmes","HOLM-03","T5",77.4,"outer_slope","gentle_slope",4,0,0,0,0,0
+"550","West Holmes","HOLM-03","T6",71.7,"outer_slope","gentle_slope",4,0,0,0,0,0
+"551","West Holmes","HOLM-03","T7",68.2,"outer_slope","gentle_slope",4,0,0,0,0,0
+"552","West Holmes","HOLM-03","T8",61.6,"outer_slope","gentle_slope",4,1,0,0,0,0
+"553","West Holmes","HOLM-03","T9",57.1,"outer_slope","gentle_slope",4,1,0,0,0,0
+"554","West Holmes","HOLM-03","T10",51.5,"outer_slope","gentle_slope",4,0,0,0,0,0
+"555","West Holmes","HOLM-03","T1",52.1,"outer_slope","gentle_slope",4,0,0,0,0,0
+"556","West Holmes","HOLM-03","T2",46.8,"outer_slope","gentle_slope",4,0,0,0,0,1
+"557","West Holmes","HOLM-03","T3",41.6,"outer_slope","gentle_slope",4,1,0,0,0,0
+"558","West Holmes","HOLM-03","T4",37.1,"outer_slope","gentle_slope",4,0,0,0,0,0
+"559","West Holmes","HOLM-03","T5",32.2,"outer_slope","gentle_slope",4,1,0,0,0,0
+"560","West Holmes","HOLM-03","T6",27.3,"outer_slope","gentle_slope",4,2,0,1,3,0
+"561","West Holmes","HOLM-03","T7",22.4,"outer_slope","gentle_slope",4,4,0,1,0,0
+"562","West Holmes","HOLM-03","T8",18.2,"outer_slope","gentle_slope",4,3,0,4,0,5
+"563","West Holmes","HOLM-03","T9",12.6,"outer_slope","gentle_slope",4,6,1,6,1,1
+"564","West Holmes","HOLM-03","T10",9.6,"outer_slope","gentle_slope",4,1,3,7,5,1
+"565","West Holmes","HOLM-03","T11",2.3,"outer_slope","gentle_slope",4,4,1,47,5,1
+"566","East Holmes","HOLM-04","T1",54,"outer_slope","flat",1,0,0,0,0,0
+"567","East Holmes","HOLM-04","T2",47,"outer_slope","gentle_slope",1,0,0,0,0,0
+"568","East Holmes","HOLM-04","T3",41,"outer_slope","gentle_slope",1,3,0,0,0,0
+"569","East Holmes","HOLM-04","T4",37,"outer_slope","gentle_slope",1,6,0,0,0,2
+"570","East Holmes","HOLM-04","T5",32,"outer_slope","gentle_slope",1,6,0,3,2,1
+"571","East Holmes","HOLM-04","T6",28,"outer_slope","gentle_slope",1,2,0,3,0,0
+"572","East Holmes","HOLM-04","T7",22,"outer_slope","gentle_slope",1,5,0,7,2,1
+"573","East Holmes","HOLM-04","T8",17,"outer_slope","gentle_slope",1,13,0,6,2,2
+"574","East Holmes","HOLM-04","T9",12,"outer_slope","moderate_slope",1,2,1,2,0,2
+"575","East Holmes","HOLM-04","T10",7,"outer_slope","moderate_slope",1,0,0,2,0,0
+"576","East Holmes","HOLM-04","T11",3,"outer_slope","gentle_slope",1,1,0,3,2,0
+"577","East Holmes","HOLM-04","T1",95,"outer_slope","wall",1,0,0,0,0,0
+"578","East Holmes","HOLM-04","T2",91,"outer_slope","wall",1,0,0,0,0,0
+"579","East Holmes","HOLM-04","T3",85,"outer_slope","wall",1,0,0,0,0,0
+"580","East Holmes","HOLM-04","T4",81,"outer_slope","wall",1,0,0,0,0,0
+"581","East Holmes","HOLM-04","T5",75,"outer_slope","wall",1,0,0,0,0,0
+"582","East Holmes","HOLM-04","T6",71,"outer_slope","wall",1,1,0,0,0,0
+"583","East Holmes","HOLM-04","T7",65,"outer_slope","wall",1,0,0,0,0,0
+"584","East Holmes","HOLM-04","T8",63,"outer_slope","steep_slope",1,0,0,0,0,0
+"585","East Holmes","HOLM-04","T9",56,"outer_slope","moderate_slope",1,0,0,0,0,0
+"586","Frederick","FRED-02","T14",24,"lagoon","gentle_slope",0,4,0,0,0,0
+"587","Heralds Surprise","HSUP-01","T1",61.3,"outer_slope","steep_slope",4,2,0,0,0,0
+"588","Heralds Surprise","HSUP-01","T2",55.5,"outer_slope","steep_slope",5,3,0,1,0,0
+"589","Heralds Surprise","HSUP-01","T3",47.6,"outer_slope","steep_slope",4,6,0,3,0,0
+"590","Heralds Surprise","HSUP-01","T4",39.6,"outer_slope","steep_slope",4,16,0,5,0,0
+"591","Heralds Surprise","HSUP-01","T5",28.4,"outer_slope","gentle_slope",4,20,2,21,1,1
+"592","Heralds Surprise","HSUP-01","T6",18.6,"outer_slope","moderate_slope",3,6,3,12,1,2
+"593","Heralds Surprise","HSUP-01","T7",13.7,"outer_slope","steep_slope",2,14,5,9,5,4
+"594","Heralds Surprise","HSUP-01","T8",9.6,"outer_slope","steep_slope",2,1,1,6,2,20
+"595","Kenn","KENN-02","T4",20,"lagoon","gentle_slope",0,0,3,0,0,0
+"596","Marion","MARI-02","T13",48,"lagoon","flat",2,4,0,1,0,0
+"597","Marion","MARI-02","T14",45,"lagoon","flat",2,0,1,3,1,0
+"598","Marion","MARI-02","T15",44,"lagoon","flat",2,4,1,0,0,0
+"599","Marion","MARI-02","T16",46,"lagoon","flat",2,4,0,2,0,5
+"600","Marion","MARI-02","T17",54,"lagoon","flat",1,5,0,0,0,0
+"601","Marion","MARI-02","T1",18,"lagoon","flat",0,3,0,2,5,0
+"602","Marion","MARI-02","T4",38,"lagoon","flat",1,11,0,0,0,0
+"603","Marion","MARI-02","T5",41,"lagoon","flat",1,5,0,1,0,0
+"604","Marion","MARI-02","T6",43,"lagoon","flat",1,2,1,0,1,0
+"605","Marion","MARI-02","T7",44,"lagoon","flat",2,3,1,4,0,2
+"606","Marion","MARI-02","T8",44,"lagoon","flat",2,0,0,0,0,0
+"607","Marion","MARI-02","T9",44,"lagoon","flat",2,6,0,0,1,1
+"608","Marion","MARI-02","T10",45,"lagoon","flat",2,4,2,2,0,5
+"609","Marion","MARI-02","T11",46,"lagoon","flat",2,0,0,1,0,0
+"610","Marion","MARI-02","T12",46,"lagoon","flat",2,1,2,2,0,6
+"611","Saumarez","SAUM-02","T5",22.2,"lagoon","flat",0,0,0,0,0,0
+"612","Saumarez","SAUM-02","T6",23.1,"lagoon","flat",0,0,0,0,0,0
+"613","Ashmore","ASHM-01","T1",31,"outer_slope","moderate_slope",4,8,0,1,1,11
+"614","Ashmore","ASHM-01","T2",37,"outer_slope","gentle_slope",3,7,0,0,0,1
+"615","Ashmore","ASHM-01","T3",38,"outer_slope","gentle_slope",3,7,0,0,0,0
+"616","Ashmore","ASHM-01","T4",55,"outer_slope","gentle_slope",1,0,0,0,0,0
+"617","Ashmore","ASHM-01","T5",53,"outer_slope","gentle_slope",1,0,0,0,0,0
+"618","Ashmore","ASHM-01","T6",55,"outer_slope","flat",0,0,0,0,0,0
+"619","Ashmore","ASHM-01","T7",49,"outer_slope","flat",1,1,0,0,0,0
+"620","Ashmore","ASHM-01","T8",43,"outer_slope","moderate_slope",4,6,0,0,0,0
+"621","Ashmore","ASHM-01","T9",52,"outer_slope","gentle_slope",1,0,0,0,0,0
+"622","Ashmore","ASHM-02","T1",65,"outer_slope","gentle_slope",0,2,0,0,0,0
+"623","Ashmore","ASHM-02","T3",58,"outer_slope","flat",1,0,0,0,0,0
+"624","Ashmore","ASHM-02","T4",53,"outer_slope","flat",1,0,0,0,0,0
+"625","Ashmore","ASHM-02","T5",47,"outer_slope","flat",0,0,0,0,0,0
+"626","Ashmore","ASHM-02","T6",42,"outer_slope","gentle_slope",0,0,0,0,0,0
+"627","Ashmore","ASHM-02","T7",37,"outer_slope","wall",2,2,1,3,0,1
+"628","Ashmore","ASHM-03","T1",73.2,"outer_slope","gentle_slope",3,0,0,0,0,0
+"629","Ashmore","ASHM-03","T2",65,"outer_slope","gentle_slope",2,0,0,0,0,0
+"630","Ashmore","ASHM-04","T1",52,"outer_slope","moderate_slope",1,6,0,0,0,0
+"631","Ashmore","ASHM-04","T2",45,"outer_slope","steep_slope",2,6,0,4,2,5
+"632","Ashmore","ASHM-04","T3",42,"outer_slope","steep_slope",3,9,0,2,0,1
+"633","Ashmore","ASHM-04","T4",38,"outer_slope","steep_slope",3,10,0,1,0,0
+"634","Ashmore","ASHM-04","T5",32,"outer_slope","moderate_slope",3,10,0,2,0,0
+"635","Ashmore","ASHM-04","T6",20,"outer_slope","gentle_slope",4,8,0,0,0,0
+"636","Ashmore","ASHM-04","T7",17.5,"outer_slope","gentle_slope",4,4,0,0,0,0
+"637","Boot","BOOT-01","T1",67,"outer_slope","moderate_slope",3,1,0,0,0,3
+"638","Boot","BOOT-01","T2",57,"outer_slope","steep_slope",3,0,0,1,0,2
+"639","Chilcott","CHIL-01","T1",36.5,"lagoon","flat",1,0,0,0,0,0
+"640","Osprey","OSPR-02","T4",90.6,"outer_slope","wall",3,0,0,0,0,0
+"641","Hermit Crab Islet","HERM-01","T1",49.4,"lagoon","flat",0,0,0,0,0,0
+"642","South Diamond","SDIA-02","T11",73.5,"outer_slope","gentle_slope",1,0,0,0,0,0
+"643","Saumarez","SAUM-02","T2",20.4,"lagoon","flat",0,0,0,0,0,0
+"644","Saumarez","SAUM-02","T3",21.1,"lagoon","flat",1,0,0,0,0,0
+"645","Saumarez","SAUM-02","T4",21.5,"lagoon","flat",1,0,0,0,0,0
+"646","Ashmore","ASHM-02","T2",67.5,"outer_slope","flat",0,0,0,0,0,0
+"647","Boot","BOOT-01","T3",47,"outer_slope","moderate_slope",3,0,0,0,0,0

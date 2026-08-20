@@ -19,7 +19,7 @@ library(patchwork) # for combining plots
 
 # Scenario
 
-Tim and colleagues (2025) investigated changes in species richness with depth in the Coral Sea, Australia. To do so, we used ROV surveys across a depth range of 2-98 throughout 50 sites. Each ROV survey lasted for 2.5 mins and covered an estimated area of about 30m per survey. 
+Tim and colleagues (2025) investigated changes in species richness with depth in the Coral Sea, Australia. To do so, we used ROV surveys across a depth range of 2-98 throughout 50 sites. Each ROV survey lasted for 2.5 mins and covered an estimated area of about 30m per survey.
 
 # Read data
 
@@ -187,11 +187,11 @@ spr_lnr_mod %>% broom.mixed::tidy(
 )
 ```
 
-Depth has a negative effect on species richness of herbivores. The rate of decrease is 1.2% (1 - 0.988 in the estimate) for every m change in depth.  The probability of this not happening due to chance is < 0.001 and suggest a significant effect of depth. 
+Depth has a negative effect on species richness of herbivores. The rate of decrease is 1.2% (1 - 0.988 in the estimate) for every m change in depth. The probability of this not happening due to chance is \< 0.001 and suggest a significant effect of depth.
 
 ## Pairwise comparisons
 
-Let us say we want to know differences in species richness between the shallowest and maximum depth. We can do so with pairwise contrasts. 
+Let us say we want to know differences in species richness between the shallowest and maximum depth. We can do so with pairwise contrasts.
 
 ### Extract min and max values
 
@@ -263,4 +263,3 @@ ggsave("Figures/Fig_Ln_Spr_Depth.jpeg",
        width = 6,
        units = "in")
 ```
-

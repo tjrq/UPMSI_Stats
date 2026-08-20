@@ -1,0 +1,436 @@
+,Reef_2,Site,Transect,Depth_m,Habitat,Aspect,Benthic_Complexity,Diversity,Observed,Estimator,s.e.,LCL,UCL
+1,Ashmore,ASHM-01,T1,31,outer_slope,moderate_slope,4,Species richness,10,13.80952381,7.733087914,10,28.96609761
+2,Ashmore,ASHM-01,T2,37,outer_slope,gentle_slope,3,Species richness,5,5.583333333,2.813707363,5,11.09809843
+3,Ashmore,ASHM-01,T3,38,outer_slope,gentle_slope,3,Species richness,4,5.714285714,3.047340017,4,11.6869624
+4,Ashmore,ASHM-01,T7,49,outer_slope,flat,1,Species richness,1,1,0,1,1
+5,Ashmore,ASHM-01,T8,43,outer_slope,moderate_slope,4,Species richness,3,3.416666667,1.333380418,3,6.030044264
+6,Ashmore,ASHM-02,T1,65,outer_slope,gentle_slope,0,Species richness,1,1,0,1,1
+7,Ashmore,ASHM-02,T7,37,outer_slope,wall,2,Species richness,6,16.71428571,6.804584683,6,30.05102662
+8,Ashmore,ASHM-04,T1,52,outer_slope,moderate_slope,1,Species richness,2,2,0.287623491,2,2.563731684
+9,Ashmore,ASHM-04,T2,45,outer_slope,steep_slope,2,Species richness,8,15.52941176,7.972445184,8,31.15511719
+10,Ashmore,ASHM-04,T3,42,outer_slope,steep_slope,3,Species richness,6,11.5,4.543315853,6,20.40473544
+11,Ashmore,ASHM-04,T4,38,outer_slope,steep_slope,3,Species richness,4,4,0.713449906,4,5.398336121
+12,Ashmore,ASHM-04,T5,32,outer_slope,moderate_slope,3,Species richness,5,5.458333333,2.011132439,5,9.400080482
+13,Ashmore,ASHM-04,T6,20,outer_slope,gentle_slope,4,Species richness,3,3,0.518059279,3,4.015377529
+14,Ashmore,ASHM-04,T7,17.5,outer_slope,gentle_slope,4,Species richness,2,2,0.314466038,2,2.616342108
+15,Betty Cay,BETT-01,T10,8.2,outer_slope,flat,3,Species richness,3,3.888888889,0.866292474,3,5.586790939
+16,Betty Cay,BETT-01,T11,8.3,outer_slope,flat,3,Species richness,10,22.20238095,9.476876221,10,40.77671703
+17,Betty Cay,BETT-01,T6,40.4,outer_slope,steep_slope,3,Species richness,2,2,0.368452949,2,2.72215451
+18,Betty Cay,BETT-01,T7,32.3,outer_slope,flat,5,Species richness,2,2.333333333,1.294449863,2,4.870408445
+19,Betty Cay,BETT-01,T8,21.1,outer_slope,flat,4,Species richness,2,2,0.476095229,2,2.933129501
+20,Betty Cay,BETT-01,T9,12.6,outer_slope,gentle_slope,3,Species richness,2,2,0.468826172,2,2.918882413
+21,Boot,BOOT-01,T1,67,outer_slope,moderate_slope,3,Species richness,2,2,0.422952585,2,2.828971833
+22,Boot,BOOT-01,T2,57,outer_slope,steep_slope,3,Species richness,2,2.333333333,1.037998592,2,4.36777319
+23,Bougainville,BOUG-01,T1,65,outer_slope,steep_slope,5,Species richness,1,1,0,1,1
+24,Bougainville,BOUG-01,T10,20.3,outer_slope,wall,4,Species richness,1,1,0,1,1
+25,Bougainville,BOUG-01,T10,54.7,outer_slope,steep_slope,5,Species richness,1,1,0,1,1
+26,Bougainville,BOUG-01,T11,17.6,outer_slope,wall,3,Species richness,2,2,0.314466038,2,2.616342108
+27,Bougainville,BOUG-01,T12,13.8,outer_slope,steep_slope,3,Species richness,7,20.33333333,7.302209571,7,34.6454011
+28,Bougainville,BOUG-01,T12,45.5,outer_slope,steep_slope,5,Species richness,2,2.5,0.703239258,2,3.878323619
+29,Bougainville,BOUG-01,T13,12.5,outer_slope,wall,4,Species richness,3,3.958333333,0.75228433,3,5.432783526
+30,Bougainville,BOUG-01,T14,9.3,outer_slope,wall,3,Species richness,8,17.62962963,6.011133774,8,29.41123533
+31,Bougainville,BOUG-01,T15,7.5,outer_slope,wall,2,Species richness,10,11.44,4.214765172,10,19.70078794
+32,Bougainville,BOUG-01,T16,36.4,outer_slope,wall,5,Species richness,2,2.333333333,1.015171114,2,4.323032155
+33,Bougainville,BOUG-01,T16,5.5,outer_slope,wall,3,Species richness,7,20.84615385,7.305978616,7,35.1656088
+34,Bougainville,BOUG-01,T17,3.6,outer_slope,steep_slope,3,Species richness,15,16.48965517,3.682935011,15,23.70807515
+35,Bougainville,BOUG-01,T17,35.1,outer_slope,wall,5,Species richness,3,3.833333333,1.089370642,3,5.968460557
+36,Bougainville,BOUG-01,T18,28.5,outer_slope,wall,4,Species richness,1,1,0,1,1
+37,Bougainville,BOUG-01,T19,22.3,outer_slope,wall,3,Species richness,1,1,0,1,1
+38,Bougainville,BOUG-01,T2,66.7,outer_slope,wall,5,Species richness,2,2.5,0.708872344,2,3.889364264
+39,Bougainville,BOUG-01,T4,67.8,outer_slope,wall,5,Species richness,1,1,0,1,1
+40,Bougainville,BOUG-01,T4,85.7,outer_slope,wall,4,Species richness,1,1,0,1,1
+41,Bougainville,BOUG-01,T5,81.9,outer_slope,steep_slope,4,Species richness,1,1,0,1,1
+42,Bougainville,BOUG-01,T6,58.1,outer_slope,steep_slope,4,Species richness,3,3.833333333,1.17603114,3,6.138312013
+43,Bougainville,BOUG-01,T6,76.4,outer_slope,steep_slope,4,Species richness,1,1,0,1,1
+44,Bougainville,BOUG-01,T7,57.8,outer_slope,steep_slope,5,Species richness,2,2.5,0.746354778,2,3.962828484
+45,Bougainville,BOUG-01,T8,57.2,outer_slope,steep_slope,5,Species richness,1,1,0,1,1
+46,Bougainville,BOUG-01,T8,66.3,outer_slope,steep_slope,4,Species richness,3,4.5,2.000473429,3,8.420855873
+47,Bougainville,BOUG-02,T1,67.1,outer_slope,steep_slope,3,Species richness,2,2.333333333,0.889999306,2,4.07769992
+48,Bougainville,BOUG-02,T10,52.1,outer_slope,steep_slope,3,Species richness,3,4.5,1.676297929,3,7.785483569
+49,Bougainville,BOUG-02,T11,47.6,outer_slope,steep_slope,3,Species richness,1,1,0,1,1
+50,Bougainville,BOUG-02,T13,45.8,outer_slope,steep_slope,3,Species richness,2,2.333333333,1.249269147,2,4.781855868
+51,Bougainville,BOUG-02,T14,45,outer_slope,moderate_slope,3,Species richness,1,1,0,1,1
+52,Bougainville,BOUG-02,T15,44.9,outer_slope,wall,3,Species richness,1,1,0,1,1
+53,Bougainville,BOUG-02,T18,33.1,outer_slope,wall,3,Species richness,1,1,0,1,1
+54,Bougainville,BOUG-02,T19,32.5,outer_slope,steep_slope,3,Species richness,5,5.933333333,2.220972317,5,10.28635909
+55,Bougainville,BOUG-02,T2,67.1,outer_slope,steep_slope,3,Species richness,2,2.5,0.69084928,2,3.854039707
+56,Bougainville,BOUG-02,T20,31.1,outer_slope,moderate_slope,3,Species richness,11,45.10526316,20.18480915,11,84.66676212
+57,Bougainville,BOUG-02,T21,28.4,outer_slope,wall,3,Species richness,4,8.5,2.231653597,4.126039324,12.87396068
+58,Bougainville,BOUG-02,T22,27.3,outer_slope,wall,3,Species richness,4,6.5,2.406311117,4,11.21628313
+59,Bougainville,BOUG-02,T23,24.8,outer_slope,steep_slope,3,Species richness,3,5,1.450972042,3,7.843852944
+60,Bougainville,BOUG-02,T24,24.2,outer_slope,wall,3,Species richness,2,2.5,0.703239258,2,3.878323619
+61,Bougainville,BOUG-02,T25,22.3,outer_slope,steep_slope,3,Species richness,7,18.25,7.803095426,7,33.543786
+62,Bougainville,BOUG-02,T26,15.4,outer_slope,moderate_slope,3,Species richness,3,5,1.463725241,3,7.868848757
+63,Bougainville,BOUG-02,T27,13.4,outer_slope,steep_slope,3,Species richness,6,13.11111111,5.70526226,6,24.29321966
+64,Bougainville,BOUG-02,T28,9.8,outer_slope,steep_slope,2,Species richness,3,5,1.424240991,3,7.791461049
+65,Bougainville,BOUG-02,T3,64.5,outer_slope,steep_slope,3,Species richness,2,2,0.472581563,2,2.926242843
+66,Bougainville,BOUG-02,T5,63,outer_slope,wall,3,Species richness,1,1,0,1,1
+67,Bougainville,BOUG-02,T6,58.4,outer_slope,moderate_slope,4,Species richness,1,1,0,1,1
+68,Bougainville,BOUG-02,T7,57.7,outer_slope,moderate_slope,4,Species richness,1,1,0,1,1
+69,Bougainville,BOUG-02,T8,55.3,outer_slope,moderate_slope,4,Species richness,7,14.42857143,7.543658746,7,29.21387088
+70,Bougainville,BOUG-02,T9,53.6,outer_slope,moderate_slope,4,Species richness,3,5,1.414308792,3,7.771994296
+71,East Diamond,EDIA-01,T1,48,lagoon,flat,2,Species richness,1,1,0,1,1
+72,East Diamond,EDIA-01,T10,25,lagoon,gentle_slope,2,Species richness,3,3.857142857,1.201437845,3,6.211917764
+73,East Diamond,EDIA-01,T11,26,lagoon,moderate_slope,2,Species richness,3,3.454545455,1.397402274,3,6.193403584
+74,East Diamond,EDIA-01,T12,21,lagoon,moderate_slope,2,Species richness,6,11.57142857,3.6815515,6,18.78713692
+75,East Diamond,EDIA-01,T13,15,lagoon,moderate_slope,2,Species richness,1,1,0,1,1
+76,East Diamond,EDIA-01,T14,19,lagoon,wall,2,Species richness,3,5,1.466176839,3,7.873653799
+77,East Diamond,EDIA-01,T15,15,lagoon,wall,2,Species richness,1,1,0,1,1
+78,East Diamond,EDIA-01,T16,10,lagoon,wall,2,Species richness,3,3,0.652004162,3,4.277904676
+79,East Diamond,EDIA-01,T2,50,lagoon,flat,2,Species richness,1,1,0,1,1
+80,East Diamond,EDIA-01,T3,48,lagoon,gentle_slope,2,Species richness,3,3,0.45525982,3,3.892292851
+81,East Diamond,EDIA-01,T4,45,lagoon,gentle_slope,2,Species richness,2,2,0.368452949,2,2.72215451
+82,East Diamond,EDIA-01,T5,45,lagoon,gentle_slope,2,Species richness,4,4.461538462,1.393488791,4,7.192726304
+83,East Diamond,EDIA-01,T6,39,lagoon,gentle_slope,2,Species richness,4,4.916666667,1.467918595,4,7.793734246
+84,East Diamond,EDIA-01,T7,38,lagoon,gentle_slope,2,Species richness,4,4.947368421,0.815066992,4,6.54487037
+85,East Diamond,EDIA-01,T8,32,lagoon,gentle_slope,2,Species richness,3,4.5,1.953881142,3,8.329536667
+86,East Diamond,EDIA-01,T9,32,lagoon,gentle_slope,2,Species richness,6,10.25,4.043307688,6,18.17473745
+87,East Diamond,EDIA-02,T1,30.9,inner_reef,flat,1,Species richness,3,4.5,2.114279255,3,8.643911193
+88,East Diamond,EDIA-02,T10,8.7,inner_reef,steep_slope,2,Species richness,3,3.4375,1.255440496,3,5.898118157
+89,East Diamond,EDIA-02,T2,25,inner_reef,steep_slope,2,Species richness,5,9.05,3.508502623,5,15.92653878
+90,East Diamond,EDIA-02,T4,24.2,inner_reef,gentle_slope,2,Species richness,3,3.875,1.164273791,3,6.156934698
+91,East Diamond,EDIA-02,T5,20,inner_reef,gentle_slope,2,Species richness,6,8.025,4.28370971,6,16.42091675
+92,East Diamond,EDIA-02,T6,19.1,inner_reef,gentle_slope,2,Species richness,4,7.6,3.64705499,4,14.74809643
+93,East Diamond,EDIA-02,T7,15.4,inner_reef,moderate_slope,3,Species richness,7,14.33333333,6.719445743,7,27.50320499
+94,East Diamond,EDIA-02,T8,15.2,inner_reef,moderate_slope,2,Species richness,6,6.928571429,2.254580342,6,11.3474677
+95,East Diamond,EDIA-02,T9,9,inner_reef,steep_slope,2,Species richness,5,9.21875,4.297401595,5,17.64150235
+96,East Holmes,HOLM-02,T1,62.7,outer_slope,steep_slope,3,Species richness,2,2.5,0.697234798,2,3.866555093
+97,East Holmes,HOLM-02,T10,37,outer_slope,gentle_slope,2,Species richness,6,10.15384615,5.094713992,6,20.13930209
+98,East Holmes,HOLM-02,T11,35,outer_slope,gentle_slope,2,Species richness,12,50.25,19.62330145,12,88.71096409
+99,East Holmes,HOLM-02,T12,31.2,outer_slope,gentle_slope,2,Species richness,4,4.833333333,2.355429736,4,9.449890785
+100,East Holmes,HOLM-02,T13,28,outer_slope,gentle_slope,2,Species richness,10,13.80952381,7.840871312,10,29.17734919
+101,East Holmes,HOLM-02,T2,63.7,outer_slope,steep_slope,3,Species richness,2,2,0.238683257,2,2.467810587
+102,East Holmes,HOLM-02,T4,63.2,outer_slope,steep_slope,4,Species richness,2,2,0.326598632,2,2.640121557
+103,East Holmes,HOLM-02,T6,56.6,outer_slope,steep_slope,3,Species richness,1,1,0,1,1
+104,East Holmes,HOLM-02,T7,54.5,outer_slope,steep_slope,4,Species richness,3,5,1.447254454,3,7.836566606
+105,East Holmes,HOLM-02,T9,45,outer_slope,wall,4,Species richness,2,2.5,0.67689129,2,3.826682549
+106,East Holmes,HOLM-04,T10,7,outer_slope,moderate_slope,1,Species richness,1,1,0,1,1
+107,East Holmes,HOLM-04,T11,3,outer_slope,gentle_slope,1,Species richness,4,6.5,2.985373529,4,12.3512246
+108,East Holmes,HOLM-04,T3,41,outer_slope,gentle_slope,1,Species richness,2,2.333333333,1.243000605,2,4.769569753
+109,East Holmes,HOLM-04,T4,37,outer_slope,gentle_slope,1,Species richness,3,3,0.476984077,3,3.934871613
+110,East Holmes,HOLM-04,T5,32,outer_slope,gentle_slope,1,Species richness,7,14.33333333,6.172122538,7,26.43047122
+111,East Holmes,HOLM-04,T6,28,outer_slope,gentle_slope,1,Species richness,3,3.8,1.129447885,3,6.013677177
+112,East Holmes,HOLM-04,T6,71,outer_slope,wall,1,Species richness,1,1,0,1,1
+113,East Holmes,HOLM-04,T7,22,outer_slope,gentle_slope,1,Species richness,7,10.73333333,5.283255739,7,21.0883243
+114,East Holmes,HOLM-04,T8,17,outer_slope,gentle_slope,1,Species richness,9,20.95652174,10.35935064,9,41.26047591
+115,East Holmes,HOLM-04,T9,12,outer_slope,moderate_slope,1,Species richness,5,6.928571429,2.565754121,5,11.9573571
+116,Edna Cay,EDNA-01,T10,19.1,outer_slope,flat,3,Species richness,1,1,0,1,1
+117,Edna Cay,EDNA-01,T11,14,outer_slope,moderate_slope,3,Species richness,1,1,0,1,1
+118,Edna Cay,EDNA-01,T12,9.8,outer_slope,flat,1,Species richness,5,5,0.711445061,5,6.394406696
+119,Edna Cay,EDNA-01,T3,79,outer_slope,moderate_slope,5,Species richness,5,5.888888889,2.654914949,5,11.09242657
+120,Edna Cay,EDNA-01,T7,48,outer_slope,moderate_slope,3,Species richness,2,2.333333333,1.312975904,2,4.906718817
+121,Edna Cay,EDNA-01,T8,39,outer_slope,moderate_slope,4,Species richness,9,18.47368421,6.018833215,9,30.27038054
+122,Edna Cay,EDNA-01,T9,26.7,outer_slope,gentle_slope,3,Species richness,4,4.472222222,1.241338494,4,6.905200963
+123,Frankie Cay,FRAN-01,T10,8,outer_slope,gentle_slope,1,Species richness,2,2.333333333,1.255935403,2,4.794921491
+124,Frankie Cay,FRAN-01,T7,35,outer_slope,steep_slope,3,Species richness,6,18.5,4.664541589,9.357666482,27.64233352
+125,Frankie Cay,FRAN-01,T8,25,outer_slope,moderate_slope,2,Species richness,8,9.4,4.092955864,8,17.42204608
+126,Frankie Cay,FRAN-01,T9,14,outer_slope,moderate_slope,1,Species richness,4,6.75,1.818789689,4,10.31476229
+127,Frederick,FRED-01,T1,34.8,inner_reef,gentle_slope,1,Species richness,3,3,0.661896702,3,4.297293698
+128,Frederick,FRED-02,T14,24,lagoon,gentle_slope,0,Species richness,1,1,0,1,1
+129,Georgina Cay,GEOR-01,T10,51.4,outer_slope,moderate_slope,3,Species richness,2,2,0.348735088,2,2.683508213
+130,Georgina Cay,GEOR-01,T13,41.2,outer_slope,steep_slope,2,Species richness,1,1,0,1,1
+131,Georgina Cay,GEOR-01,T14,36.2,outer_slope,moderate_slope,2,Species richness,4,5.714285714,2.175752322,4,9.978681904
+132,Georgina Cay,GEOR-01,T15,32.6,outer_slope,gentle_slope,2,Species richness,2,2,0.219042914,2,2.429316222
+133,Heralds Surprise,HSUP-01,T1,61.3,outer_slope,steep_slope,4,Species richness,2,2.5,0.738548946,2,3.947529335
+134,Heralds Surprise,HSUP-01,T2,55.5,outer_slope,steep_slope,5,Species richness,3,4.5,2.090931598,3,8.598150627
+135,Heralds Surprise,HSUP-01,T3,47.6,outer_slope,steep_slope,4,Species richness,5,5.888888889,2.23700359,5,10.27333536
+136,Heralds Surprise,HSUP-01,T4,39.6,outer_slope,steep_slope,4,Species richness,5,5.476190476,1.395788346,5,8.211885365
+137,Heralds Surprise,HSUP-01,T5,28.4,outer_slope,gentle_slope,4,Species richness,9,11.2,4.810744439,9,20.62888584
+138,Heralds Surprise,HSUP-01,T6,18.6,outer_slope,moderate_slope,3,Species richness,8,13.75,4.90880363,8,23.37107832
+139,Heralds Surprise,HSUP-01,T7,13.7,outer_slope,steep_slope,2,Species richness,11,11.64864865,2.908359795,11,17.3489291
+140,Heralds Surprise,HSUP-01,T8,9.6,outer_slope,steep_slope,2,Species richness,9,11.175,5.584221037,9,22.11987211
+141,Hermit Crab Islet,HERM-01,T1,46.2,lagoon,flat,1,Species richness,5,5,0.947746865,5,6.857549722
+142,Hermit Crab Islet,HERM-01,T10,30.3,lagoon,flat,3,Species richness,8,12.3125,4.612541251,8,21.35291473
+143,Hermit Crab Islet,HERM-01,T11,31,lagoon,flat,2,Species richness,7,7.1171875,2.714120052,7,12.43676505
+144,Hermit Crab Islet,HERM-01,T12,33.2,lagoon,flat,1,Species richness,1,1,0,1,1
+145,Hermit Crab Islet,HERM-01,T13,21.1,lagoon,flat,1,Species richness,2,2,0.337997669,2,2.662463258
+146,Hermit Crab Islet,HERM-01,T14,22,lagoon,flat,1,Species richness,3,3.8,1.373698098,3,6.492398798
+147,Hermit Crab Islet,HERM-01,T16,23.7,lagoon,gentle_slope,0,Species richness,1,1,0,1,1
+148,Hermit Crab Islet,HERM-01,T17,14.1,lagoon,moderate_slope,0,Species richness,4,7.6,3.081227618,4,13.63909516
+149,Hermit Crab Islet,HERM-01,T18,15.2,lagoon,moderate_slope,0,Species richness,4,4.9,1.373518578,4,7.592046944
+150,Hermit Crab Islet,HERM-01,T19,13.5,lagoon,moderate_slope,0,Species richness,6,6.115384615,2.215776454,6,10.45822666
+151,Hermit Crab Islet,HERM-01,T2,46.6,lagoon,flat,1,Species richness,3,3.9,0.767719304,3,5.404702186
+152,Hermit Crab Islet,HERM-01,T2,48.1,lagoon,flat,1,Species richness,2,2,0.492365964,2,2.965019556
+153,Hermit Crab Islet,HERM-01,T20,10.2,lagoon,moderate_slope,0,Species richness,6,15,4.746025311,6,24.30203868
+154,Hermit Crab Islet,HERM-01,T3,46.8,lagoon,flat,1,Species richness,2,2,0.219042914,2,2.429316222
+155,Hermit Crab Islet,HERM-01,T4,47.1,lagoon,flat,0,Species richness,1,1,0,1,1
+156,Hermit Crab Islet,HERM-01,T5,38.7,lagoon,flat,2,Species richness,1,1,0,1,1
+157,Hermit Crab Islet,HERM-01,T5,46.4,lagoon,flat,1,Species richness,1,1,0,1,1
+158,Hermit Crab Islet,HERM-01,T6,40.2,lagoon,flat,2,Species richness,2,2.5,0.661266003,2,3.796057551
+159,Hermit Crab Islet,HERM-01,T7,41.2,lagoon,flat,2,Species richness,3,3,0.630731854,3,4.236211717
+160,Hermit Crab Islet,HERM-01,T7,47.7,lagoon,flat,1,Species richness,3,4.5,1.99273301,3,8.40568493
+161,Hermit Crab Islet,HERM-01,T8,42.5,lagoon,flat,2,Species richness,3,3.416666667,1.28436898,3,5.933983609
+162,Hermit Crab Islet,HERM-01,T8,47.9,lagoon,flat,1,Species richness,2,2,0.326598632,2,2.640121557
+163,Hermit Crab Islet,HERM-01,T9,30.1,lagoon,flat,3,Species richness,8,29.77777778,10.90115957,8.411897632,51.14365792
+164,Juliette Cay,JULI-01,T1,98,outer_slope,steep_slope,4,Species richness,1,1,0,1,1
+165,Juliette Cay,JULI-01,T3,68,outer_slope,flat,3,Species richness,1,1,0,1,1
+166,Juliette Cay,JULI-01,T7,34.9,outer_slope,gentle_slope,3,Species richness,6,8.863636364,1.496397258,6,11.7965211
+167,Juliette Cay,JULI-01,T8,28,outer_slope,gentle_slope,3,Species richness,2,2,0.301511345,2,2.590951376
+168,Juliette Cay,JULI-02,T2,94.2,outer_slope,moderate_slope,3,Species richness,1,1,0,1,1
+169,Juliette Cay,JULI-02,T3,86.4,outer_slope,moderate_slope,3,Species richness,1,1,0,1,1
+170,Juliette Cay,JULI-02,T4,77,outer_slope,moderate_slope,4,Species richness,2,2,0.314466038,2,2.616342108
+171,Juliette Cay,JULI-02,T5,67.1,outer_slope,moderate_slope,3,Species richness,4,4.21875,1.947228684,4,8.03524809
+172,Juliette Cay,JULI-02,T6,59.1,outer_slope,gentle_slope,2,Species richness,1,1,0,1,1
+173,Juliette Cay,JULI-02,T8,47.6,outer_slope,gentle_slope,2,Species richness,5,5,0.778985734,5,6.526783983
+174,Juliette Cay,JULI-02,T9,35.4,outer_slope,moderate_slope,3,Species richness,6,13.11111111,6.866781351,6,26.56975525
+175,Kenn,KENN-01,T1,40.8,outer_slope,steep_slope,4,Species richness,6,10.125,4.330517459,6,18.61265825
+176,Kenn,KENN-01,T2,31.1,outer_slope,steep_slope,4,Species richness,7,18.25,9.375937327,7,36.62649948
+177,Kenn,KENN-01,T3,31.4,outer_slope,gentle_slope,3,Species richness,11,13.19642857,5.091673377,11,23.17592501
+178,Kenn,KENN-01,T4,32.3,outer_slope,gentle_slope,3,Species richness,4,5.75,2.104326497,4,9.874404146
+179,Kenn,KENN-02,T4,20,lagoon,gentle_slope,0,Species richness,1,1,0,1,1
+180,Lorna Cay,LORN-01,T1,45.1,outer_slope,flat,2,Species richness,3,3,0.368452949,3,3.72215451
+181,Lorna Cay,LORN-01,T10,4,outer_slope,flat,1,Species richness,4,5.714285714,2.233131066,4,10.09114218
+182,Lorna Cay,LORN-01,T12,55.6,outer_slope,steep_slope,4,Species richness,2,2.5,0.67689129,2,3.826682549
+183,Lorna Cay,LORN-01,T13,55.2,outer_slope,steep_slope,3,Species richness,3,5,1.402643008,3,7.749129779
+184,Lorna Cay,LORN-01,T5,31.7,outer_slope,flat,2,Species richness,1,1,0,1,1
+185,Lorna Cay,LORN-01,T6,32.5,outer_slope,flat,2,Species richness,4,5.714285714,1.794299564,4,9.231048237
+186,Lorna Cay,LORN-01,T6,46,outer_slope,steep_slope,1,Species richness,1,1,0,1,1
+187,Lorna Cay,LORN-01,T7,34,outer_slope,flat,2,Species richness,3,3,0.507120012,3,3.99393696
+188,Lorna Cay,LORN-01,T7,36.5,outer_slope,flat,3,Species richness,2,2.333333333,1.21191244,2,4.708638068
+189,Lorna Cay,LORN-01,T8,27,outer_slope,flat,2,Species richness,3,3.444444444,1.205802883,3,5.807774668
+190,Lorna Cay,LORN-01,T8,40,outer_slope,gentle_slope,3,Species richness,6,6.15625,2.645724908,6,11.34177553
+191,Lorna Cay,LORN-01,T9,44.8,outer_slope,gentle_slope,2,Species richness,5,5.909090909,2.033395138,5,9.894472146
+192,Lorna Cay,LORN-01,T9,9,outer_slope,flat,1,Species richness,5,10.14285714,3.733080155,5,17.4595598
+193,Lorna Cay,LORN-02,T4,15,lagoon,flat,1,Species richness,7,7.122222222,3.200187765,7,13.39447498
+194,Lorna Cay,LORN-02,T5,7,lagoon,flat,3,Species richness,7,10.63636364,5.969473806,7,22.3363173
+195,Margaret Cay,MARG-01,T10,9,outer_slope,gentle_slope,4,Species richness,12,23.73958333,11.06350068,12,45.42364621
+196,Margaret Cay,MARG-01,T5,53.3,outer_slope,steep_slope,1,Species richness,2,2.333333333,1.249269147,2,4.781855868
+197,Margaret Cay,MARG-01,T6,43.6,outer_slope,moderate_slope,0,Species richness,5,9,4.025894951,5,16.89060911
+198,Margaret Cay,MARG-01,T7,34.2,outer_slope,moderate_slope,0,Species richness,1,1,0,1,1
+199,Margaret Cay,MARG-01,T8,25.2,outer_slope,moderate_slope,1,Species richness,10,36.72727273,12.853358,11.53515396,61.91939149
+200,Margaret Cay,MARG-01,T9,17.3,outer_slope,gentle_slope,4,Species richness,2,2,0.468826172,2,2.918882413
+201,Margaret Cay,MARG-02,T10,6.4,lagoon,moderate_slope,1,Species richness,6,10.3902439,4.470065889,6,19.15141205
+202,Margaret Cay,MARG-02,T2,42.2,lagoon,moderate_slope,0,Species richness,1,1,0,1,1
+203,Margaret Cay,MARG-02,T3,34.5,lagoon,moderate_slope,0,Species richness,1,1,0,1,1
+204,Margaret Cay,MARG-02,T4,34.9,lagoon,moderate_slope,0,Species richness,1,1,0,1,1
+205,Margaret Cay,MARG-02,T8,13.8,lagoon,moderate_slope,0,Species richness,2,2,0.487831731,2,2.956132624
+206,Margaret Cay,MARG-02,T9,7.7,lagoon,moderate_slope,1,Species richness,5,6.96875,2.064919301,5,11.01591746
+207,Marion,MARI-01,T1,33.9,lagoon,flat,2,Species richness,3,3.888888889,1.015192611,3,5.878629843
+208,Marion,MARI-01,T6,35,lagoon,flat,1,Species richness,3,3.833333333,1.029847425,3,5.851797195
+209,Marion,MARI-02,T1,18,lagoon,flat,0,Species richness,4,4.225,1.394824918,4,6.958806605
+210,Marion,MARI-02,T10,45,lagoon,flat,2,Species richness,5,5,1.13976804,5,7.233904309
+211,Marion,MARI-02,T11,46,lagoon,flat,2,Species richness,1,1,0,1,1
+212,Marion,MARI-02,T12,46,lagoon,flat,2,Species richness,5,9.090909091,3.806075743,5,16.55068047
+213,Marion,MARI-02,T13,48,lagoon,flat,2,Species richness,3,3.8,1.236304366,3,6.223112031
+214,Marion,MARI-02,T14,45,lagoon,flat,2,Species richness,3,3.8,1.659347566,3,7.052261466
+215,Marion,MARI-02,T15,44,lagoon,flat,2,Species richness,3,3.8,1.622392547,3,6.97983096
+216,Marion,MARI-02,T16,46,lagoon,flat,2,Species richness,5,5.909090909,2.051041582,5,9.929058541
+217,Marion,MARI-02,T17,54,lagoon,flat,1,Species richness,3,3.2,1.559456005,3,6.256477605
+218,Marion,MARI-02,T4,38,lagoon,flat,1,Species richness,3,3.454545455,1.248444729,3,5.90145216
+219,Marion,MARI-02,T5,41,lagoon,flat,1,Species richness,3,3.833333333,1.03661367,3,5.865058793
+220,Marion,MARI-02,T6,43,lagoon,flat,1,Species richness,3,4.5,1.75237213,3,7.934586262
+221,Marion,MARI-02,T7,44,lagoon,flat,2,Species richness,5,5.9,1.972801743,5,9.766620365
+222,Marion,MARI-02,T9,44,lagoon,flat,2,Species richness,6,9.5,4.560218894,6,18.43786479
+223,Middle Cay,MIDD-01,T1,40,inner_reef,flat,2,Species richness,4,7.6,3.016369481,4,13.51197555
+224,Middle Cay,MIDD-01,T10,5,inner_reef,flat,1,Species richness,1,1,0,1,1
+225,Middle Cay,MIDD-01,T2,40,inner_reef,flat,1,Species richness,2,2.5,0.708872344,2,3.889364264
+226,Middle Cay,MIDD-01,T3,30,inner_reef,flat,1,Species richness,4,4.833333333,2.018794096,4,8.790097053
+227,Middle Cay,MIDD-01,T5,26,inner_reef,flat,1,Species richness,2,2,0.460566186,2,2.902693138
+228,Middle Cay,MIDD-01,T6,21,inner_reef,steep_slope,3,Species richness,8,15.6,7.140842587,8,29.59579429
+229,Middle Cay,MIDD-01,T7,11,inner_reef,flat,3,Species richness,7,9.909090909,3.291343659,7,16.36000594
+230,Middle Cay,MIDD-01,T8,10,inner_reef,flat,3,Species richness,7,7.244444444,1.784899656,7,10.74278349
+231,Middle Cay,MIDD-01,T9,4,inner_reef,flat,1,Species richness,3,3.444444444,1.250596067,3,5.895567695
+232,North Flinders,FLIN-02,T4,40,lagoon,flat,0,Species richness,1,1,0,1,1
+233,North Flinders,FLIN-02,T5,41.5,lagoon,flat,0,Species richness,1,1,0,1,1
+234,North Flinders,FLIN-02,T6,43.3,lagoon,flat,0,Species richness,3,3.45,1.310862157,3,6.019242617
+235,North Flinders,FLIN-02,T7,44,lagoon,flat,1,Species richness,3,4.5,2.15028187,3,8.714475022
+236,North Flinders,FLIN-04,T1,34.1,lagoon,flat,1,Species richness,3,3.416666667,1.133884051,3,5.63903857
+237,North Flinders,FLIN-04,T5,18.8,lagoon,gentle_slope,0,Species richness,4,4.954545455,0.732995021,4,6.391189297
+238,Observation Cay,OBSN-01,T10,5,outer_slope,wall,1,Species richness,7,14.68,6.368225416,7,27.16149246
+239,Observation Cay,OBSN-01,T11,5,outer_slope,wall,1,Species richness,7,8.923076923,3.331302485,7,15.45230981
+240,Observation Cay,OBSN-01,T4,63,outer_slope,wall,1,Species richness,1,1,0,1,1
+241,Observation Cay,OBSN-01,T7,33,outer_slope,wall,1,Species richness,2,2,0.140705294,2,2.275777309
+242,Observation Cay,OBSN-01,T8,25,outer_slope,wall,1,Species richness,5,5.888888889,2.443026831,5,10.67713349
+243,Observation Cay,OBSN-01,T9,16,outer_slope,wall,1,Species richness,5,7.7,2.081427537,5,11.77952301
+244,Osprey,OSPR-01,T12,44.7,outer_slope,wall,4,Species richness,1,1,0,1,1
+245,Osprey,OSPR-01,T14,55,outer_slope,steep_slope,3,Species richness,3,4.5,2.128450852,3,8.671687013
+246,Osprey,OSPR-01,T15,52.4,outer_slope,steep_slope,4,Species richness,3,5,1.443962624,3,7.830114737
+247,Osprey,OSPR-01,T16,38.2,outer_slope,wall,3,Species richness,2,2.5,0.714142843,2,3.899694252
+248,Osprey,OSPR-01,T16,66.2,outer_slope,steep_slope,3,Species richness,1,1,0,1,1
+249,Osprey,OSPR-01,T17,35.3,outer_slope,steep_slope,3,Species richness,5,13,3.634236196,5.877027945,20.12297206
+250,Osprey,OSPR-01,T18,33.3,outer_slope,wall,3,Species richness,3,4.5,2.120004526,3,8.655132519
+251,Osprey,OSPR-01,T19,28.2,outer_slope,wall,3,Species richness,5,13,3.401447107,6.333286174,19.66671383
+252,Osprey,OSPR-01,T19,53.2,outer_slope,steep_slope,3,Species richness,1,1,0,1,1
+253,Osprey,OSPR-01,T21,21.8,outer_slope,steep_slope,3,Species richness,10,43.23076923,14.23579837,15.32911713,71.13242133
+254,Osprey,OSPR-01,T21,52.8,outer_slope,steep_slope,4,Species richness,2,2.5,0.697234798,2,3.866555093
+255,Osprey,OSPR-01,T22,18.8,outer_slope,wall,3,Species richness,3,5,1.375690827,3,7.696304476
+256,Osprey,OSPR-01,T22,47.8,outer_slope,moderate_slope,2,Species richness,4,4.888888889,1.492081188,4,7.81331428
+257,Osprey,OSPR-01,T23,16.4,outer_slope,wall,3,Species richness,6,18.5,4.876268145,8.942690057,28.05730994
+258,Osprey,OSPR-01,T24,14.1,outer_slope,wall,3,Species richness,5,7.785714286,2.028151147,5,11.76081749
+259,Osprey,OSPR-01,T24,41.2,outer_slope,wall,4,Species richness,1,1,0,1,1
+260,Osprey,OSPR-01,T25,32.8,outer_slope,moderate_slope,3,Species richness,2,2.333333333,1.318094738,2,4.916751547
+261,Osprey,OSPR-01,T25,9.1,outer_slope,wall,3,Species richness,7,14.69230769,6.120833435,7,26.68892078
+262,Osprey,OSPR-01,T26,35.7,outer_slope,gentle_slope,3,Species richness,2,2.333333333,1.11312948,2,4.515027024
+263,Osprey,OSPR-01,T26,7.1,outer_slope,wall,3,Species richness,5,7.842105263,1.906939558,5,11.57963812
+264,Osprey,OSPR-01,T27,36.6,outer_slope,moderate_slope,3,Species richness,6,18.5,4.263245682,10.14419201,26.85580799
+265,Osprey,OSPR-01,T27,7,outer_slope,steep_slope,3,Species richness,4,4.909090909,1.307077688,4,7.470916103
+266,Osprey,OSPR-01,T28,28.8,outer_slope,moderate_slope,3,Species richness,3,3.416666667,1.316458876,3,5.996878651
+267,Osprey,OSPR-01,T29,25.5,outer_slope,moderate_slope,3,Species richness,4,6.666666667,1.827973664,4,10.24942921
+268,Osprey,OSPR-01,T3,77.2,outer_slope,steep_slope,3,Species richness,1,1,0,1,1
+269,Osprey,OSPR-01,T30,23.7,outer_slope,moderate_slope,3,Species richness,3,3,0.626481275,3,4.227880736
+270,Osprey,OSPR-01,T31,18.9,outer_slope,steep_slope,3,Species richness,1,1,0,1,1
+271,Osprey,OSPR-01,T32,15.4,outer_slope,steep_slope,3,Species richness,5,8.9375,3.697905647,5,16.18526189
+272,Osprey,OSPR-01,T33,12.7,outer_slope,moderate_slope,3,Species richness,3,5,1.454371482,3,7.850515725
+273,Osprey,OSPR-01,T34,5.1,outer_slope,moderate_slope,1,Species richness,6,6.483333333,2.069706429,6,10.53988339
+274,Osprey,OSPR-01,T35,7.1,outer_slope,moderate_slope,1,Species richness,5,7.8125,2.436750701,5,12.58844361
+275,Osprey,OSPR-01,T36,9.1,outer_slope,moderate_slope,1,Species richness,2,2,0.238683257,2,2.467810587
+276,Osprey,OSPR-01,T7,67.8,outer_slope,steep_slope,4,Species richness,1,1,0,1,1
+277,Osprey,OSPR-01,T7,96.3,outer_slope,wall,2,Species richness,1,1,0,1,1
+278,Osprey,OSPR-01,T8,65.8,outer_slope,steep_slope,4,Species richness,1,1,0,1,1
+279,Osprey,OSPR-01,T9,63.2,outer_slope,moderate_slope,3,Species richness,1,1,0,1,1
+280,Osprey,OSPR-02,T1,47.7,outer_slope,steep_slope,3,Species richness,3,3.8,1.516746918,3,6.772769332
+281,Osprey,OSPR-02,T10,12.7,outer_slope,moderate_slope,2,Species richness,8,12.37142857,4.317162759,8,20.8329121
+282,Osprey,OSPR-02,T10,68,outer_slope,steep_slope,4,Species richness,1,1,0,1,1
+283,Osprey,OSPR-02,T11,15.8,outer_slope,steep_slope,2,Species richness,4,7.6,3.113276231,4,13.70190929
+284,Osprey,OSPR-02,T11,64.2,outer_slope,steep_slope,4,Species richness,1,1,0,1,1
+285,Osprey,OSPR-02,T12,18.2,outer_slope,wall,2,Species richness,4,8.5,2.120957236,4.343000205,12.65699979
+286,Osprey,OSPR-02,T12,61.4,outer_slope,steep_slope,4,Species richness,1,1,0,1,1
+287,Osprey,OSPR-02,T13,9.4,outer_slope,moderate_slope,2,Species richness,6,6.95,1.973388478,6,10.81777034
+288,Osprey,OSPR-02,T14,7.3,outer_slope,moderate_slope,2,Species richness,9,14.87755102,4.274203953,9,23.25483683
+289,Osprey,OSPR-02,T15,6.1,outer_slope,gentle_slope,1,Species richness,10,12.97391304,2.422933715,10,17.72277586
+290,Osprey,OSPR-02,T16,47.8,outer_slope,moderate_slope,4,Species richness,2,2,0.440844002,2,2.864038367
+291,Osprey,OSPR-02,T19,33.2,outer_slope,steep_slope,3,Species richness,4,4.833333333,2.205271685,4,9.155586412
+292,Osprey,OSPR-02,T20,27.7,outer_slope,steep_slope,3,Species richness,3,3.2,1.655799724,3,6.445307825
+293,Osprey,OSPR-02,T21,21.4,outer_slope,moderate_slope,2,Species richness,4,7.6,3.511884584,4,14.4831673
+294,Osprey,OSPR-02,T22,17.1,outer_slope,wall,3,Species richness,3,5,1.318094738,3,7.583418214
+295,Osprey,OSPR-02,T23,14.1,outer_slope,steep_slope,2,Species richness,8,12.32,5.584434298,8,23.2652901
+296,Osprey,OSPR-02,T24,6.2,outer_slope,moderate_slope,1,Species richness,14,28.86956522,14.5134092,14,57.31532454
+297,Osprey,OSPR-02,T25,8.2,outer_slope,moderate_slope,2,Species richness,10,27.67272727,11.93906881,10,51.07287216
+298,Osprey,OSPR-02,T3,42.3,outer_slope,moderate_slope,3,Species richness,6,13.42857143,6.397868532,6,25.96816333
+299,Osprey,OSPR-02,T4,32.2,outer_slope,steep_slope,2,Species richness,2,2.333333333,1.046527045,2,4.38448865
+300,Osprey,OSPR-02,T5,35,outer_slope,steep_slope,3,Species richness,1,1,0,1,1
+301,Osprey,OSPR-02,T6,38.1,outer_slope,steep_slope,3,Species richness,2,2,0.472581563,2,2.926242843
+302,Osprey,OSPR-02,T6,80.6,outer_slope,steep_slope,4,Species richness,2,2.333333333,1.076720298,2,4.443666338
+303,Osprey,OSPR-02,T7,28,outer_slope,steep_slope,2,Species richness,2,2,0.358870281,2,2.703372826
+304,Osprey,OSPR-02,T7,71.6,outer_slope,steep_slope,5,Species richness,1,1,0,1,1
+305,Osprey,OSPR-02,T8,24.9,outer_slope,steep_slope,3,Species richness,3,4.5,1.953267141,3,8.328333249
+306,Osprey,OSPR-02,T9,23.1,outer_slope,wall,3,Species richness,4,4.888888889,1.426695756,4,7.685161188
+307,Osprey,OSPR-03,T1,55.6,outer_slope,wall,3,Species richness,1,1,0,1,1
+308,Osprey,OSPR-03,T10,18.1,outer_slope,steep_slope,3,Species richness,4,8.5,2.23025002,4.128790284,12.87120972
+309,Osprey,OSPR-03,T11,8.3,outer_slope,moderate_slope,1,Species richness,9,16.86206897,7.872824969,9,32.29252236
+310,Osprey,OSPR-03,T12,6.4,outer_slope,moderate_slope,1,Species richness,12,16.47077922,4.712370686,12,25.70685605
+311,Osprey,OSPR-03,T13,96.5,outer_slope,wall,3,Species richness,1,1,0,1,1
+312,Osprey,OSPR-03,T16,81.1,outer_slope,steep_slope,3,Species richness,1,1,0,1,1
+313,Osprey,OSPR-03,T19,78.1,outer_slope,steep_slope,3,Species richness,1,1,0,1,1
+314,Osprey,OSPR-03,T2,55.7,outer_slope,steep_slope,3,Species richness,1,1,0,1,1
+315,Osprey,OSPR-03,T21,60.6,outer_slope,wall,3,Species richness,1,1,0,1,1
+316,Osprey,OSPR-03,T22,64.9,outer_slope,wall,3,Species richness,2,2.5,0.65279121,2,3.779447261
+317,Osprey,OSPR-03,T3,45.8,outer_slope,wall,3,Species richness,1,1,0,1,1
+318,Osprey,OSPR-03,T5,37.5,outer_slope,steep_slope,4,Species richness,1,1,0,1,1
+319,Osprey,OSPR-03,T6,34.3,outer_slope,steep_slope,4,Species richness,3,5,1.474055462,3,7.889095617
+320,Osprey,OSPR-03,T7,28.2,outer_slope,wall,4,Species richness,4,5.714285714,1.990067068,4,9.614745494
+321,Osprey,OSPR-03,T8,24.4,outer_slope,steep_slope,4,Species richness,3,5,1.398026507,3,7.740081603
+322,Osprey,OSPR-03,T9,14.5,outer_slope,wall,2,Species richness,3,3.8,1.667098126,3,7.067452286
+323,Saumarez,SAUM-01,T2,29.6,inner_reef,flat,1,Species richness,2,2.5,0.723627227,2,3.918283303
+324,Saumarez,SAUM-01,T4,29.6,inner_reef,flat,0,Species richness,2,2,0.287623491,2,2.563731684
+325,Saumarez,SAUM-01,T5,29.5,inner_reef,flat,1,Species richness,2,2,0.348735088,2,2.683508213
+326,Saumarez,SAUM-01,T6,29.9,inner_reef,flat,1,Species richness,1,1,0,1,1
+327,Shark Cay,SHAR-01,T10,11,outer_slope,flat,1,Species richness,5,6.888888889,2.296774858,5,11.39048489
+328,Shark Cay,SHAR-01,T2,85,outer_slope,wall,2,Species richness,1,1,0,1,1
+329,Shark Cay,SHAR-01,T3,77,outer_slope,moderate_slope,2,Species richness,1,1,0,1,1
+330,Shark Cay,SHAR-01,T7,36,outer_slope,steep_slope,2,Species richness,5,5.458333333,2.27098013,5,9.909372597
+331,Shark Cay,SHAR-01,T8,28,outer_slope,gentle_slope,3,Species richness,3,3,0.49910843,3,3.978234547
+332,Shark Cay,SHAR-01,T9,18,outer_slope,gentle_slope,1,Species richness,2,2,0.487831731,2,2.956132624
+333,South Diamond,SDIA-01,T1,35.3,lagoon,flat,1,Species richness,1,1,0,1,1
+334,South Diamond,SDIA-01,T2,35.6,lagoon,flat,2,Species richness,1,1,0,1,1
+335,South Diamond,SDIA-02,T1,15.2,outer_slope,gentle_slope,2,Species richness,8,8.974358974,3.058315789,8,14.96854777
+336,South Diamond,SDIA-02,T1,31.5,outer_slope,flat,2,Species richness,3,3.875,1.077265706,3,5.986401985
+337,South Diamond,SDIA-02,T1,95.3,outer_slope,gentle_slope,3,Species richness,1,1,0,1,1
+338,South Diamond,SDIA-02,T10,23.7,outer_slope,gentle_slope,3,Species richness,3,3.2,1.772818335,3,6.674660087
+339,South Diamond,SDIA-02,T10,74.1,outer_slope,gentle_slope,0,Species richness,1,1,0,1,1
+340,South Diamond,SDIA-02,T11,21.4,outer_slope,gentle_slope,3,Species richness,2,2,0.1,2,2.195996398
+341,South Diamond,SDIA-02,T12,20,outer_slope,gentle_slope,3,Species richness,4,4.464285714,1.050041064,4,6.522328382
+342,South Diamond,SDIA-02,T13,66.8,outer_slope,flat,0,Species richness,1,1,0,1,1
+343,South Diamond,SDIA-02,T15,79,outer_slope,gentle_slope,3,Species richness,5,11.66666667,5.069648121,5,21.6029944
+344,South Diamond,SDIA-02,T2,36,outer_slope,flat,3,Species richness,3,3.888888889,0.95273708,3,5.756219252
+345,South Diamond,SDIA-02,T2,93.9,outer_slope,gentle_slope,3,Species richness,1,1,0,1,1
+346,South Diamond,SDIA-02,T3,43.7,outer_slope,flat,3,Species richness,2,2.333333333,1.235392766,2,4.754658661
+347,South Diamond,SDIA-02,T3,94.1,outer_slope,gentle_slope,3,Species richness,2,2.333333333,1.372554452,2,5.023490626
+348,South Diamond,SDIA-02,T4,47.5,outer_slope,flat,3,Species richness,3,3.8,1.366703621,3,6.478689875
+349,South Diamond,SDIA-02,T4,97.2,outer_slope,gentle_slope,3,Species richness,1,1,0,1,1
+350,South Diamond,SDIA-02,T5,41.7,outer_slope,flat,3,Species richness,2,2.333333333,1.092860208,2,4.475299981
+351,South Diamond,SDIA-02,T5,88.7,outer_slope,gentle_slope,3,Species richness,2,2.5,0.719058728,2,3.90932921
+352,South Diamond,SDIA-02,T6,35.1,outer_slope,flat,2,Species richness,2,2.333333333,0.997055148,2,4.287525513
+353,South Diamond,SDIA-02,T6,87,outer_slope,gentle_slope,3,Species richness,1,1,0,1,1
+354,South Diamond,SDIA-02,T7,33.3,outer_slope,flat,2,Species richness,3,4.5,2.05649378,3,8.530653743
+355,South Diamond,SDIA-02,T7,84.4,outer_slope,gentle_slope,3,Species richness,2,2.5,0.708872344,2,3.889364264
+356,South Diamond,SDIA-02,T8,28.8,outer_slope,gentle_slope,3,Species richness,2,2.5,0.744067446,2,3.958345395
+357,South Diamond,SDIA-02,T8,81.7,outer_slope,gentle_slope,3,Species richness,1,1,0,1,1
+358,South Diamond,SDIA-02,T9,24.7,outer_slope,gentle_slope,3,Species richness,1,1,0,1,1
+359,South Diamond,SDIA-02,T9,78.2,outer_slope,gentle_slope,3,Species richness,2,2.5,0.714142843,2,3.899694252
+360,South Flinders,FLIN-01,T1,35.6,outer_slope,steep_slope,4,Species richness,6,7.333333333,3.436864873,6,14.0694647
+361,South Flinders,FLIN-01,T1,41.5,outer_slope,steep_slope,4,Species richness,3,5,1.449733905,3,7.841426241
+362,South Flinders,FLIN-01,T10,45.7,outer_slope,gentle_slope,3,Species richness,1,1,0,1,1
+363,South Flinders,FLIN-01,T2,34.3,outer_slope,steep_slope,3,Species richness,2,2.5,0.69084928,2,3.854039707
+364,South Flinders,FLIN-01,T2,37.1,outer_slope,wall,4,Species richness,4,6.5,2.271374808,4,10.95181282
+365,South Flinders,FLIN-01,T3,30.2,outer_slope,steep_slope,4,Species richness,3,3.428571429,1.299965907,3,5.976457787
+366,South Flinders,FLIN-01,T3,42.1,outer_slope,wall,3,Species richness,1,1,0,1,1
+367,South Flinders,FLIN-01,T4,25.3,outer_slope,steep_slope,4,Species richness,2,2,0.456048022,2,2.893837698
+368,South Flinders,FLIN-01,T4,35.2,outer_slope,wall,3,Species richness,3,5,1.39107303,3,7.726453039
+369,South Flinders,FLIN-01,T5,20.4,outer_slope,steep_slope,4,Species richness,3,3.8,1.322128678,3,6.391324593
+370,South Flinders,FLIN-01,T6,15.3,outer_slope,steep_slope,4,Species richness,3,4.5,2.158820291,3,8.73121002
+371,South Flinders,FLIN-01,T6,34.3,outer_slope,steep_slope,3,Species richness,1,1,0,1,1
+372,South Flinders,FLIN-01,T7,45.2,outer_slope,wall,4,Species richness,1,1,0,1,1
+373,South Flinders,FLIN-01,T7,67.1,outer_slope,gentle_slope,4,Species richness,1,1,0,1,1
+374,South Flinders,FLIN-01,T7,9.9,outer_slope,moderate_slope,4,Species richness,4,5.75,2.062615578,4,9.792652247
+375,South Flinders,FLIN-01,T8,5.2,outer_slope,gentle_slope,2,Species richness,3,3.857142857,0.970494415,3,5.759276959
+376,Southwest Cay,SWCA-01,T12,61.2,outer_slope,flat,1,Species richness,1,1,0,1,1
+377,Southwest Cay,SWCA-01,T16,48.1,outer_slope,steep_slope,2,Species richness,2,2.5,0.661266003,2,3.796057551
+378,Southwest Cay,SWCA-01,T17,44.1,outer_slope,moderate_slope,2,Species richness,2,2.333333333,1.066666667,2,4.423961584
+379,Southwest Cay,SWCA-01,T18,40.5,outer_slope,moderate_slope,3,Species richness,4,4.9,1.2016425,4,7.255176022
+380,Southwest Cay,SWCA-01,T19,37.4,outer_slope,moderate_slope,2,Species richness,3,3,0.233265683,3,3.457192337
+381,Southwest Cay,SWCA-01,T20,35,outer_slope,gentle_slope,2,Species richness,4,6.666666667,1.767245386,4,10.13040397
+382,Southwest Cay,SWCA-01,T21,32.1,outer_slope,steep_slope,2,Species richness,3,3.8,1.335723615,3,6.417970179
+383,Southwest Cay,SWCA-01,T22,27.9,outer_slope,steep_slope,2,Species richness,5,6.857142857,2.57367831,5,11.90145965
+384,Southwest Cay,SWCA-01,T23,24.9,outer_slope,moderate_slope,1,Species richness,4,4.941176471,0.854673254,4,6.616305267
+385,Southwest Cay,SWCA-01,T24,22.4,outer_slope,moderate_slope,1,Species richness,5,5.888888889,2.546218242,5,10.87938494
+386,Southwest Cay,SWCA-01,T25,19.4,outer_slope,gentle_slope,1,Species richness,10,22.109375,8.600902684,10,38.9668345
+387,Southwest Cay,SWCA-01,T26,15.4,outer_slope,moderate_slope,2,Species richness,3,3,0.401150807,3,3.786241133
+388,Southwest Cay,SWCA-01,T27,11,outer_slope,steep_slope,2,Species richness,4,4.222222222,1.583420066,4,7.325668523
+389,Turtle Islet,TURT-01,T5,61,outer_slope,wall,2,Species richness,1,1,0,1,1
+390,Turtle Islet,TURT-01,T6,50,outer_slope,wall,1,Species richness,3,5,1.414308792,3,7.771994296
+391,West Herald,HERA-01,T2,35.3,passage,flat,2,Species richness,1,1,0,1,1
+392,West Herald,HERA-01,T4,43.5,passage,gentle_slope,2,Species richness,3,3,0.604464415,3,4.184728483
+393,West Herald,HERA-01,T5,43.8,passage,gentle_slope,2,Species richness,5,7.727272727,1.983500706,5,11.61486267
+394,West Herald,HERA-01,T6,41.7,passage,gentle_slope,2,Species richness,9,16.66666667,6.081510333,9,28.58620789
+395,West Herald,HERA-01,T7,40.5,passage,gentle_slope,2,Species richness,8,8.641975309,2.657511844,8,13.85060281
+396,West Herald,HERA-01,T8,40.4,passage,gentle_slope,2,Species richness,8,8.241071429,2.573985473,8,13.28599025
+397,West Herald,HERA-01,T9,37.1,passage,gentle_slope,3,Species richness,9,9.642857143,2.55967771,9,14.65973327
+398,West Holmes,HOLM-01,T1,55,outer_slope,steep_slope,3,Species richness,2,2.333333333,1.225541865,2,4.73535125
+399,West Holmes,HOLM-01,T10,34.7,outer_slope,gentle_slope,1,Species richness,3,4.5,1.941674795,3,8.305612668
+400,West Holmes,HOLM-01,T2,51,outer_slope,steep_slope,3,Species richness,5,6.818181818,2.440245732,5,11.60097557
+401,West Holmes,HOLM-01,T3,52.4,outer_slope,steep_slope,3,Species richness,1,1,0,1,1
+402,West Holmes,HOLM-01,T4,55,outer_slope,steep_slope,4,Species richness,1,1,0,1,1
+403,West Holmes,HOLM-01,T5,46.4,outer_slope,moderate_slope,3,Species richness,3,3,0.412924743,3,3.809317625
+404,West Holmes,HOLM-01,T6,42.5,outer_slope,moderate_slope,4,Species richness,3,3,0.617687483,3,4.210645221
+405,West Holmes,HOLM-01,T7,43,outer_slope,moderate_slope,3,Species richness,2,2.5,0.727854881,2,3.926569352
+406,West Holmes,HOLM-01,T8,36.8,outer_slope,moderate_slope,2,Species richness,4,5.75,2.221112538,4,10.10330058
+407,West Holmes,HOLM-01,T9,36,outer_slope,moderate_slope,2,Species richness,5,5.46875,1.532396395,5,8.472191744
+408,West Holmes,HOLM-03,T10,9.6,outer_slope,gentle_slope,4,Species richness,6,7.882352941,2.662590664,6,13.10093475
+409,West Holmes,HOLM-03,T11,2.3,outer_slope,gentle_slope,4,Species richness,7,12.89655172,5.106906745,7,22.90590502
+410,West Holmes,HOLM-03,T2,46.8,outer_slope,gentle_slope,4,Species richness,1,1,0,1,1
+411,West Holmes,HOLM-03,T3,41.6,outer_slope,gentle_slope,4,Species richness,1,1,0,1,1
+412,West Holmes,HOLM-03,T5,32.2,outer_slope,gentle_slope,4,Species richness,1,1,0,1,1
+413,West Holmes,HOLM-03,T6,27.3,outer_slope,gentle_slope,4,Species richness,3,3.416666667,1.251659673,3,5.869874546
+414,West Holmes,HOLM-03,T7,22.4,outer_slope,gentle_slope,4,Species richness,3,3.8,1.404460427,3,6.552691855
+415,West Holmes,HOLM-03,T8,18.2,outer_slope,gentle_slope,4,Species richness,4,4,0.524753095,4,5.028497167
+416,West Holmes,HOLM-03,T8,61.6,outer_slope,gentle_slope,4,Species richness,1,1,0,1,1
+417,West Holmes,HOLM-03,T9,12.6,outer_slope,gentle_slope,4,Species richness,6,8.8,3.185777865,6,15.04400988
+418,West Holmes,HOLM-03,T9,57.1,outer_slope,gentle_slope,4,Species richness,1,1,0,1,1
+419,Willis,WILL-01,T1,35.2,outer_slope,gentle_slope,3,Species richness,5,10.4,2.764568059,5,15.81845383
+420,Willis,WILL-01,T10,50.4,outer_slope,steep_slope,3,Species richness,3,3.416666667,1.105432459,3,5.583274473
+421,Willis,WILL-01,T11,50.1,outer_slope,steep_slope,3,Species richness,2,2,0.272659924,2,2.534403632
+422,Willis,WILL-01,T12,40,outer_slope,steep_slope,3,Species richness,1,1,0,1,1
+423,Willis,WILL-01,T13,43,outer_slope,steep_slope,3,Species richness,3,5,1.524303672,3,7.987580298
+424,Willis,WILL-01,T14,42,outer_slope,steep_slope,3,Species richness,1,1,0,1,1
+425,Willis,WILL-01,T15,42,outer_slope,steep_slope,3,Species richness,5,5.466666667,1.456069511,5,8.320510467
+426,Willis,WILL-01,T2,42.3,outer_slope,gentle_slope,4,Species richness,2,2,0.314466038,2,2.616342108
+427,Willis,WILL-01,T3,44.4,outer_slope,gentle_slope,4,Species richness,1,1,0,1,1
+428,Willis,WILL-01,T4,51.5,outer_slope,steep_slope,3,Species richness,3,3.2,1.870018635,3,6.865169176
+429,Willis,WILL-01,T5,52.3,outer_slope,steep_slope,3,Species richness,1,1,0,1,1
+430,Willis,WILL-01,T6,52.3,outer_slope,steep_slope,3,Species richness,2,2.333333333,1.167921403,2,4.62241722
+431,Willis,WILL-01,T8,44.8,outer_slope,steep_slope,2,Species richness,1,1,0,1,1
+432,Willis,WILL-01,T9,44.1,outer_slope,steep_slope,2,Species richness,3,3.2,1.74642492,3,6.622929944
+433,Wreck,WREC-01,T1,31.5,outer_slope,gentle_slope,3,Species richness,6,10.15384615,5.221124329,6,20.3870618
+434,Wreck,WREC-01,T2,36.5,outer_slope,gentle_slope,3,Species richness,6,6.473684211,1.705897286,6,9.817181453
+435,Wreck,WREC-01,T3,36.3,outer_slope,gentle_slope,3,Species richness,9,18.67741935,5.741988489,9,29.93150999
