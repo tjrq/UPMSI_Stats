@@ -19,7 +19,7 @@ library(patchwork) # for combining plots
 
 # Scenario
 
-Tim and colleagues (2025b) investigated changes in macroalgae cover in the Bolinao-Anda Reef Complex, Philippines. To do so, we used RUV drops across a depth range of 1-60 at 4 sites. From the RUV deployment, we took one snapshot and then quantified the number of points covered by macroalgae relative to other benthic categories. 
+Tim and colleagues (2025b) investigated changes in macroalgae cover in the Bolinao-Anda Reef Complex, Philippines. To do so, we used RUV drops across a depth range of 1-60 at 4 sites. From the RUV deployment, we took one snapshot and then quantified the number of points covered by macroalgae relative to other benthic categories.
 
 # Read data
 
@@ -144,7 +144,8 @@ pairwise_ma <-
   emmeans(~Depth,
           epred = TRUE) |> 
   pairs(type = "link") %>% 
-  confint(level = 0.95) %>% 
+  summary(infer = c(TRUE, TRUE), # return pvalue and conf
+          level = 0.95) %>%
   as.tibble()
 
 pairwise_ma %>% head()

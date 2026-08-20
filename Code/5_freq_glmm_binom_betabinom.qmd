@@ -9,7 +9,6 @@ editor: visual
 ```{r}
 library(tidyverse) # data manipulation
 library(broom.mixed) # for tidy model interpretation
-library(sjPlot) # for table visualization
 library(emmeans) # estimating marginal means
 library(DHARMa) # model diagnostics
 library(glmmTMB) # running glmms
@@ -19,7 +18,7 @@ library(patchwork) # for combining plots
 
 # Scenario
 
-Tim and colleagues (2019) investigated differences in the attached of Porites coral nubbins when exposed to two herbivore grazers and two butterflyfish facultative corralivores in aquaria. Coral nubbins were attached to tiles with 10 nubbins for each tile. These tiles were then exposed to the grazers or corallivores in the aquaria for 8h. The initial and final number of coral nubbins attached after 8h were then compared. 
+Tim and colleagues (2019) investigated differences in the attached of Porites coral nubbins when exposed to two herbivore grazers and two butterflyfish facultative corralivores in aquaria. Coral nubbins were attached to tiles with 10 nubbins for each tile. These tiles were then exposed to the grazers or corallivores in the aquaria for 8h. The initial and final number of coral nubbins attached after 8h were then compared.
 
 # Read data
 
@@ -168,7 +167,7 @@ nub_newdata %>%
   mutate(p.value = round(p.value, 2))
 ```
 
-Nubbin detachment differs only between C. kleinii (ref group) and C. sordidus wherein attachment of nubbins in aquaria with C. sordidus is 56% lower. 
+Nubbin detachment differs only between C. kleinii (ref group) and C. sordidus wherein attachment of nubbins in aquaria with C. sordidus is 56% lower.
 
 ## Pairwise comparisons
 
@@ -182,7 +181,8 @@ pairwise_nub <-
   emmeans(~Fish_species,
           epred = TRUE) |> 
   pairs(type = "link") %>% 
-  confint(level = 0.95) %>% 
+  summary(infer = c(TRUE, TRUE), # return pvalue and conf
+          level = 0.95) %>%
   as.tibble()
 
 pairwise_nub %>% head()

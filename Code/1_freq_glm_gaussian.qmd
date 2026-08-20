@@ -1,0 +1,182 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+# Load library
+
+```{r}
+library(tidyverse) # data manipulation
+library(broom.mixed) # for tidy model interpretation
+library(emmeans) # estimating marginal means
+library(DHARMa) # model diagnostics
+library(glmmTMB) # running glmms
+library(ggimage) # for adding images
+library(patchwork) # for combining plots
+```
+
+# Scenario
+
+Tim and colleagues (2025) investigated changes in species richness with depth in the Coral Sea, Australia. To do so, we used ROV surveys across a depth range of 2-98 throughout 50 sites. Each ROV survey lasted for 2.5 mins and covered an estimated area of about 30m per survey.
+
+# Read data
+
+```{r}
+nutri <- read_csv("Data/tile_nutrients.csv", trim_ws = TRUE)
+```
+
+## Glimpse data and find columns of interest
+
+```{r}
+nutri %>% glimpse()
+```
+
+We are interested in Nitrate,  Site
+
+## Isolate variables of interest and data preparation
+
+```{r}
+nutri2 <- 
+  # old dataframe
+  nutri %>% 
+  # select relevant columns
+  select(Site, 
+         Phosphate) %>% 
+  # change Site as factor
+  mutate(Site = factor(Site,
+                    levels = c("Tomasa",
+                    "Lucero",
+                    "Malilnep")))
+
+nutri2 %>% head()
+```
+
+# Exploratory data analysis
+
+```{r}
+# boxplot
+nutri2 %>% 
+  ggplot(aes(y = Phosphate, x = Site)) +
+  geom_boxplot() +
+  theme_classic()
+```
+
+# Fit the model 1 (gaussian distribution)
+
+This assumes no site level variance (i.e. a simple glm)
+
+```{r}
+nutri_gau_mod <- 
+  glmmTMB(Phosphate ~ Site,
+        family = gaussian(link = 'identity'), 
+        data = nutri2,
+        REML = TRUE)
+```
+
+## Model validation
+
+```{r}
+nutri_gau_mod %>% testUniformity() # qqplot
+nutri_gau_mod %>% plotResiduals() # residual plot
+```
+
+Fit looks good
+
+# Save / load model
+
+```{r}
+save(nutri_gau_mod, file = "Model_Outputs/nutri_gau_mod.RData")
+
+load("Model_Outputs/nutri_gau_mod.RData")
+```
+
+## Predictions / emmeans
+
+```{r}
+phos_newdata <-
+  nutri_gau_mod  %>% 
+  emmeans(~ Site,
+          type = "response") %>% 
+  as.tibble()
+
+phos_newdata %>% head()
+```
+
+## Plot
+
+```{r}
+p_phos <-
+phos_newdata %>% 
+  ggplot(aes(y = emmean, x =Site)) +
+  geom_pointrange(aes(ymin = lower.CL, ymax = upper.CL),
+              fill = "#8AA17D",
+              alpha = 0.3) +
+  scale_x_discrete(name = "Site") +
+  scale_y_continuous(name = "Phosphate concentrations",
+                     limits = c(0.2,1),
+                     breaks = seq(0.2,1, by = 0.2)) +
+  theme_classic() +
+  ggtitle("a)")
+```
+
+## Model interpretation
+
+```{r}
+nutri_gau_mod %>% broom.mixed::tidy(
+  effects = "fixed",
+  conf.int = TRUE,
+  exponentiate = FALSE) %>% 
+  mutate(p.value = round(p.value, 3))
+```
+
+Site influenced phosphate concentrations but only when Tomasa (reference group) was compared to Lucero and Malilnep where concentrations were 0.21 uM lower. However, what about Lucero vs Malilnep?
+
+## Pairwise comparisons
+
+```{r}
+pairwise_nutri <- 
+nutri_gau_mod |> 
+  emmeans(~ Site, 
+          epred = TRUE) |> 
+  pairs() %>%
+  summary(infer = c(TRUE, TRUE), # return pvalue and conf
+          level = 0.95) %>% 
+  as.tibble()
+
+pairwise_nutri %>% head()
+```
+
+### Plot
+
+```{r}
+p_phos_pairwise <-
+pairwise_nutri  %>% 
+mutate(contrast = fct_rev(fct_inorder(contrast))) %>% 
+ggplot(aes(y = estimate, x = contrast)) +
+  geom_point() +
+  geom_pointrange(aes(y = estimate, ymax = lower.CL, ymin = upper.CL)) +
+  geom_hline(yintercept = 0, lty = 11, color = "red") +
+  scale_y_continuous("Contrast ratio") +
+  scale_x_discrete("") +
+  theme_classic() +
+  ggtitle("b)")
+```
+
+# Combine plot
+
+```{r}
+p_final_phos <- 
+p_phos / p_phos_pairwise
+```
+
+# Save plot
+
+```{r}
+ggsave("Figures/Fig_gau_Phos.jpeg",
+       plot = p_final_phos,
+       dpi = 300,
+       height = 5,
+       width = 5,
+       units = "in")
+```
