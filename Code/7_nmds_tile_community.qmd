@@ -1,0 +1,250 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+# Load library
+
+```{r}
+library(tidyverse) # data manipulation
+library(vegan) # for multivariate analysis
+library(patchwork) # for combining plots
+library(ggrepel) # for multivariate plotting
+library(ggforce) # for multivariate plotting
+library(pairwiseAdonis) # pairwise permanova
+```
+
+# Scenario
+
+# Read data
+
+```{r}
+tbc <- read_csv("Data/tile_benthic_composition.csv", trim_ws = TRUE)
+```
+
+## Glimpse data and find columns of interestGlimpse data and find columns of interest
+
+```{r}
+tbc %>% glimpse()
+```
+We are interested in Site and columns from BT to SPO
+
+## Isolate variables of interest and data preparation
+
+```{r}
+tbc2 <- 
+  # old dataframe
+  tbc %>% 
+  # filter only Top orientation
+  filter(Orientation == "Top") %>% 
+  # select relevant columns
+  select(Site,
+         Rep,
+         BT: SPO) %>% 
+  # change Site as factor
+  mutate(Site = factor(Site,
+                    levels = c("Tomasa",
+                    "Lucero",
+                    "Malilnep")))
+
+  tbc %>% head()
+```
+
+## Separate explanatory and response matrix
+
+```{r}
+# explanatory variable
+exp <- tbc %>% 
+  select(Site, Rep) %>% 
+  as.data.frame()
+
+# response variable
+res <- tbc %>% 
+  select(BT: SPO)  %>% 
+  as.data.frame()
+```
+
+
+## Data (response) standardization
+
+```{r}
+res_stand <- wisconsin(res^0.25)
+```
+
+data is wisconsin and fourth root transformed
+
+# Run mds
+
+```{r}
+res_mds <- metaMDS(res_stand,
+                  # distance is bray-curtis
+                  distance = "bray", 
+                  # number of dimensions - 2 dimensional
+                  k = 2,
+                  # iterations
+                  try = 100,
+                  # do not transform as already standardized
+                  autotransform = FALSE)
+```
+
+## stressplot 
+
+```{r}
+res_mds$stress
+# stress at 0.18
+```
+
+## Extract scores
+
+```{r}
+# extract scores from nmds; sites here are the individual tiles
+scores_res <- as.data.frame(scores(res_mds, display = "sites"))
+
+# create sample ID column for response matrix
+scores_res$SampleID <- rownames(scores_res)
+
+# create sample ID column for explanatory matrix
+exp$SampleID <- rownames(exp)
+
+# combine response and explanatory matrix; joined by sample id column
+scores_df <- left_join(scores_res, exp, by = "SampleID")
+```
+
+## Plot
+
+```{r}
+p_nmds_tile <-
+ggplot() +
+  # points
+  geom_point(data = scores_df,
+             aes(NMDS1, NMDS2,
+                 colour = Site,
+                 shape = Site),
+             size = 5) +
+  # group ellipses for ease of visualization
+  stat_ellipse(data = scores_df,
+               aes(NMDS1, NMDS2, fill = Site),
+               geom = "polygon",
+               alpha = 0.2,
+               level = 0.68) +
+  # vertical and horizontal lines
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  geom_vline(xintercept = 0, linetype = "dashed") +
+  # add nmds stress to the plot
+  annotate(
+    "text",
+    x = 1,
+    y = 1.1,
+    label = paste0("Stress = ", round(res_mds$stress, 2)),
+    hjust = 1.1,
+    vjust = 1.5,
+    size = 5
+  ) +
+  theme_classic()
+```
+
+Visually, there are differences in benthic composition among tiles, with Lucero different from Malilnep and Tomasa. 
+
+# Run PERMANOVA
+
+```{r}
+adonis2(res_stand ~ 
+          Site,
+        data = exp,
+        perm = 3000, # usually permutations are ~ 10,000 but to save time, am setting it to 3000
+        strata = exp$Rep) # controls for variation with reps in a site
+```
+
+Site influenced benthic composition and explains 28% of the variance. 
+
+## Pairwise comparisons
+
+```{r}
+pairwise_tbc <- pairwise.adonis2(
+  res_stand ~ Site,
+  data = exp,
+  nperm = 3000,
+  strata = "Rep"
+)
+```
+
+All sites are significantly different, with greater variation between Lucero and Malilnep and Tomasa compared to Malilnep and Tomasa.
+
+## Model checks
+
+```{r}
+disper <- betadisper(vegdist(res_stand, method = "bray"),
+                     group = exp$Site)
+
+permutest(disper, permutations = 3000)
+```
+Non-significant site effect. This suggest that any differences recorded in permanova was due to community/centroid variation rather than among site variability. 
+
+# Run envfit
+
+## Select only CCA, TA, BT for ease of plotting
+
+```{r}
+res_stand2 <- res_stand %>% select(CCA, TA, BT)
+```
+
+## Envfit
+
+```{r}
+res_envfit <- envfit(res_mds, 
+                     env = res_stand2,
+                     permutations = 3000)
+```
+
+All 3 variables were significant influential to variation in tile community explaining 54 to 68% of the variance. 
+
+## Save envfit variables for plotting
+
+```{r}
+# extract envfit scores 
+envfit_df <- as.data.frame(scores(res_envfit, display = "vectors"))
+
+# Add variable names as a column
+envfit_df$Variable <- rownames(envfit_df)
+```
+
+
+## Plot
+
+```{r}
+p_final_nmds <-
+p_nmds_tile +
+  # plots vectors
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  geom_vline(xintercept = 0, linetype = "dashed") +
+  geom_segment(data = envfit_df,
+               aes(x = 0, y = 0,
+                   xend = NMDS1,
+                   yend = NMDS2),
+               arrow = arrow(length = unit(0.2, "cm")),
+               colour = "black",
+               linewidth = 0.8) +
+  # add texts
+  ggrepel::geom_text_repel(
+    data = envfit_df,
+    aes(x = NMDS1, y = NMDS2, label = Variable),
+    colour = "black",
+    size = 8,
+    box.padding = 0.10,
+    point.padding = 0.05,
+    segment.colour = NA
+  )
+  
+```
+
+# Save plot
+
+```{r}
+ggsave("Figures/p_final_nmds.jpeg",
+       plot = p_final_nmds,
+       dpi = 300,
+       height = 5,
+       width = 5,
+       units = "in")
+```

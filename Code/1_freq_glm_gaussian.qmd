@@ -32,7 +32,7 @@ nutri <- read_csv("Data/tile_nutrients.csv", trim_ws = TRUE)
 nutri %>% glimpse()
 ```
 
-We are interested in Nitrate,  Site
+We are interested in Nitrate, Site
 
 ## Isolate variables of interest and data preparation
 
@@ -126,7 +126,7 @@ phos_newdata %>%
 nutri_gau_mod %>% broom.mixed::tidy(
   effects = "fixed",
   conf.int = TRUE,
-  exponentiate = FALSE) %>% 
+  exponentiate = FALSE) %>% # because already on response scale
   mutate(p.value = round(p.value, 3))
 ```
 
