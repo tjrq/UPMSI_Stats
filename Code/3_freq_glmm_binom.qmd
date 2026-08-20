@@ -1,0 +1,187 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+# Load library
+
+```{r}
+library(tidyverse) # data manipulation
+library(broom.mixed) # for tidy model interpretation
+library(sjPlot) # for table visualization
+library(emmeans) # estimating marginal means
+library(DHARMa) # model diagnostics
+library(glmmTMB) # running glmms
+library(ggimage) # for adding images
+library(patchwork) # for combining plots
+```
+
+# Scenario
+
+Tim and colleagues (2025) investigated changes in species richness with depth in the Coral Sea, Australia. To do so, we used ROV surveys across a depth range of 2-98 throughout 50 sites. Each ROV survey lasted for 2.5 mins and covered an estimated area of about 30m per survey.
+
+# Read data
+
+```{r}
+ma <- read_csv("Data/macroalgae.csv", trim_ws = TRUE)
+```
+
+## Glimpse data and find columns of interest
+
+```{r}
+ma %>% glimpse()
+```
+
+We are interested in Site, Depth, Macroalgae, Total_points
+
+## Isolate variables of interest and data preparation
+
+```{r}
+ma2 <- 
+  # old dataframe
+  ma %>% 
+  # select relevant columns
+  select(Macroalgae, 
+         Depth,
+         Site,
+         Total_points) %>% 
+  # change Site as factor
+  mutate(Site = as.factor(Site),
+         Depth = as.factor(Depth)) %>% 
+# calculate proportional cover. binomial needs to have responses between 0 and 1
+  mutate(ma_prop = Macroalgae/Total_points)
+```
+
+# Exploratory data analysis
+
+```{r}
+# scatterplot
+ma2 %>% 
+  ggplot(aes(y = ma_prop, x = Depth)) +
+  geom_boxplot()
+```
+
+# Fit the model (binomial distribution)
+
+```{r}
+ma_binom_mod <- 
+  glmmTMB(ma_prop ~ Depth +
+            (1 | Site),
+        weights = Total_points,
+        family = binomial(), 
+        data = ma2,
+        REML = TRUE)
+```
+
+## Model validation
+
+```{r}
+ma_binom_mod  %>% testUniformity()
+ma_binom_mod  %>% plotResiduals() 
+ma_binom_mod %>% testDispersion() 
+```
+
+Shows some signs of dispersion but looks relatively minor
+
+# Save / load model
+
+```{r}
+save(ma_binom_mod , file = "Model_Outputs/ma_binom_mod.RData")
+
+load("Model_Outputs/ma_binom_mod.RData")
+```
+
+## Predictions / emmeans
+
+```{r}
+# grid preparation
+ma_newdata <-
+  ma_binom_mod  %>% 
+  emmeans(~ Depth,
+          type = "response") %>% 
+  as.tibble()
+
+ma_newdata %>% head()
+```
+
+## Plot
+
+```{r}
+p_ma <-
+ma_newdata %>% 
+  ggplot(aes(y = prob, 
+             x = Depth)) +
+  geom_pointrange(aes(ymin = asymp.LCL, ymax = asymp.UCL),
+                  position = position_dodge(0.5),
+                  color = "#8AA17D") +
+  scale_x_discrete(name = "Depth") +
+  scale_y_continuous(name = "Proportional macroalgae cover",
+                     limits = c(0,1),
+                     breaks = seq(0,1, by = 0.2)) +
+  theme_classic() +
+  ggtitle("a)") +
+  theme(legend.position = 'none')
+```
+
+## Model interpretation
+
+```{r}
+ma_binom_mod %>% broom.mixed::tidy(
+  effects = "fixed",
+  conf.int = TRUE,
+  exponentiate = TRUE) %>%  # in log odds ratio
+  mutate(p.value = round(p.value, 2))
+```
+
+There are differences in macroalgae cover with depth. When compared to 10m (the reference group), these differences range from 58 to 82%. 
+
+## Pairwise comparisons
+
+```{r}
+pairwise_ma <- 
+ ma_binom_mod |> 
+  emmeans(~Depth,
+          epred = TRUE) |> 
+  pairs(type = "link") %>% 
+  confint(level = 0.95) %>% 
+  as.tibble()
+
+pairwise_ma %>% head()
+```
+
+### Plot
+
+```{r}
+p_pairwise_ma <-
+pairwise_ma  %>% 
+  mutate(contrast = fct_rev(fct_inorder(contrast))) %>% 
+  ggplot(aes(y = contrast, x = estimate)) +
+  geom_point() +
+  geom_pointrange(aes(x = estimate, xmax = asymp.UCL + SE, xmin = asymp.LCL)) +
+  geom_vline(xintercept = 0, lty = 11, color = "red") +
+  scale_x_continuous("Contrast ratio (log-scale)",
+                     limits = c(-3, 3)) +
+  scale_y_discrete("",
+                   position = "right") +
+  ggtitle("b) Comparisons of macroalgae among depths") +
+  theme_classic() 
+```
+
+# Combine plot
+
+```{r}
+p_final_ma <- 
+p_ma + p_pairwise_ma 
+```
+
+# Save plot
+
+```{r}
+ggsave("Figures/Fig_binom_ma.jpeg",
+       plot = p_final_ma,
+       dpi = 300,
+       height = 4,
+       width = 6,
+       units = "in")
+```
