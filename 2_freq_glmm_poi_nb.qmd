@@ -169,7 +169,7 @@ Depth has a negative effect on abundance of herbivores. The rate of decrease is 
 
 ## Pairwise comparisons
 
-Let us say we want to know differences in species richness between the shallowest and maximum depth. We can do so with pairwise contrasts. 
+Let us say we want to know differences in abundance between the shallowest and maximum depth and at 50 and 75m depth. We can do so with pairwise contrasts. 
 
 ### Extract min and max values
 
@@ -205,7 +205,6 @@ abun_nb_mod |>
   pairs(rev = TRUE, 
         type = "response") %>% 
   as.tibble()
-# 66% lower herbivores in the deepest compared to the shallowest depth band
 ```
 
 ### Plot
