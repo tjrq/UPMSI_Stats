@@ -7,57 +7,237 @@ editor: visual
 # Load library
 
 ```{r}
-
+library(tidyverse) # data manipulation
+library(broom.mixed) # for tidy model interpretation
+library(sjPlot) # for table visualization
+library(emmeans) # estimating marginal means
+library(DHARMa) # model diagnostics
+library(glmmTMB) # running glmms
+library(ggimage) # for adding images
+library(patchwork) # for combining plots
 ```
 
 # Scenario
 
-Insert text describing the scenario per example
-
 # Read data
 
 ```{r}
+abun <- read_csv("Data/herb_abundance.csv", trim_ws = TRUE)
+```
 
+## Glimpse data and find columns of interest
+
+```{r}
+abun  %>% glimpse()
+```
+
+We are interested in Reef_2, Site, Depth_m, cropper, browser, detritivore, excavator, scraper
+
+## Isolate variables of interest and data preparation
+
+```{r}
+abun2 <- 
+  # old dataframe
+  abun %>% 
+  # select relevant columns
+  select(Reef_2, 
+         Site,
+         Depth_m,
+         cropper,
+         browser,
+         detritivore,
+         excavator,
+         scraper) %>% 
+  # change Reef_2, Site as factors
+  mutate(Reef_2 = as.factor(Reef_2),
+         Site = as.factor(Site)) %>% 
+  # combine all herbivore feeding groups as "All_herbs"
+  mutate(All_herbs = cropper + browser + detritivore + excavator + scraper)
 ```
 
 # Exploratory data analysis
 
 ```{r}
+# scatterplot
+abun2 %>% 
+  ggplot(aes(y = All_herbs, x = Depth_m)) +
+  geom_point() +
+  geom_smooth()
 
+# histogram
+abun2 %>% ggplot(aes(x = All_herbs)) +
+  geom_histogram()
 ```
 
-# Fit the model
+# Fit the model (poisson distribution)
 
 ```{r}
-
+abun_poi_mod <- 
+  glmmTMB(All_herbs ~ Depth_m + 
+            (1 | Reef_2 / Site),
+        family = poisson(), 
+        data = abun2,
+        REML = TRUE)
 ```
 
-# Model validation
+## Model validation
 
 ```{r}
-
+abun_poi_mod %>% testUniformity()
+abun_poi_mod %>% plotResiduals()
+abun_poi_mod %>% testDispersion()
 ```
 
-# Model outputs
+Here we can see that our fit is garbage, so we need to reevaluate our models
+
+# Fit model 2 (negbinom)
 
 ```{r}
-
+abun_nb_mod <- 
+  glmmTMB(All_herbs ~ Depth_m + 
+            (1 | Reef_2 / Site),
+        family = nbinom2(), 
+        data = abun2,
+        REML = TRUE)
 ```
 
-# Model investigation / hypothesis testing
+## Model validation
 
 ```{r}
-
+abun_nb_mod %>% testUniformity() # qqplot
+abun_nb_mod %>% plotResiduals() # residual plot
+abun_nb_mod %>% testDispersion()
 ```
 
-# Predictions / plot
+## Predictions / emmeans
 
 ```{r}
+# Prepare matrix for predicted data to be stored
+abun_grid <- with(abun2,
+                    data.frame(Depth_m = seq(min(Depth_m),
+                                             max(Depth_m),
+                                             length = 100)))
 
+# emmeans
+abun_newdata <- abun_nb_mod %>% 
+  emmeans(~ Depth_m, 
+          at = abun_grid,
+          type = 'response') %>% # change data from log to response scale
+  as.data.frame()
+
+#abun_newdata %>% head()
 ```
 
-# Pairwise comparisons
+## Plot
 
 ```{r}
+p_abundepth <-
+abun_newdata %>% 
+  ggplot(aes(y = response, x =Depth_m)) +
+  geom_ribbon(aes(ymin = asymp.LCL, ymax = asymp.UCL),
+              fill = "#8AA17D",
+              alpha = 0.5) +
+  geom_line() +
+  # here add the rawdata
+  geom_point(data = abun2,
+             aes(y = All_herbs),
+                 color = "#929FBD",
+             alpha = 0.3) +
+  scale_x_continuous(name = "Depth") +
+  scale_y_continuous(name = "Abundance",
+                     limits = c(0,50),
+                     breaks = seq(0,50, by = 10)) +
+  theme_classic() +
+  ggtitle("a)") +
+  geom_image(data = tibble(Depth_m = 70,
+                            response = 45),
+                            aes(image = ("Images/siganid.png")),
+                            size = 0.30)
+```
 
+## Model interpretation
+
+```{r}
+abun_nb_mod %>% broom.mixed::tidy(
+  effects = "fixed",
+  conf.int = TRUE,
+  exponentiate = TRUE
+)
+```
+
+Depth has a negative effect on abundance of herbivores. The rate of decrease is 5.2% (1 - 0.948 in the estimate) for every m change in depth.  The probability of this not happening due to chance is < 0.001 and suggest a significant effect of depth. 
+
+## Pairwise comparisons
+
+Let us say we want to know differences in species richness between the shallowest and maximum depth. We can do so with pairwise contrasts. 
+
+### Extract min and max values
+
+```{r}
+depth_comp <- abun2 %>% 
+  summarise(min_depth = min(Depth_m),
+            mid_depth = 50,
+            low_depth = 75,
+            max_depth = max(Depth_m)) %>% 
+  unlist(use.names = FALSE) %>% # remove column names of min and max depth
+  as_tibble() %>% # have them as one column
+  rename(Depth_m = value) # name column as Depth_m
+```
+
+### Pairwise between shallowest and deepest depth
+
+```{r}
+# comparisons betweem min, 50m, 75m, and max depth
+pairwise_depth <- 
+abun_nb_mod |> 
+  emmeans(~ Depth_m, 
+          at = depth_comp, 
+          epred = TRUE) |> 
+  pairs(type = "link") %>% 
+  as.tibble()
+# from the shallowest to the deepest depth band, the ratio increases (greater differences in abundance)
+
+# [inverse] comparisons from max to min depth
+abun_nb_mod |> 
+  emmeans(~ Depth_m, 
+          at = depth_comp, 
+          epred = TRUE) |> 
+  pairs(rev = TRUE, 
+        type = "response") %>% 
+  as.tibble()
+# 66% lower herbivores in the deepest compared to the shallowest depth band
+```
+
+### Plot
+
+```{r}
+p_abun_pairwise <-
+pairwise_depth %>% 
+  mutate(contrast = fct_rev(fct_inorder(contrast))) %>% # makes 2.3m the top most of the fig
+ggplot(aes(y = contrast, x = estimate)) +
+  geom_point() +
+  geom_pointrange(aes(x = estimate, xmax = estimate + SE, xmin = estimate - SE)) +
+  geom_vline(xintercept = 0, lty = 11, color = "red") +
+  scale_x_continuous("Contrast ratio (log-scale)") +
+  scale_y_discrete("") +
+  ggtitle("b)") +
+  theme_classic() 
+```
+
+# Combine plot
+
+```{r}
+p_final_abun <- 
+p_abundepth + p_abun_pairwise 
+```
+
+# Save plot
+
+```{r}
+ggsave("Figures/Fig_Nb_Abund_Depth.jpeg",
+       plot = p_final_abun,
+       dpi = 300,
+       height = 5,
+       width = 8,
+       units = "in")
 ```

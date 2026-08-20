@@ -19,7 +19,7 @@ library(patchwork) # for combining plots
 
 # Scenario
 
-Tim and colleagues (2025) aimed to investigate changes in species richness and how that changes with depth in the Coral Sea, Australia. To do so, we used ROV surveys across a depth range of 2-98 along 50 sites. Each ROV survey lasted for 2.5 mins and covered an estimated area of about 30m per survey. 
+Tim and colleagues (2025) investigated changes in species richness with depth in the Coral Sea, Australia. To do so, we used ROV surveys across a depth range of 2-98 throughout 50 sites. Each ROV survey lasted for 2.5 mins and covered an estimated area of about 30m per survey. 
 
 # Read data
 
@@ -60,10 +60,10 @@ spr2 %>%
   geom_point() +
   geom_smooth()
 
-# historgram
-#spr2 %>% 
- # ggplot(aes(x = SRich)) +
-  # geom_histogram()
+historgram
+  spr2 %>% 
+  ggplot(aes(x = SRich)) +
+  geom_histogram()
 ```
 
 # Fit the model 1 (gaussian distribution)
@@ -81,10 +81,8 @@ spr_gau_mod <-
 ## Model validation
 
 ```{r}
-spr_gau_mod_resid <- spr_gau_mod %>% simulateResiduals(plot = TRUE)
-
-spr_gau_mod_resid %>% testUniformity() # qqplot
-spr_gau_mod_resid %>% plotResiduals() # residual plot
+spr_gau_mod %>% testUniformity() # qqplot
+spr_gau_mod %>% plotResiduals() # residual plot
 ```
 
 Here we can see that our fit is garbage, so we need to reevaluate our models
@@ -104,10 +102,8 @@ spr_ln_mod <-
 ## Model validation
 
 ```{r}
-spr_ln_mod_resid <- spr_ln_mod %>% simulateResiduals(plot = TRUE)
-
-spr_ln_mod_resid %>% testUniformity() # qqplot
-spr_ln_mod_resid %>% plotResiduals() # residual plot
+spr_ln_mod %>% testUniformity() # qqplot
+spr_ln_mod %>% plotResiduals() # residual plot
 ```
 
 This model is def better than model 1. We get some warnings but the shape of the residual plot doesn't seem to follow any shape (i.e. it is within an acceptable range of error).
@@ -128,10 +124,8 @@ spr_lnr_mod <-
 ## Model validation
 
 ```{r}
-spr_lnr_mod_resid <- spr_lnr_mod %>% simulateResiduals(plot = TRUE)
-
-spr_lnr_mod_resid %>% testUniformity() # qqplot
-spr_lnr_mod_resid %>% plotResiduals() # residual plot
+spr_lnr_mod %>% testUniformity() # qqplot
+spr_lnr_mod %>% plotResiduals() # residual plot
 ```
 
 ## Predictions / emmeans
@@ -206,7 +200,7 @@ min_max_depth <- spr2 %>%
 
 ```{r}
 # comparisons from 2.3 to 98m
-pairwise_depth <- 
+pairwise_spdepth <- 
 spr_lnr_mod |> 
   emmeans(~ Depth_m, 
           at = min_max_depth, 
@@ -230,13 +224,13 @@ spr_lnr_mod |>
 ### Plot
 
 ```{r}
-p_pairwise <-
-pairwise_depth %>% 
+p_sp_pairwise <-
+pairwise_spdepth %>% 
 ggplot(aes(y = ratio, x = contrast)) +
   geom_point() +
   geom_pointrange(aes(y = ratio, ymax = ratio + SE, ymin = ratio - SE)) +
-  geom_hline(yintercept = 1, lty = 11, color = "red") +
-  scale_y_continuous("Contrast ratio (log-scale)") +
+  geom_hline(yintercept = 0, lty = 11, color = "red") +
+  scale_y_continuous("Contrast ratio") +
   scale_x_discrete("") +
   theme_classic() +
   ggtitle("b)")
@@ -246,7 +240,7 @@ ggplot(aes(y = ratio, x = contrast)) +
 
 ```{r}
 p_final_spr <- 
-p_sprdepth + p_pairwise
+p_sprdepth + p_sp_pairwise
 ```
 
 # Save plot
