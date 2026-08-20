@@ -185,6 +185,7 @@ pairwise_nub <-
           level = 0.95) %>%
   as.tibble()
 
+#pairwise_arnp %>% filter(p.value < 0.05)
 pairwise_nub %>% head()
 ```
 

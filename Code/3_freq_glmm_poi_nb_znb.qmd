@@ -1,0 +1,264 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+# Load library
+
+```{r}
+library(tidyverse) # data manipulation
+library(broom.mixed) # for tidy model interpretation
+library(emmeans) # estimating marginal means
+library(DHARMa) # model diagnostics
+library(glmmTMB) # running glmms
+library(ggimage) # for adding images
+library(patchwork) # for combining plots
+```
+
+# Scenario
+
+Data is from Tim and colleagues (2025) and has the same descriptions as the gaussian and lognormal models so I won't be elaborating again here.
+
+# Read data
+
+```{r}
+arnp <- read_csv("Data/arnp_fvc.csv", trim_ws = TRUE)
+```
+
+## Glimpse data and find columns of interest
+
+```{r}
+arnp  %>% glimpse()
+```
+We are interested in Site, Abundance, `Size est.`, `Trophic group`
+
+## Isolate variables of interest and data preparation
+
+```{r}
+arnp2 <- 
+  # old dataframe
+  arnp %>% 
+  # select relevant columns
+  select(Year, 
+         Site,
+         Abundance,
+         `Size est.`,
+         `Trophic group`) %>% 
+  # rename size est and trophic group
+  rename(Length = `Size est.`,
+         Trophic_group = `Trophic group`) %>% 
+  # factor Trophic group, year, site
+  mutate(Trophic_group = factor(Trophic_group),
+         Year = factor(Year),
+         Site = factor(Site)) %>% 
+  # filter planktivore, herbivore, detrivore as we will only use these
+  filter(
+    Trophic_group %in% c(
+      "Planktivore",
+      "Herbivore",
+      "Detritivore"
+    )
+  ) %>% 
+  # ensures there are other trophic groups are not counted
+  droplevels() 
+```
+
+# Exploratory data analysis
+
+```{r}
+# scatterplot
+arnp2 %>% 
+  ggplot(aes(y = Abundance, x = Year, color = Trophic_group)) +
+  geom_boxplot() +
+  facet_grid(~ Trophic_group) +
+  theme_classic()
+
+# histogram
+arnp2 %>% ggplot(aes(x = Abundance)) +
+  geom_histogram()
+```
+
+# Fit the model (poisson distribution)
+
+```{r}
+arnp_poi_mod <- 
+  glmmTMB(Abundance ~ Year * Trophic_group + 
+            (1 | Site),
+        family = poisson(), 
+        data = arnp2,
+        REML = TRUE)
+```
+
+## Model validation
+
+```{r}
+arnp_poi_mod %>% testUniformity()
+arnp_poi_mod %>% plotResiduals()
+arnp_poi_mod %>% testDispersion()
+```
+
+Here we can see that our fit is garbage, so we need to reevaluate our models
+
+# Fit model 2 (negbinom)
+
+```{r}
+arnp_nb_mod <- 
+  glmmTMB(Abundance ~ Year * Trophic_group + 
+            (1 | Site),
+        family = nbinom2(), 
+        data = arnp2,
+        REML = TRUE)
+```
+
+## Model validation
+
+```{r}
+arnp_nb_mod %>% testUniformity() # qqplot
+arnp_nb_mod %>% plotResiduals() # residual plot
+arnp_nb_mod %>% testDispersion()
+```
+
+# Fit model 3 (zero inflated)
+
+```{r}
+arnp_znb_mod <- 
+  glmmTMB(Abundance ~ Length + 
+            (1 | Site),
+        ziformula = ~ Year + Trophic_group,
+        family = nbinom2(), 
+        data = arnp2,
+        REML = TRUE)
+```
+
+## Model validation
+
+```{r}
+arnp_znb_mod %>% testUniformity() # qqplot
+arnp_znb_mod %>% plotResiduals() # residual plot
+arnp_znb_mod %>% testDispersion()
+```
+
+# AIC model comparisons
+
+```{r}
+AIC(arnp_poi_mod, arnp_nb_mod, arnp_znb_mod) %>% 
+  as.data.frame() %>% 
+  tibble::rownames_to_column("Model") %>% 
+  arrange(AIC)
+```
+
+Model 2 seems to be the best
+
+# Save / load model
+
+```{r}
+save(arnp_nb_mod, file = "Model_Outputs/arnp_nb_mod.RData")
+
+load("Model_Outputs/arnp_nb_mod.RData")
+```
+
+## Predictions / emmeans
+
+```{r}
+# Prepare matrix for predicted data to be stored
+# grid preparation
+arnp_newdata <-
+  arnp_nb_mod %>% 
+  emmeans(~ Year | Trophic_group,
+          type = "response") %>% 
+  as.tibble()
+
+arnp_newdata %>% head()
+```
+
+## Plot
+
+```{r}
+p_arn_abun <-
+arnp_newdata %>% 
+    ggplot(aes(y = response, 
+             x = Year, 
+             fill = Trophic_group, 
+             color = Trophic_group,
+             shape = Trophic_group)) +
+  geom_pointrange(aes(ymin = asymp.LCL, ymax = asymp.UCL),
+                  position = position_dodge(0.5)) +
+  facet_grid(~ Trophic_group) +
+  scale_x_discrete(name = "Year") +
+  scale_y_continuous(name = "Abundance",
+                     limits = c(0,30),
+                     breaks = seq(0,30, by = 10)) +
+  theme_classic() +
+  ggtitle("a)") +
+  theme(legend.position = "none")
+```
+
+## Model interpretation
+
+```{r}
+arnp_nb_mod %>% broom.mixed::tidy(
+  effects = "fixed",
+  conf.int = TRUE,
+  exponentiate = TRUE) %>%  
+  mutate(p.value = round(p.value, 2))
+```
+
+There is an interaction term, therefore we cannot interpret the year or trophic group effects by themselves. 
+
+## Pairwise comparisons
+
+### Pairwise between year and trophic group
+
+```{r}
+pairwise_arnp <- 
+ arnp_nb_mod |> 
+  emmeans(~ Year | Trophic_group, # contrast by year for each trophic group
+          epred = TRUE) |> 
+  pairs(type = "link") %>% 
+  #pairs(type = "response") %>%
+  summary(infer = c(TRUE, TRUE), # return pvalue and conf
+          level = 0.95) %>%
+  as.tibble()
+
+#pairwise_arnp %>% filter(p.value < 0.05)
+```
+Note: interpretation on the response scale 
+
+For herbivores, comparisons between 2016 and 2019 suggested a 23% increase in abundance, while there were no differences between 2016 and 2018. For planktivores, abundance was 62-69% greater in 2019 compared to 2016 and 2018. There were no differences in abundance between years for detritivores. 
+
+### Plot
+
+```{r}
+p_arnp_pairwise <-
+pairwise_arnp %>% 
+  mutate(contrast = fct_rev(fct_inorder(contrast))) %>%
+ggplot(aes(y = contrast, x = estimate, color = Trophic_group)) +
+  geom_point() +
+  geom_pointrange(aes(x = estimate, xmax = asymp.UCL, xmin = asymp.LCL)) +
+  geom_vline(xintercept = 0, lty = 11, color = "red") +
+  facet_grid(~ Trophic_group) +
+  scale_x_continuous("Contrast ratio (log-scale)") +
+  scale_y_discrete("", position = "right") +
+  ggtitle("b)") +
+  theme_classic() +
+  theme(legend.position = "none")
+```
+
+# Combine plot
+
+```{r}
+p_final_arnp <- 
+p_arn_abun / p_arnp_pairwise
+```
+
+# Save plot
+
+```{r}
+ggsave("Figures/Fig_Nb_Abund_ARNP.jpeg",
+       plot = p_final_arnp ,
+       dpi = 300,
+       height = 6,
+       width = 6,
+       units = "in")
+```
