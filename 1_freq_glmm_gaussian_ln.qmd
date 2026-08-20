@@ -1,0 +1,262 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+# Load library
+
+```{r}
+library(tidyverse) # data manipulation
+library(broom.mixed) # for tidy model interpretation
+library(sjPlot) # for table visualization
+library(emmeans) # estimating marginal means
+library(DHARMa) # model diagnostics
+library(glmmTMB) # running glmms
+library(ggimage) # for adding images
+library(patchwork) # for combining plots
+```
+
+# Scenario
+
+Tim and colleagues (2025) aimed to investigate changes in species richness and how that changes with depth in the Coral Sea, Philippines. To do so, we used ROV surveys across a depth range of 2-98 along 50 sites. 
+
+# Read data
+
+```{r}
+spr <- read_csv("Data/herb_sprich.csv", trim_ws = TRUE)
+```
+
+## Glimpse data and find columns of interest
+
+```{r}
+spr %>% glimpse()
+```
+
+We are interested in Site, Depth_m, Estimator
+
+## Isolate variables of interest and data preparation
+
+```{r}
+spr2 <- 
+  # old dataframe
+  spr %>% 
+  # select relevant columns
+  select(Estimator, 
+         Depth_m,
+         Site) %>% 
+  # change Site as factor
+  mutate( Site = as.factor(Site)) %>% 
+  # rename Estimator to SRich for ease
+  rename(SRich = Estimator)
+```
+
+# Exploratory data analysis
+
+```{r}
+# scatterplot
+spr2 %>% 
+  ggplot(aes(y = SRich, x = Depth_m)) +
+  geom_point() +
+  geom_smooth()
+
+# historgram
+#spr2 %>% 
+ # ggplot(aes(x = SRich)) +
+  # geom_histogram()
+```
+
+# Fit the model 1 (gaussian distribution)
+
+This assumes no site level variance (i.e. a simple glm)
+
+```{r}
+spr_gau_mod <- 
+  glmmTMB(SRich ~ Depth_m,
+        family = gaussian(link = 'identity'), 
+        data = spr2,
+        REML = TRUE)
+```
+
+## Model validation
+
+```{r}
+spr_gau_mod_resid <- spr_gau_mod %>% simulateResiduals(plot = TRUE)
+
+spr_gau_mod_resid %>% testUniformity() # qqplot
+spr_gau_mod_resid %>% plotResiduals() # residual plot
+```
+
+Here we can see that our fit is garbage, so we need to reevaluate our models
+
+# Fit the model 2 (lognormal)
+
+This assumes no site level variance (i.e. a simple glm)
+
+```{r}
+spr_ln_mod <- 
+  glmmTMB(SRich ~ Depth_m,
+        family = lognormal(), 
+        data = spr2,
+        REML = TRUE)
+```
+
+## Model validation
+
+```{r}
+spr_ln_mod_resid <- spr_ln_mod %>% simulateResiduals(plot = TRUE)
+
+spr_ln_mod_resid %>% testUniformity() # qqplot
+spr_ln_mod_resid %>% plotResiduals() # residual plot
+```
+
+This model is def better than model 1. We get some warnings but the shape of the residual plot doesn't seem to follow any shape (i.e. it is within an acceptable range of error).
+
+Now let's try including a random variable (i.e. a glmm before we )
+
+# Fit model 3 (include site as random variable)
+
+```{r}
+spr_lnr_mod <- 
+  glmmTMB(SRich ~ Depth_m +
+            (1 | Site),
+        family = lognormal(), 
+        data = spr2,
+        REML = TRUE)
+```
+
+## Model validation
+
+```{r}
+spr_lnr_mod_resid <- spr_lnr_mod %>% simulateResiduals(plot = TRUE)
+
+spr_lnr_mod_resid %>% testUniformity() # qqplot
+spr_lnr_mod_resid %>% plotResiduals() # residual plot
+```
+
+## Predictions / emmeans
+
+```{r}
+# Prepare matrix for predicted data to be stored
+spr_grid <- with(spr2,
+                    data.frame(Depth_m = seq(min(Depth_m),
+                                             max(Depth_m),
+                                             length = 100)))
+
+# emmeans
+spr_newdata <- spr_lnr_mod %>% 
+  emmeans(~ Depth_m, 
+          at = spr_grid,
+          type = 'response') %>% # change data from log to response scale
+  as.data.frame()
+
+#spr_newdata %>% head()
+```
+
+## Plot
+
+```{r}
+p_sprdepth <-
+spr_newdata %>% 
+  ggplot(aes(y = response, x =Depth_m)) +
+  geom_ribbon(aes(ymin = asymp.LCL, ymax = asymp.UCL),
+              fill = "#8AA17D",
+              alpha = 0.3) +
+  geom_line() +
+  scale_x_continuous(name = "Depth") +
+  scale_y_continuous(name = "Species richness",
+                     limits = c(0,10),
+                     breaks = seq(0,10, by = 2)) +
+  theme_classic() +
+  ggtitle("a)") +
+  geom_image(data = tibble(Depth_m = 70,
+                            response = 9),
+                            aes(image = ("Images/naso.png")),
+                            size = 0.30)
+```
+
+## Model interpretation
+
+```{r}
+spr_lnr_mod %>% broom.mixed::tidy(
+  effects = "fixed",
+  conf.int = TRUE,
+  exponentiate = TRUE
+)
+```
+
+Depth has a negative effect on species richness of herbivores. The rate of decrease is 1.2% (1 - 0.988 in the estimate) for every m change in depth.  The probability of this not happening due to chance is < 0.001 and suggest a significant effect of depth. 
+
+## Pairwise comparisons
+
+Let us say we want to know differences in species richness between the shallowest and maximum depth. We can do so with pairwise contrasts. 
+
+### Extract min and max values
+
+```{r}
+min_max_depth <- spr2 %>% 
+  summarise(min_depth = min(Depth_m),
+            max_depth = max(Depth_m)) %>% 
+  unlist(use.names = FALSE) %>% # remove column names of min and max depth
+  as_tibble() %>% # have them as one column
+  rename(Depth_m = value) # name column as Depth_m
+```
+
+### Pairwise between shallowest and deepest depth
+
+```{r}
+# comparisons from 2.3 to 98m
+pairwise_depth <- 
+spr_lnr_mod |> 
+  emmeans(~ Depth_m, 
+          at = min_max_depth, 
+          epred = TRUE) |> 
+  pairs(type = "response") %>% 
+  as.tibble()
+# 3x more herbivores in the shallowest compared to the deepest
+# can also be presented as a 202% (3.02 - 1) increase in richness from deep to shallow
+
+# [inverse] comparisons from 98 to 2.3m
+spr_lnr_mod |> 
+  emmeans(~ Depth_m, 
+          at = min_max_depth, 
+          epred = TRUE) |> 
+  pairs(rev = TRUE, 
+        type = "response") %>% 
+  as.tibble()
+# 66% lower herbivores in the deepest compared to the shallowest depth band
+```
+
+### Plot
+
+```{r}
+p_pairwise <-
+pairwise_depth %>% 
+ggplot(aes(y = ratio, x = contrast)) +
+  geom_point() +
+  geom_pointrange(aes(y = ratio, ymax = ratio + SE, ymin = ratio - SE)) +
+  geom_hline(yintercept = 1, lty = 11, color = "red") +
+  scale_y_continuous("Contrast ratio (log-scale)") +
+  scale_x_discrete("") +
+  theme_classic() +
+  ggtitle("b)")
+```
+
+# Combine plot
+
+```{r}
+p_final_spr <- 
+p_sprdepth + p_pairwise
+```
+
+# Save plot
+
+```{r}
+ggsave("Figures/Fig_Ln_Spr_Depth.jpeg",
+       plot = p_final_spr,
+       dpi = 300,
+       height = 4,
+       width = 6,
+       units = "in")
+```
+
