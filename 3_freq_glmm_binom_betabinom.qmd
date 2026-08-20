@@ -1,0 +1,225 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+# Load library
+
+```{r}
+library(tidyverse) # data manipulation
+library(broom.mixed) # for tidy model interpretation
+library(sjPlot) # for table visualization
+library(emmeans) # estimating marginal means
+library(DHARMa) # model diagnostics
+library(glmmTMB) # running glmms
+library(ggimage) # for adding images
+library(patchwork) # for combining plots
+```
+
+# Scenario
+
+
+
+# Read data
+
+```{r}
+larvae <- read_csv("Data/plank_larvae.csv", trim_ws = TRUE)
+```
+
+## Glimpse data and find columns of interest
+
+```{r}
+larvae  %>% glimpse()
+```
+
+We are interested in Species, Larvae, Initial, Individual, Survivorship, Time
+
+## Isolate variables of interest and data preparation
+
+```{r}
+larvae2 <- 
+  # old dataframe
+  larvae %>% 
+  # select relevant columns
+  select(Species, 
+         Larvae,
+         Individual,
+         Survivorship,
+         Initial,
+         Time) %>% 
+  # only have data where feeding trials were conducted in daylight hours
+  filter(Time == "Day") %>%
+  # change Species, Larvae as factors
+  mutate(Species = as.factor(Species),
+         Larvae = as.factor(Larvae),
+         Individual = as.factor(Individual)) %>% 
+  mutate(Species = recode(Species,
+                          'cur' = 'A. cura',
+                          'ret' = 'D. reti',
+                          'sex' = 'A. sex',
+                          'tri' = 'D. tri',
+                          'viri'= 'C. viri')) %>% 
+  mutate(Larvae = recode(Larvae,
+                         'millepora' = 'A. mill',
+                         'heliopora' = 'H. coer')) %>% 
+  mutate(survival_prop = Survivorship/Initial)
+```
+
+# Exploratory data analysis
+
+```{r}
+# scatterplot
+larvae2 %>% 
+  ggplot(aes(y = Survivorship, x = Larvae)) +
+  geom_boxplot() +
+  facet_grid(~ Species) +
+  theme_classic()
+```
+
+Heliopora consistently has higher survivorship compared to A. millepora. We should be able to run an additive model since an interaction term doesn't seem to be present.  
+
+# Fit the model (binomial distribution)
+
+```{r}
+larvae_binom_mod <- 
+  glmmTMB(survival_prop ~ Larvae + 
+            Species +
+            (1 | Individual),
+        weights = Initial,
+        family = binomial(), 
+        data = larvae2,
+        REML = TRUE)
+```
+
+## Model validation
+
+```{r}
+larvae_binom_mod  %>% testUniformity()
+larvae_binom_mod  %>% plotResiduals() # some minor issues with residuals
+larvae_binom_mod %>% testDispersion() # show signs of overdispersion
+```
+
+Fit could be better. Let's try betabinomial. 
+
+# Fit model 2 (beta binomial)
+
+```{r}
+larvae_bbinom_mod <- 
+  glmmTMB(survival_prop ~ Larvae + 
+            Species +
+            (1 | Individual),
+        weights = Initial,
+        family = betabinomial(), 
+        data = larvae2,
+        REML = TRUE)
+```
+
+## Model validation
+
+```{r}
+larvae_bbinom_mod %>% testUniformity() # qqplot
+larvae_bbinom_mod %>% plotResiduals() # residual plot
+larvae_bbinom_mod %>% testDispersion()
+```
+
+Dispersion still seems to be an issue, but we are somewhat out of options and it doesn't seem to be too bad. 
+
+## Predictions / emmeans
+
+```{r}
+# grid preparation
+larvae_newdata <-
+  larvae_bbinom_mod %>% 
+  emmeans(~ Larvae + Species,
+          type = "response") %>% 
+  as.tibble()
+
+larvae_newdata %>% head()
+```
+
+## Plot
+
+```{r}
+p_larvae <-
+larvae_newdata %>% 
+  ggplot(aes(y = prob, 
+             x = Species, 
+             fill = Larvae, 
+             color = Larvae,
+             shape = Larvae)) +
+  geom_pointrange(aes(ymin = asymp.LCL, ymax = asymp.UCL),
+                  position = position_dodge(0.5)) +
+  scale_x_discrete(name = "Fish species") +
+  scale_y_continuous(name = "Proportional larvae survivorship",
+                     limits = c(0,1),
+                     breaks = seq(0,1, by = 0.2)) +
+  theme_classic() +
+  ggtitle("a)")
+```
+
+## Model interpretation
+
+```{r}
+larvae_bbinom_mod %>% broom.mixed::tidy(
+  effects = "fixed",
+  conf.int = TRUE,
+  exponentiate = TRUE # in log odds ratio
+)
+```
+
+Survivorship of Acropora overall is 91% lower when compared to Heliopora.
+Survivorship of larvae varies with fish species when held at Heliopora only
+
+## Pairwise comparisons
+
+Let us say we want to know differences in survivorship of Heliopora or Acropora among fish species. 
+
+### Pairwise between fish species on similar larvae
+
+```{r}
+# comparisons betweem min, 50m, 75m, and max depth
+pairwise_larvae <- 
+larvae_bbinom_mod |> 
+  emmeans(~Species | Larvae,
+          epred = TRUE) |> 
+  pairs(type = "link") %>% 
+  as.tibble()
+
+pairwise_larvae %>% head()
+```
+
+### Plot
+
+```{r}
+p_pairwise_larvae <-
+pairwise_larvae  %>% 
+  mutate(contrast = fct_rev(fct_inorder(contrast))) %>% 
+  ggplot(aes(y = contrast, x = estimate)) +
+  geom_point() +
+  geom_pointrange(aes(x = estimate, xmax = estimate + SE, xmin = estimate - SE)) +
+  geom_vline(xintercept = 0, lty = 11, color = "red") +
+  scale_x_continuous("Contrast ratio (log-scale)",
+                     limits = c(-2,2)) +
+  scale_y_discrete("") +
+  ggtitle("b) Comparisons among fish species") +
+  theme_classic() 
+```
+
+# Combine plot
+
+```{r}
+p_final_larvae <- 
+p_larvae / p_pairwise_larvae 
+```
+
+# Save plot
+
+```{r}
+ggsave("Figures/Fig_betabinom_Larvae.jpeg",
+       plot = p_final_larvae,
+       dpi = 300,
+       height = 6,
+       width = 6,
+       units = "in")
+```

@@ -19,6 +19,8 @@ library(patchwork) # for combining plots
 
 # Scenario
 
+Data is from Tim and colleagues (2025) and has the same descriptions as the gaussian and lognormal models so I won't be elaborating again here.
+
 # Read data
 
 ```{r}
