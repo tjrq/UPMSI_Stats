@@ -1,0 +1,130 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+# Load library
+
+```{r}
+library(tidyverse) # data manipulation
+library(broom.mixed) # for tidy model interpretation
+library(sjPlot) # for table visualization
+library(emmeans) # estimating marginal means
+library(DHARMa) # model diagnostics
+library(glmmTMB) # running glmms
+library(ggimage) # for adding images
+library(patchwork) # for combining plots
+```
+
+# Scenario
+
+Tim and colleagues (2025a) investigated changes in species richness with depth in the Coral Sea, Australia. To do so, we used ROV surveys across a depth range of 2-98 throughout 50 sites. Each ROV survey lasted for 2.5 mins and covered an estimated area of about 30m per survey. 
+
+We have partitioned the herbivore assemblages into five feeding groups (croppers, detritivores, scrapers, excavators, browsers), but for the purpose of this exercise, we will combine them all as "all herbivores". 
+
+# Read data
+
+```{r}
+
+```
+
+## Glimpse data and find columns of interest
+
+```{r}
+
+```
+
+We are interested in Reef_2, Site, Depth_m, cropper, browser, detritivore, excavator, scraper
+
+## Isolate variables of interest and data preparation
+
+```{r}
+
+```
+
+# Exploratory data analysis
+
+```{r}
+
+```
+
+# Fit the model (poisson distribution)
+
+```{r}
+
+```
+
+## Model validation
+
+```{r}
+
+```
+
+
+# Fit model 2 (negbinom)
+
+```{r}
+
+```
+
+## Model validation
+
+```{r}
+
+```
+
+# Save / load model
+
+```{r}
+
+```
+
+## Predictions / emmeans
+
+```{r}
+
+```
+
+## Plot
+
+```{r}
+
+```
+
+## Model interpretation
+
+```{r}
+
+```
+
+
+### Extract min and max values
+
+```{r}
+
+```
+
+### Pairwise between shallowest and deepest depth
+
+```{r}
+
+```
+
+### Plot
+
+```{r}
+
+```
+
+# Combine plot
+
+```{r}
+
+```
+
+# Save plot
+
+```{r}
+
+```

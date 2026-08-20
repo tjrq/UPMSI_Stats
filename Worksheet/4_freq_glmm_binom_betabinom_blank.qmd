@@ -1,0 +1,127 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+# Load library
+
+```{r}
+library(tidyverse) # data manipulation
+library(broom.mixed) # for tidy model interpretation
+library(sjPlot) # for table visualization
+library(emmeans) # estimating marginal means
+library(DHARMa) # model diagnostics
+library(glmmTMB) # running glmms
+library(ggimage) # for adding images
+library(patchwork) # for combining plots
+```
+
+# Scenario
+
+Tim and colleagues (2019) investigated differences in the attached of Porites coral nubbins when exposed to two herbivore grazers and two butterflyfish facultative corralivores in aquaria. Coral nubbins were attached to tiles with 10 nubbins for each tile. These tiles were then exposed to the grazers or corallivores in the aquaria for 8h. The initial and final number of coral nubbins attached after 8h were then compared.
+
+# Read data
+
+```{r}
+
+```
+
+## Glimpse data and find columns of interest
+
+```{r}
+
+```
+
+We are interested in Fish_species, Nubbins_start, Nubbins_end, Fish_ind
+
+## Isolate variables of interest and data preparation
+
+```{r}
+
+```
+
+# Exploratory data analysis
+
+```{r}
+
+
+```
+
+
+
+# Fit the model (binomial distribution)
+
+```{r}
+
+```
+
+## Model validation
+
+```{r}
+
+```
+
+
+
+# Fit model 2 (beta binomial)
+
+```{r}
+
+```
+
+## Model validation
+
+```{r}
+
+```
+
+Slight dispersion but doesn't seem too bad
+
+# Save / load model
+
+```{r}
+
+```
+
+## Predictions / emmeans
+
+```{r}
+
+```
+
+## Plot
+
+```{r}
+
+```
+
+## Model interpretation
+
+```{r}
+
+```
+
+### Pairwise 
+
+```{r}
+
+```
+
+### Plot
+
+```{r}
+
+```
+
+# Combine plot
+
+```{r}
+
+```
+
+# Save plot
+
+```{r}
+
+```

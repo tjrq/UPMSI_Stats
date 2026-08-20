@@ -19,7 +19,7 @@ library(patchwork) # for combining plots
 
 # Scenario
 
-Tim and colleagues (2025) investigated changes in species richness with depth in the Coral Sea, Australia. To do so, we used ROV surveys across a depth range of 2-98 throughout 50 sites. Each ROV survey lasted for 2.5 mins and covered an estimated area of about 30m per survey.
+Tim and colleagues (2025b) investigated changes in macroalgae cover in the Bolinao-Anda Reef Complex, Philippines. To do so, we used RUV drops across a depth range of 1-60 at 4 sites. From the RUV deployment, we took one snapshot and then quantified the number of points covered by macroalgae relative to other benthic categories. 
 
 # Read data
 
@@ -134,7 +134,7 @@ ma_binom_mod %>% broom.mixed::tidy(
   mutate(p.value = round(p.value, 2))
 ```
 
-There are differences in macroalgae cover with depth. When compared to 10m (the reference group), these differences range from 58 to 82%. 
+There are differences in macroalgae cover with depth. When compared to 10m (the reference group), these differences range from 58 to 82%.
 
 ## Pairwise comparisons
 

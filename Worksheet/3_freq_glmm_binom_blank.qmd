@@ -1,0 +1,111 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+# Load library
+
+```{r}
+library(tidyverse) # data manipulation
+library(broom.mixed) # for tidy model interpretation
+library(sjPlot) # for table visualization
+library(emmeans) # estimating marginal means
+library(DHARMa) # model diagnostics
+library(glmmTMB) # running glmms
+library(ggimage) # for adding images
+library(patchwork) # for combining plots
+```
+
+# Scenario
+
+Tim and colleagues (2025b) investigated changes in macroalgae cover in the Bolinao-Anda Reef Complex, Philippines. To do so, we used RUV drops across a depth range of 1-60 at 4 sites. From the RUV deployment, we took one snapshot and then quantified the number of points covered by macroalgae relative to other benthic categories. 
+
+# Read data
+
+```{r}
+
+```
+
+## Glimpse data and find columns of interest
+
+```{r}
+
+```
+
+We are interested in Site, Depth, Macroalgae, Total_points
+
+## Isolate variables of interest and data preparation
+
+```{r}
+
+```
+
+# Exploratory data analysis
+
+```{r}
+
+```
+
+# Fit the model (binomial distribution)
+
+```{r}
+
+```
+
+## Model validation
+
+```{r}
+
+```
+
+Shows some signs of dispersion but looks relatively minor
+
+# Save / load model
+
+```{r}
+
+```
+
+## Predictions / emmeans
+
+```{r}
+
+```
+
+## Plot
+
+```{r}
+
+```
+
+## Model interpretation
+
+```{r}
+
+```
+
+
+## Pairwise comparisons
+
+```{r}
+
+```
+
+### Plot
+
+```{r}
+
+```
+
+# Combine plot
+
+```{r}
+
+```
+
+# Save plot
+
+```{r}
+
+```
