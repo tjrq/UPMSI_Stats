@@ -19,7 +19,7 @@ library(patchwork) # for combining plots
 
 # Scenario
 
-Tim and colleagues (2025) aimed to investigate changes in species richness and how that changes with depth in the Coral Sea, Philippines. To do so, we used ROV surveys across a depth range of 2-98 along 50 sites. 
+Tim and colleagues (2025) aimed to investigate changes in species richness and how that changes with depth in the Coral Sea, Australia. To do so, we used ROV surveys across a depth range of 2-98 along 50 sites. Each ROV survey lasted for 2.5 mins and covered an estimated area of about 30m per survey. 
 
 # Read data
 
