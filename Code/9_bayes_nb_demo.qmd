@@ -1,0 +1,250 @@
+---
+title: "Sprich"
+format: html
+editor: visual
+---
+
+Quarto document for fitting species richness among depth bands and slope orientation using Bayesian and lognormal distribution. Habitat type and site are considered group level variables.
+
+# Load library
+
+```{r}
+#| label: libraries
+#| output: false
+#| eval: true
+#| warning: false
+#| message: false
+#| cache: false
+
+library(tidyverse)
+library(brms)
+library(coda)
+library(bayesplot)
+library(DHARMa)
+library(emmeans)
+library(broom)
+library(tidybayes)
+library(broom.mixed)
+library(bayestestR)
+library(patchwork)
+source("helperFunctions.R")
+```
+
+# Read data
+
+```{r}
+abun <- read_csv("Data/herb_abundance.csv",
+                      trim_ws = TRUE)
+glimpse(abun)
+```
+
+# Declare factors
+
+```{r}
+abun2 <- 
+  # old dataframe
+  abun %>% 
+  # select relevant columns
+  select(Reef_2, 
+         Site,
+         Depth_m,
+         cropper,
+         browser,
+         detritivore,
+         excavator,
+         scraper) %>% 
+  # change Reef_2, Site as factors
+  mutate(Reef_2 = as.factor(Reef_2),
+         Site = as.factor(Site)) %>% 
+  # combine all herbivore feeding groups as "All_herbs"
+  mutate(All_herbs = cropper + browser + detritivore + excavator + scraper)
+```
+
+# Model fitting
+
+Not gonna run full model cause it will take too long.
+
+## Define formula
+
+```{r}
+herbs_form <- 
+  bf(All_herbs ~ 
+       Depth_m +
+       (1 | Site),
+     family = negbinomial(link = "log"))
+```
+
+## Data exploration
+
+```{r}
+abun2 |> 
+  summarise(log_med = log(median(All_herbs)),
+            log_mad = log(mad(All_herbs))) 
+```
+
+## Weakly informative priors
+
+```{r}
+herb_priors <- prior(normal(1.2, 2), class = "Intercept") +
+  prior(normal(0, 1), class = "b") +
+  prior(gamma(0.01, 0.01), class = "shape") +
+  prior(student_t(3, 0, 2), class = "sd")
+```
+
+## Prior only model
+
+```{r}
+#| cache: true
+herbs_prior_mod <- brm(herbs_form,
+                    data = abun2,
+                    prior = herb_priors,
+                    sample_prior = "only",
+                    iter = 2000, # small number of iter cause too long
+                    warmup = 500,
+                    chains = 3,
+                    cores = 6,
+                    thin = 5,
+                    seed = 123,
+                    control = list(adapt_delta = 0.99,
+                                   max_treedepth = 20),
+                    refresh = 0)
+```
+
+## Prior evaluation
+
+```{r}
+herbs_prior_mod |> conditional_effects() |> 
+  plot(points = TRUE,
+       ask = FALSE,
+       plot = FALSE) |> 
+  wrap_plots() & 
+  scale_y_log10()
+```
+
+## Fit model
+
+```{r}
+#| cache: true
+herbs_mod <- update(herbs_prior_mod,
+                  sample_prior = "yes",
+                    iter = 3000,
+                    warmup = 500,
+                    refresh = 1000)
+```
+
+### Chain diagnostics
+
+```{r}
+# trace
+herbs_mod |> mcmc_plot(type = "trace")
+# autocorr
+herbs_mod |> mcmc_plot(type = "acf_bar")
+
+# rhat
+herbs_mod |> mcmc_plot(type = "rhat_hist")
+
+# ess
+herbs_mod |> mcmc_plot(type = "neff_hist")
+```
+
+### Residuals
+
+```{r}
+herbs_resids <- make_brms_dharma_res(herbs_mod)
+
+# qqplot
+herbs_resids |> testUniformity()
+
+# residplot
+herbs_resids |> plotResiduals()
+
+# testdisp
+herbs_resids |> testDispersion()
+```
+
+#### Save model
+
+```{r}
+save(herbs_mod, file = "Model_Outputs/bayes_abun_mod.Rdata")
+```
+
+#### Load model
+
+```{r}
+load("Model_Outputs/bayes_abun_mod.RData")
+```
+
+# Plotting
+
+## Newdata for plotting depth
+
+```{r}
+depth_newdata <- with(abun2,
+                 data.frame(Depth_m = seq(min(Depth_m),
+                                          max(Depth_m),
+                                          length = 100)))
+```
+
+## Prep db for plotting
+
+```{r, cache=TRUE}
+herbs_depth_pred <- 
+  herbs_mod |> 
+  emmeans(~ Depth_m, 
+          at = depth_newdata, 
+          type = "response")
+```
+
+### Gather emmeans
+
+```{r}
+herbs_depth_pred_draws <- 
+gather_emmeans_draws(herbs_depth_pred)
+```
+
+### Subset 200 draws
+
+```{r}
+herbs_depth_pred_draws_subset <- sample(unique(herbs_depth_pred_draws$.draw), 200)
+
+herbs_depth_pred_draws_200 <- herbs_depth_pred_draws  |>  
+  filter(.draw %in% herbs_depth_pred_draws_subset)
+```
+
+### Plot
+
+```{r}
+p_sprich_depth <-
+herbs_depth_pred_draws_200 |> 
+  ggplot(aes(x = Depth_m, 
+             y = .value)) +
+ geom_line(aes(group = .draw), 
+            color = "#DDD487", 
+            alpha = 0.25, 
+            size = 1) +
+   stat_lineribbon(colour = "yellow4", 
+                  size = 1.5, 
+                  point_interval = "median_hdci", 
+                  fill = "yellow4", 
+                  .width = 0.001, 
+                  alpha = 1) + 
+  scale_x_continuous("Depth") +
+  scale_y_continuous("Abundance") +
+  theme_classic()
+```
+
+# Model interpretation
+
+## Exceedance probability
+
+```{r}
+herbs_mod |> as_draws_df() |> 
+  dplyr::select(matches("^b_.*")) |> 
+  exp() |> # backtransform from logscale
+  summarise_draws(median,
+                  HDInterval::hdi,
+                  Pl= ~mean(.x < 1), #exceedence prob
+                  Pg = ~mean(.x > 1)) |> 
+  filter(Pl > 0.85 | # filter weak evidence (0.85)
+           Pg > 0.85)
+```
