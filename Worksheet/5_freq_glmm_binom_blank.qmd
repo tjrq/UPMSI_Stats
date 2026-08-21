@@ -19,9 +19,9 @@ library(patchwork) # for combining plots
 
 # Scenario
 
-Tim and colleagues (2025a) investigated changes in species richness with depth in the Coral Sea, Australia. To do so, we used ROV surveys across a depth range of 2-98 throughout 50 sites. Each ROV survey lasted for 2.5 mins and covered an estimated area of about 30m per survey. 
+Tim and colleagues (2025b) investigated changes browser assemblages and bite rates across four depth bands (1-10, 11-20, 31-40, 41-50m) and four sites in the Bolinao-Anda Reef Complex, Philippines. We also quantified changes in macroalgae cover with depth band. To quantify macroalgae cover, photographs from RUV drops (video cameras with weights) were extracted, with the photo quantified point intercept by determining the number of points intercepted by macroalgae relative to other benthic categories.
 
-We have partitioned the herbivore assemblages into five feeding groups (croppers, detritivores, scrapers, excavators, browsers), but for the purpose of this exercise, we will combine them all as "all herbivores". 
+For the purpose of this exercise, we will only be looking at changes in macroalgae cover with depth band.
 
 # Read data
 
@@ -35,8 +35,6 @@ We have partitioned the herbivore assemblages into five feeding groups (croppers
 
 ```
 
-We are interested in Reef_2, Site, Depth_m, cropper, browser, detritivore, excavator, scraper
-
 ## Isolate variables of interest and data preparation
 
 ```{r}
@@ -49,7 +47,7 @@ We are interested in Reef_2, Site, Depth_m, cropper, browser, detritivore, excav
 
 ```
 
-# Fit the model (poisson distribution)
+# Fit the model (binomial distribution)
 
 ```{r}
 
@@ -58,20 +56,7 @@ We are interested in Reef_2, Site, Depth_m, cropper, browser, detritivore, excav
 ## Model validation
 
 ```{r}
-
-```
-
-
-# Fit model 2 (negbinom)
-
-```{r}
-
-```
-
-## Model validation
-
-```{r}
-
+ 
 ```
 
 # Save / load model
@@ -98,14 +83,7 @@ We are interested in Reef_2, Site, Depth_m, cropper, browser, detritivore, excav
 
 ```
 
-
-### Extract min and max values
-
-```{r}
-
-```
-
-### Pairwise between shallowest and deepest depth
+## Pairwise comparisons
 
 ```{r}
 

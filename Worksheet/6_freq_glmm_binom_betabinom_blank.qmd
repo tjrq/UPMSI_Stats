@@ -9,7 +9,6 @@ editor: visual
 ```{r}
 library(tidyverse) # data manipulation
 library(broom.mixed) # for tidy model interpretation
-library(sjPlot) # for table visualization
 library(emmeans) # estimating marginal means
 library(DHARMa) # model diagnostics
 library(glmmTMB) # running glmms
@@ -19,7 +18,7 @@ library(patchwork) # for combining plots
 
 # Scenario
 
-Tim and colleagues (2025b) investigated changes in macroalgae cover in the Bolinao-Anda Reef Complex, Philippines. To do so, we used RUV drops across a depth range of 1-60 at 4 sites. From the RUV deployment, we took one snapshot and then quantified the number of points covered by macroalgae relative to other benthic categories. 
+Tim and colleagues (2019) investigated differences in the proportion of Porites coral nubbins attached to tiles when exposed to two herbivore grazers and two butterflyfish facultative coralivores in aquaria. Ten coral nubbins were attached to each individual tile and were placed in an aquarium with a single individual of Chlorurus (grazer), Siganus (grazer) or Chaetodon (corallivores), with the fish allowed to interact with the coral nubbin for 8h. The initial (prior to the start) and final number (end) of coral nubbins attached after 8h were then compared.
 
 # Read data
 
@@ -32,8 +31,6 @@ Tim and colleagues (2025b) investigated changes in macroalgae cover in the Bolin
 ```{r}
 
 ```
-
-We are interested in Site, Depth, Macroalgae, Total_points
 
 ## Isolate variables of interest and data preparation
 
@@ -59,7 +56,17 @@ We are interested in Site, Depth, Macroalgae, Total_points
 
 ```
 
-Shows some signs of dispersion but looks relatively minor
+# Fit model 2 
+
+```{r}
+
+```
+
+## Model validation
+
+```{r}
+
+```
 
 # Save / load model
 
@@ -85,8 +92,9 @@ Shows some signs of dispersion but looks relatively minor
 
 ```
 
-
 ## Pairwise comparisons
+
+### Pairwise between fish species on similar larvae
 
 ```{r}
 

@@ -19,7 +19,9 @@ library(patchwork) # for combining plots
 
 # Scenario
 
-Tim and colleagues (2025a) investigated changes in species richness with depth in the Coral Sea, Australia. To do so, we used ROV surveys across a depth range of 2-98 throughout 50 sites. Each ROV survey lasted for 2.5 mins and covered an estimated area of about 30m per survey.
+Tim and colleagues (2025) investigated changes in herbivore assemblages with depth in the Coral Sea, Australia. To do so, we used ROV surveys across a depth range of 2-98 throughout 50 sites. Each ROV survey lasted for 2.5 mins and covered an estimated area of about 30m per survey. During each survey, we identified the species, counted the abundance and estimated the size of herbivorous fishes.
+
+For the purpose of this exercise, we will only examine changes in species richness with depth.
 
 # Read data
 
@@ -33,8 +35,6 @@ Tim and colleagues (2025a) investigated changes in species richness with depth i
 
 ```
 
-We are interested in Site, Depth_m, Estimator
-
 ## Isolate variables of interest and data preparation
 
 ```{r}
@@ -47,8 +47,7 @@ We are interested in Site, Depth_m, Estimator
 
 ```
 
-# Fit the model 1
-
+# Fit the model 1 
 
 ```{r}
 
@@ -59,11 +58,9 @@ We are interested in Site, Depth_m, Estimator
 ```{r}
 
 ```
-
 
 # Fit the model 2 
 
-
 ```{r}
 
 ```
@@ -74,9 +71,7 @@ We are interested in Site, Depth_m, Estimator
 
 ```
 
-Now let's try including a random variable (i.e. a glmm before we )
-
-# Fit model 3 (include site as random variable)
+# Fit model 3 
 
 ```{r}
 
@@ -112,10 +107,7 @@ Now let's try including a random variable (i.e. a glmm before we )
 
 ```
 
-
 ## Pairwise comparisons
-
-Let us say we want to know differences in species richness between the shallowest and maximum depth. We can do so with pairwise contrasts.
 
 ### Extract min and max values
 

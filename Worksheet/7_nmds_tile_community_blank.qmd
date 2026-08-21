@@ -1,0 +1,120 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+# Load library
+
+```{r}
+library(tidyverse) # data manipulation
+library(vegan) # for multivariate analysis
+library(patchwork) # for combining plots
+library(ggrepel) # for multivariate plotting
+library(ggforce) # for multivariate plotting
+library(pairwiseAdonis) # pairwise permanova
+```
+
+# Scenario
+
+Tim and colleagues (2020) investigated changes in the settlement of Pocillopora larvae when provided tiles conditioned at different sites with varying distances form fish farms (i.e. Tomasa - near, Lucero - middle, Malilnep - far) in the Bolinao-Anda Reef Complex. By taking an image of each tile and by conducting point intercept of each image, we examined differences in benthic assemblages when tiles were conditioned at differing distances from the fish farms.
+
+# Read data
+
+```{r}
+
+```
+
+## Glimpse data and find columns of interest and find columns of interest
+
+```{r}
+
+```
+
+## Isolate variables of interest and data preparation
+
+```{r}
+
+```
+
+## Separate explanatory and response matrix
+
+```{r}
+
+```
+
+## Data (response) standardization
+
+```{r}
+
+```
+
+# Run mds
+
+```{r}
+
+```
+
+## stressplot
+
+```{r}
+
+```
+
+## Extract scores
+
+```{r}
+
+```
+
+## Plot
+
+```{r}
+
+```
+
+# Run PERMANOVA
+
+```{r}
+
+```
+
+Site influenced benthic composition and explains 28% of the variance.
+
+## Model checks
+
+```{r}
+
+```
+
+## Pairwise comparisons
+
+```{r}
+
+```
+
+# Run envfit
+
+## Envfit
+
+```{r}
+
+```
+
+## Extract and save scores for plotting
+
+```{r}
+
+```
+
+## Plot
+
+```{r}
+  
+```
+
+# Save plot
+
+```{r}
+
+```

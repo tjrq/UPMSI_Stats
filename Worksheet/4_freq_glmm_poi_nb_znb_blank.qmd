@@ -1,0 +1,139 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+# Load library
+
+```{r}
+library(tidyverse) # data manipulation
+library(broom.mixed) # for tidy model interpretation
+library(emmeans) # estimating marginal means
+library(DHARMa) # model diagnostics
+library(glmmTMB) # running glmms
+library(ggimage) # for adding images
+library(patchwork) # for combining plots
+```
+
+# Scenario
+
+Data is from Tim and colleagues (2023). Here we investigated changes in the abundance of reef fish assemblages throughout three time periods (2016, 2018, 2019) in Apo Reef Natural Park (ARNP). Coincidentally, these time periods aligned with a bleaching event in 2016 and so some of the variation may be associated with coral bleaching. We collected data by conducting fish visual census at various five sites in the ARNP where all reef fishes were identified to species level and counted.
+
+For the purpose of this exercise, we will be testing differences in abundance of planktivore, herbivore and detritivore species (personal bias) through the three time periods.
+
+# Read data
+
+```{r}
+
+```
+
+## Glimpse data and find columns of interest
+
+```{r}
+
+```
+
+## Isolate variables of interest and data preparation
+
+```{r}
+
+```
+
+# Exploratory data analysis
+
+```{r}
+
+```
+
+# Fit the model (poisson distribution)
+
+```{r}
+
+```
+
+## Model validation
+
+```{r}
+
+```
+
+# Fit model 2 (negbinom)
+
+```{r}
+
+```
+
+## Model validation
+
+```{r}
+
+```
+
+# Fit model 3 (zero inflated)
+
+```{r}
+
+```
+
+## Model validation
+
+```{r}
+
+```
+
+# AIC model comparisons
+
+```{r}
+
+```
+
+# Save / load model
+
+```{r}
+
+```
+
+## Predictions / emmeans
+
+```{r}
+
+```
+
+## Plot
+
+```{r}
+
+```
+
+## Model interpretation
+
+```{r}
+
+```
+
+## Pairwise comparisons
+
+### Pairwise between year and trophic group
+
+```{r}
+
+```
+
+### Plot
+
+```{r}
+
+```
+
+# Combine plot
+
+```{r}
+
+```
+
+# Save plot
+
+```{r}
+
+```

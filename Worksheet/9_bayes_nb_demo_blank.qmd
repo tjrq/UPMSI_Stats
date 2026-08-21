@@ -1,0 +1,128 @@
+---
+title: "Sprich"
+format: html
+editor: visual
+---
+
+Tim and colleagues (2025) investigated changes in herbivore assemblages with depth in the Coral Sea, Australia. To do so, we used ROV surveys across a depth range of 2-98 throughout 50 sites. Each ROV survey lasted for 2.5 mins and covered an estimated area of about 30m per survey. During each survey, we identified the species, counted the abundance and estimated the size of herbivorous fishes.
+
+For the purpose of this exercise, we will only examine changes in abundance with depth using the bayesian framework.
+
+# Load library
+
+```{r}
+```
+
+# Read data
+
+```{r}
+
+```
+
+# Declare factors
+
+```{r}
+
+```
+
+# Model fitting
+
+## Define formula
+
+```{r}
+
+```
+
+## Data exploration
+
+```{r}
+
+```
+
+## Weakly informative priors
+
+```{r}
+
+```
+
+## Prior only model
+
+```{r}
+
+```
+
+## Prior evaluation
+
+```{r}
+
+```
+
+## Fit model
+
+```{r}
+
+```
+
+### Chain diagnostics
+
+```{r}
+
+```
+
+### Residuals
+
+```{r}
+
+```
+
+#### Save model
+
+```{r}
+
+```
+
+#### Load model
+
+```{r}
+
+```
+
+# Plotting
+
+## Newdata for plotting depth
+
+```{r}
+
+```
+
+## Prep db for plotting
+
+```{r, cache=TRUE}
+
+```
+
+### Gather emmeans
+
+```{r}
+
+```
+
+### Subset 200 draws
+
+```{r}
+
+```
+
+### Plot
+
+```{r}
+
+```
+
+# Model interpretation
+
+## Exceedance probability
+
+```{r}
+
+```

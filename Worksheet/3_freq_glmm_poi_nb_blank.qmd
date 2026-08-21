@@ -9,7 +9,6 @@ editor: visual
 ```{r}
 library(tidyverse) # data manipulation
 library(broom.mixed) # for tidy model interpretation
-library(sjPlot) # for table visualization
 library(emmeans) # estimating marginal means
 library(DHARMa) # model diagnostics
 library(glmmTMB) # running glmms
@@ -19,7 +18,9 @@ library(patchwork) # for combining plots
 
 # Scenario
 
-Tim and colleagues (2019) investigated differences in the attached of Porites coral nubbins when exposed to two herbivore grazers and two butterflyfish facultative corralivores in aquaria. Coral nubbins were attached to tiles with 10 nubbins for each tile. These tiles were then exposed to the grazers or corallivores in the aquaria for 8h. The initial and final number of coral nubbins attached after 8h were then compared.
+Tim and colleagues (2025) investigated changes in herbivore assemblages with depth in the Coral Sea, Australia. To do so, we used ROV surveys across a depth range of 2-98 throughout 50 sites. Each ROV survey lasted for 2.5 mins and covered an estimated area of about 30m per survey. During each survey, we identified the species, counted the abundance and estimated the size of herbivorous fishes.
+
+For the purpose of this exercise, we will only examine changes in abundance with depth.
 
 # Read data
 
@@ -33,8 +34,6 @@ Tim and colleagues (2019) investigated differences in the attached of Porites co
 
 ```
 
-We are interested in Fish_species, Nubbins_start, Nubbins_end, Fish_ind
-
 ## Isolate variables of interest and data preparation
 
 ```{r}
@@ -45,12 +44,9 @@ We are interested in Fish_species, Nubbins_start, Nubbins_end, Fish_ind
 
 ```{r}
 
-
 ```
 
-
-
-# Fit the model (binomial distribution)
+# Fit the model 
 
 ```{r}
 
@@ -62,9 +58,7 @@ We are interested in Fish_species, Nubbins_start, Nubbins_end, Fish_ind
 
 ```
 
-
-
-# Fit model 2 (beta binomial)
+# Fit model 2 
 
 ```{r}
 
@@ -75,8 +69,6 @@ We are interested in Fish_species, Nubbins_start, Nubbins_end, Fish_ind
 ```{r}
 
 ```
-
-Slight dispersion but doesn't seem too bad
 
 # Save / load model
 
@@ -102,7 +94,15 @@ Slight dispersion but doesn't seem too bad
 
 ```
 
-### Pairwise 
+## Pairwise comparisons
+
+### Extract min and max values
+
+```{r}
+
+```
+
+### Pairwise between shallowest and deepest depth
 
 ```{r}
 
@@ -111,7 +111,7 @@ Slight dispersion but doesn't seem too bad
 ### Plot
 
 ```{r}
-
+ 
 ```
 
 # Combine plot

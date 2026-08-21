@@ -1,0 +1,116 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+# Load library
+
+```{r}
+library(tidyverse) # data manipulation
+library(vegan) # for multivariate analysis
+library(patchwork) # for combining plots
+library(ggrepel) # for multivariate plotting
+library(ggforce) # for multivariate plotting
+library(pairwiseAdonis) # pairwise permanova
+```
+
+# Scenario
+
+Tim and colleagues (2018) investigated differences in fish species assemblages across 3 geographic locations (Apo Reef, Patnanungan, Abra de Ilog) and at 3 depths (10m, 20m, 30m) in the Philippines. Fish data was obtained by conducting fish visual census throughout the geographic locations.
+
+# Read data
+
+```{r}
+
+```
+
+## Glimpse data and find columns of interest
+
+```{r}
+
+```
+
+## Isolate variables of interest and data preparation
+
+```{r}
+
+```
+
+## Separate explanatory and response matrix
+
+```{r}
+
+```
+
+## Data (response) standardization
+
+```{r}
+
+```
+
+# Run mds
+
+```{r}
+
+```
+
+## stressplot
+
+```{r}
+
+```
+
+## Extract scores
+
+```{r}
+
+```
+
+## Plot
+
+```{r}
+
+```
+
+# Run PERMANOVA
+
+```{r}
+
+```
+
+## Model checks
+
+```{r}
+
+```
+
+## Pairwise comparisons
+
+```{r}
+
+```
+
+# Run envfit
+
+```{r}
+
+```
+
+## Extract r and p values
+
+```{r}
+
+```
+
+## Plot
+
+```{r}
+
+```
+
+# Save plot
+
+```{r}
+
+```

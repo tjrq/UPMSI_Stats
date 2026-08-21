@@ -1,0 +1,109 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+# Load library
+
+```{r}
+library(tidyverse) # data manipulation
+library(broom.mixed) # for tidy model interpretation
+library(emmeans) # estimating marginal means
+library(DHARMa) # model diagnostics
+library(glmmTMB) # running glmms
+library(ggimage) # for adding images
+library(patchwork) # for combining plots
+```
+
+# Scenario
+
+Tim and colleagues (2020) investigated changes in the settlement of Pocillopora larvae when provided tiles conditioned at different sites with varying distances form fish farms (i.e. Tomasa - near, Lucero - middle, Malilnep - far) in the Bolinao-Anda Reef Complex. We also examined nutrient concentrations of 4 nutrients (nitrite, nitrate, phosphate, ammonia) throughout those sites.
+
+For the purposes of this exercise, we will only look at changes in phosphate concentrations with site.
+
+# Read data
+
+```{r}
+
+```
+
+## Glimpse data and find columns of interest
+
+```{r}
+
+```
+
+## Isolate variables of interest and data preparation
+
+```{r}
+
+```
+
+# Exploratory data analysis
+
+```{r}
+
+```
+
+# Fit the model 
+
+This assumes no site level variance (i.e. a simple glm)
+
+```{r}
+
+```
+
+## Model validation
+
+```{r}
+
+```
+
+# Save / load model
+
+```{r}
+
+```
+
+## Predictions / emmeans
+
+```{r}
+
+```
+
+## Plot
+
+```{r}
+
+```
+
+## Model interpretation
+
+```{r}
+
+```
+
+## Pairwise comparisons
+
+```{r}
+
+```
+
+### Plot
+
+```{r}
+
+```
+
+# Combine plot
+
+```{r}
+
+```
+
+# Save plot
+
+```{r}
+
+```
